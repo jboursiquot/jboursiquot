@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/jboursiquot
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jboursiquot.com
+  * I am jboursiquot (https://keybase.io/jboursiquot) on keybase.
+  * I have a public key with fingerprint ED6D 593E 5733 2FC8 7CD8  9B22 036A F617 84D5 062D
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101b646203ab744ad597d4d70b1941ecf4f8c7e5a446a0337f11911e2667f2d06a60a",
+      "fingerprint": "ed6d593e57332fc87cd89b22036af61784d5062d",
+      "host": "keybase.io",
+      "key_id": "036af61784d5062d",
+      "kid": "0101b646203ab744ad597d4d70b1941ecf4f8c7e5a446a0337f11911e2667f2d06a60a",
+      "uid": "b6e69eab2766db31e4b874420589b900",
+      "username": "jboursiquot"
+    },
+    "merkle_root": {
+      "ctime": 1512660693,
+      "hash_meta": "ea1009b7a5e4c844ec1ed94d1fcabc8f1e1e62d138c48fbc665e842da3f9a08e",
+      "seqno": 1788153
+    },
+    "revoke": {
+      "sig_ids": [
+        "a3c19919d7a98213a9de23f066e9ba0219005b37c8d95dfab25ea536e9bb8a680f"
+      ]
+    },
+    "service": {
+      "hostname": "jboursiquot.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1512660700,
+  "expire_in": 157680000,
+  "prev": "f251b281fc2d63f5159be2e4b0d1c01a31f83bae73d88a9b9b7d295c73f5dff6",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMK5AnicrVNdaFxFGN1Nk0hTS5eC2hcVrgQrLMvMnXtn5q5IqD8QjU/qom1sN/Pz
+3eSa7N7de+/GhBB/Ii1daGlsSxuJ+lLE0NIiSvpQbNFNQUlLFQO1iJY+xIqFohBB
+UWydmyoiffVpmJnzne+c882cXb8m05U98Uznb/cMrXkve6410chse2jHtxOWDPW4
+VZywhmF1gRENcVIeDrRVtBBGWFKH2ogIyRxHaNdj2tEMSew5GJTv+FwxcIXjUIEI
+YT7GHsZgU8p8WyMqKBJW3vKD6iBEtSioJoYWNDVEBFxGiO0rzpTmnrRNFyp8ihl3
+tIuorU3hUBinFUacFDEUgtCcmU35lrzb8f+z7sYqnaRAPRDSZpRqSTA4khtWG7lG
+todQCowhqooKGPRLMmxEcVBvhIk1mbcqEA2PQDkKzdbkq5IgRWEXm16IesR4FPFQ
+uQKJSKMRGCFPMuGCo7jjgMKgPUdjXwmpuI8Bg3GKCVcO96Wi1AXu2FoQ3xOIg5ES
+Q70amg6Mc+wSoyCC0XAY0uZxMGiSi61ivyWIwp6HPc2Ex21MhKfBJj6iFDwpkI2N
+L1cSprj2XO0b8y4Il6S3kgvKkW9tn0ybRaOBWiVPR3V7BAUVVoyoWhQmoQpHzOVQ
+ktTiYhpNMl5L0S+DLP/NU5ZBVZu3YipGwTCEVWPEIP+bGkMob8FYLYigHKQIlxlB
+KD2tGbOG0rddLG1uUrM1Jb6LXU+CbeaGNFYIC4J9TqQARjTnwgxRMm17rmIGq32f
+/hujY2SKQUNpsquKpBGBNdn65MX2TLYr09nRlv6hTNfa3D8/y3rkjpvPHa7fd6T5
+wvtL431n1rdtyHyzacvnr9e/mtnwQV/vz/nZfbO/1I9nFuiXb3e03hr8YqDZPaea
+A/r0pp293SuLU/3TCx/2FJ5HXz/Qs7Hs8B9mxsTi/PKvA1eWphsze+yLB3YVm/ee
+mlr+c65r14XLpcWr5ZWlk4f+6Llr+dm9D3988/zjT54+NX/y2LXc3t6rbzSnth+5
+nmtbl9+R61jYn227cmbm0ZWfLs8evvPaoZ0fjTx4vvRd4eK6uHns1VIT3okPHn16
+8rE3O7bsPxittD9VuFuVWtm5G/MuWezf/dnWHy98f2nt72d3Z7e9Mj22p/ha6dO+
+jU8cuN7dOnfp/nfbT8TT3bkblX2bO/8CjuOB2g==
+=Yxf8
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jboursiquot
+
+==================================================================
+
