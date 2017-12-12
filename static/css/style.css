@@ -1,623 +1,95 @@
-/*----------------------------------------------------------------
-
-// Table of contents //
-
-        Body
-    0.  Typography
-    1.  Buttons
-    2.  General
-    3.  Pre loader
-    4.  Navigation section
-    5.  Home section
-    6.  About section
-    7.  Latest section
-    8.  Work section
-    9.  Testimonial section
-    10. Contact section
-    11. Footer section
-    12. Social icon
-    13. Mobile Responsive styles
-
-------------------------------------------------------------------*/
-
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700|Source+Sans+Pro:400,600');
-
-body {
-    background: #ffffff;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    overflow-x: hidden;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-
-
-/*---------------------------------------
-    0 Typorgraphy              
------------------------------------------*/
-
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Nunito Sans', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  letter-spacing: 1px;
-}
-
-h1 {
-  color: #ffffff;
-  font-size: 45px;
-}
-
-h2 {
-  color: #2b2b2b;
-  font-size: 30px;
-  margin: 0px;
-}
-
-h3 {
-  color: #353535;
-  font-size: 20px;
-}
-
-h4 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: 3px;
-  line-height: 28px;
-  text-transform: uppercase;
-  padding-top: 12px;
-}
-
-p {
-  color: #878787;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 25px;
-  letter-spacing: 0.5px;
-}
-
-.white-color {
-  color: #f0f0f0 !important;
-}
-
-strong {
-  font-weight: 600;
-}
-
-
-
-/*---------------------------------------
-    1 Buttons               
------------------------------------------*/
-
-.section-btn {
-  background: #000000;
-  border-radius: 50px;
-  border: none;
-  color: #ffffff;
-  font-size: 10px;
-  font-weight: normal;
-  letter-spacing: 2px;
-  padding: 16px 28px;
-  margin-top: 32px;
-  text-transform: uppercase;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700|Source+Sans+Pro:400,600');body{background:#ffffff;font-family:'Source Sans Pro', sans-serif;font-style:normal;font-weight:normal;overflow-x:hidden;}
+html, body{width:100%;height:100%;}
+h1,h2,h3,h4,h5,h6{font-family:'Nunito Sans', sans-serif;font-style:normal;font-weight:bold;line-height:normal;letter-spacing:1px;}
+h1{color:#ffffff;font-size:45px;}
+h2{color:#2b2b2b;font-size:30px;margin:0px;}
+h3{color:#353535;font-size:20px;}
+h4{font-family:'Source Sans Pro', sans-serif;font-size:13px;font-weight:normal;letter-spacing:3px;line-height:28px;text-transform:uppercase;padding-top:12px;}
+p{color:#878787;font-size:16px;font-weight:normal;line-height:25px;letter-spacing:0.5px;}
+.white-color{color:#f0f0f0 !important;}
+strong{font-weight:600;}
+.section-btn{background:#000000;border-radius:50px;border:none;color:#ffffff;font-size:10px;font-weight:normal;letter-spacing:2px;padding:16px 28px;margin-top:32px;text-transform:uppercase;-webkit-transition:all ease-in-out 0.4s;transition:all ease-in-out 0.4s;}
 .section-btn:focus,
-.section-btn:hover {
-  background: #2b2b2b;
-  border-color: transparent;
-  color: #ffffff;
-}
-
-.section-btn.btn-primary {
-  background: #ffffff;
-  border: none;
-  color: #2b2b2b;
-}
-
-
-
-/*---------------------------------------
-    2 General               
------------------------------------------*/
-
-html{
-  -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: #757557;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  text-decoration: none !important;
-}
-
-a:hover, a:active, a:focus {
-  color: #4eefc3;
-  outline: none;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
+.section-btn:hover{background:#2b2b2b;border-color:transparent;color:#ffffff;}
+.section-btn.btn-primary{background:#ffffff;border:none;color:#2b2b2b;}
+html{-webkit-font-smoothing:antialiased;}
+a{color:#757557;-webkit-transition:0.5s;transition:0.5s;text-decoration:none !important;}
+a:hover, a:active, a:focus{color:#4eefc3;outline:none;}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
 *:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.parallax-section {
-  background-attachment: fixed !important;
-  background-size: cover !important;
-}
-
-.overlay {
-  background: rgba(0,0,0,0.7);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.section-title {
-  margin: 0;
-  padding-bottom: 32px;
-}
-
+*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+.parallax-section{background-attachment:fixed !important;background-size:cover !important;}
+.overlay{background:rgba(0,0,0,0.7);position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;}
+.section-title{margin:0;padding-bottom:32px;}
 #about, #latest, #work,
-#testimonial, #contact, footer {
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-#testimonial, footer {
-  background: #f9f9f9;
-}
-
+#testimonial, #contact, footer{position:relative;padding-top:80px;padding-bottom:80px;}
+#testimonial, footer{background:#f9f9f9;}
 #latest, #work,
 #testimonial, #contact,
-footer {
-  text-align: center;
+footer{text-align:center;}
+.preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;background:none repeat scroll 0 0 #ffffff;}
+.spinner{border:1px solid transparent;border-radius:5px;position:relative;}
+.spinner:before{content:'';box-sizing:border-box;position:absolute;top:50%;left:50%;width:45px;height:45px;margin-top:-10px;margin-left:-10px;border-radius:50%;border:1px solid #575757;border-top-color:#ffffff;animation:spinner .9s linear infinite;}
+@-webkit-@keyframes spinner{to{transform:rotate(360deg);}
 }
-
-
-/*---------------------------------------
-    3 Pre loader section              
------------------------------------------*/
-
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  background: none repeat scroll 0 0 #ffffff;
+@keyframes spinner{to{transform:rotate(360deg);}
 }
-
-.spinner {
-  border: 1px solid transparent;
-  border-radius: 5px;
-  position: relative;
-}
-
-.spinner:before {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 45px;
-  height: 45px;
-  margin-top: -10px;
-  margin-left: -10px;
-  border-radius: 50%;
-  border: 1px solid #575757;
-  border-top-color: #ffffff;
-  animation: spinner .9s linear infinite;
-}
-
-@-webkit-@keyframes spinner {
-  to {transform: rotate(360deg);}
-}
-
-@keyframes spinner {
-  to {transform: rotate(360deg);}
-}
-
-
-
-/*---------------------------------------
-    4 Navigation section              
------------------------------------------*/
-
-.navbar-default {
-  background-color: #ffffff;
-  box-shadow: 5px 5px 15px 0 rgba(31, 31, 31, 0.07);
-  border: none;
-  margin-bottom: 0;
-  padding: 6px 0;
-}
-
-.navbar-default .navbar-brand {
-  color: #474747;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.navbar-default .navbar-nav li a {
-  color: #757575;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-  padding: 0 12px;
-  margin: 15px 8px;
-}
-
-.navbar-default .navbar-nav > li a:hover {
-  background-color: transparent;
-  color: #656565 !important;
-}
-
+.navbar-default{background-color:#ffffff;box-shadow:5px 5px 15px 0 rgba(31, 31, 31, 0.07);border:none;margin-bottom:0;padding:6px 0;}
+.navbar-default .navbar-brand{color:#474747;font-family:'Nunito Sans', sans-serif;font-weight:bold;font-size:20px;}
+.navbar-default .navbar-nav li a{color:#757575;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;-webkit-transition:all ease-in-out 0.4s;transition:all ease-in-out 0.4s;padding:0 12px;margin:15px 8px;}
+.navbar-default .navbar-nav > li a:hover{background-color:transparent;color:#656565 !important;}
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #858585;
-}
-
+.navbar-default .navbar-nav > li > a:focus{color:#858585;}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #656565;
-}
-
-.navbar-default .navbar-toggle {
-  border: none;
-  padding-top: 10px;
-}
-
-.navbar-default .navbar-toggle {
-  background-color: transparent;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background: #000000;
-  border-color: transparent;
-}
-
-
-
-/*---------------------------------------
-    5 Home section              
------------------------------------------*/
-
-#home {
-  background: url('../images/johnny-boursiquot-7.png') 50% 0 repeat-y fixed;
-  background-size: cover;
-  background-position: center center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-   align-items: center;
-  height: 100vh;
-  position: relative;
-  text-align: center;
-}
-
-#home h4 {
-  color: #989898;
-}
-
-#home strong {
-  color: #e9e9e9;
-}
-
-
-
-/*---------------------------------------
-    6 About section              
------------------------------------------*/
-
-#about {
-  padding-top: 100px;
-}
-
-.about-image {
-  text-align: center;
-}
-
-.about-image img {
-  border-radius: 100%;
-  width: 350px;
-  height: 350px;
-  display: inline-block;
-}
-
-.about-thumb {
-  padding: 32px 12px;
-}
-
-.about-thumb p {
-  padding: 2px 0;
-}
-
-
-
-/*---------------------------------------
-   7 Latest section              
------------------------------------------*/
-
-#latest {
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.latest-thumb {
-  /* cursor: crosshair; */
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-}
-
-.latest-thumb h3 {
-  margin-bottom: 10px;
-}
-
-.latest-thumb .fa {
-  background: #f9f9f9;
-  border-radius: 50%;
-  color: #000000;
-  font-size: 40px;
-  text-align: center;
-  width: 85px;
-  height: 85px;
-  line-height: 85px;
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
-
-
-/*---------------------------------------
-    8 Work section              
------------------------------------------*/
-
-.work-thumb {
-  border-radius: 100%;
-  margin: 22px 12px;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-}
-
-.work-thumb img {
-  border-radius: 100%;
-}
-
-.work-thumb h2 {
-  color: #ffffff;
-  font-size: 25px;
-}
-
-.work-thumb-overlay {
-  position: absolute;
-  background: rgba(0,0,0,0.5);
-  border-radius: 5px;
-  cursor: crosshair;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  padding: 82px 42px;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-}
-
-.work-thumb:hover .work-thumb-overlay {
-  opacity: 1;
-}
-
-
-
-/*---------------------------------------
-   9 Testimonial section              
------------------------------------------*/
-
-#testimonial h3 {
-  color: #696969;
-}
-
-#testimonial .tst-author {
-  margin-top: 22px;
-}
-
-
-
-/*---------------------------------------
-    10 Contact section              
------------------------------------------*/
-
+.navbar-default .navbar-nav > .active > a:focus{color:#656565;}
+.navbar-default .navbar-toggle{border:none;padding-top:10px;}
+.navbar-default .navbar-toggle{background-color:transparent;}
+.navbar-default .navbar-toggle .icon-bar{background:#000000;border-color:transparent;}
+#home{background:url('../images/johnny-boursiquot-7.png') 50% 0 repeat-y fixed;background-size:cover;background-position:center center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:100vh;position:relative;text-align:center;}
+#home h4{color:#989898;}
+#home strong{color:#e9e9e9;}
+#about{padding-top:100px;}
+.about-image{text-align:center;}
+.about-image img{border-radius:100%;width:350px;height:350px;display:inline-block;}
+.about-thumb{padding:32px 12px;}
+.about-thumb p{padding:2px 0;}
+#latest{border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;}
+.latest-thumb{-webkit-transition:all ease-in-out 0.4s;transition:all ease-in-out 0.4s;}
+.latest-thumb h3{margin-bottom:10px;}
+.latest-thumb .fa{background:#f9f9f9;border-radius:50%;color:#000000;font-size:40px;text-align:center;width:85px;height:85px;line-height:85px;margin-top:15px;margin-bottom:5px;}
+.work-thumb{border-radius:100%;margin:22px 12px;padding:0;overflow:hidden;position:relative;text-align:center;}
+.work-thumb img{border-radius:100%;}
+.work-thumb h2{color:#ffffff;font-size:25px;}
+.work-thumb-overlay{position:absolute;background:rgba(0,0,0,0.5);border-radius:5px;cursor:crosshair;opacity:0;width:100%;height:100%;padding:82px 42px;-webkit-transition:all ease-in-out 0.4s;transition:all ease-in-out 0.4s;}
+.work-thumb:hover .work-thumb-overlay{opacity:1;}
+#testimonial h3{color:#696969;}
+#testimonial .tst-author{margin-top:22px;}
 #contact .text-success,
-#contact .text-danger {
-  display: none;
+#contact .text-danger{display:none;}
+#contact .form-control{border:none;border-bottom:1px solid #e9e9e9;border-radius:0px;box-shadow:none;font-size:18px;margin-top:10px;margin-bottom:10px;-webkit-transition:all ease-in-out 0.4s;transition:all ease-in-out 0.4s;}
+#contact .form-control:focus{border-bottom-color:#999999;}
+#contact input{height:55px;}
+#contact button#cf-submit{background:#000000;border:none;border-radius:50px;color:#ffffff;font-family:'Nunito Sans', sans-serif;height:55px;margin-top:24px;}
+#contact button#cf-submit:hover{background:#2b2b2b;}
+footer{padding:20px 0;}
+footer h4{color:#4eefc3;font-size:23px;}
+footer p{font-size:10px;letter-spacing:2px;text-transform:uppercase;}
+.social-icon{position:relative;padding:0;margin:0;text-align:center;}
+.social-icon li{display:inline-block;list-style:none;}
+.social-icon li a{background:#ffffff;border-radius:100%;color:#000000;cursor:pointer;font-size:17px;text-decoration:none;transition:all 0.4s ease-in-out;width:35px;height:35px;line-height:35px;text-align:center;vertical-align:middle;margin:22px 6px 12px 6px;}
+.social-icon li a:hover{background:#000000;color:#ffffff;transform:scale(1.1);}
+@media (max-width:980px){#home{height:55vh;}
+.latest-thumb{margin-top:12px;margin-bottom:22px;}
 }
-
-#contact .form-control {
-  border: none;
-  border-bottom: 1px solid #e9e9e9;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
+@media (max-width:768px){#home{height:65vh;}
 }
-
-#contact .form-control:focus {
-  border-bottom-color: #999999;
+@media (max-width:580px){h1{font-size:32px;}
+h2, .work-thumb h2{font-size:26px;}
+#home{height:100vh;}
+.about-image img{width:250px;height:250px;}
+#testimonial h3{font-size:16px;}
 }
-
-#contact input {
-  height: 55px;
-}
-
-#contact button#cf-submit {
-  background: #000000;
-  border: none;
-  border-radius: 50px;
-  color: #ffffff;
-  font-family: 'Nunito Sans', sans-serif;
-  height: 55px;
-  margin-top: 24px;
-}
-
-#contact button#cf-submit:hover {
-  background: #2b2b2b;
-}
-
-
-
-/*---------------------------------------
-    11 Footer section              
------------------------------------------*/
-
-footer {
-  padding: 20px 0;
-}
-
-footer h4 {
-  color: #4eefc3;
-  font-size: 23px;
-}
-
-footer p {
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-
-
-/*---------------------------------------
-   12 Social icon             
------------------------------------------*/
-
-.social-icon {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.social-icon li {
-  display: inline-block;
-  list-style: none;
-}
-
-.social-icon li a {
-  background: #ffffff;
-  border-radius: 100%;
-  color: #000000;
-  cursor: pointer;
-  font-size: 17px;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  vertical-align: middle;
-  margin: 22px 6px 12px 6px;
-}
-
-.social-icon li a:hover {
-  background: #000000;
-  color: #ffffff;
-  transform: scale(1.1);
-}
-
-
-
-/*---------------------------------------
-    13 Mobile Responsive styles              
------------------------------------------*/
-
-@media (max-width: 980px) {
-  #home {
-    height: 55vh;
-  }
-
-  .latest-thumb {
-    margin-top: 12px;
-    margin-bottom: 22px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  #home {
-    height: 65vh;
-  }
-}
-
-
-@media (max-width: 580px) {
-  h1 {
-    font-size: 32px;
-  }
-
-  h2, .work-thumb h2 {
-    font-size: 26px;
-  }
-
-  #home {
-    height: 100vh;
-  }
-
-  .about-image img {
-    width: 250px;
-    height: 250px;
-  }
-
-  #testimonial h3 {
-    font-size: 16px;
-  }
-}
-
-
-@media (max-width: 320px) {
-  h1 {
-    font-size: 28px;
-  }
-
-  #home {
-    height: 145vh;
-  }
+@media (max-width:320px){h1{font-size:28px;}
+#home{height:145vh;}
 }
