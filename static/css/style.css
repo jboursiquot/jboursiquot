@@ -46,7 +46,7 @@ footer{text-align:center;}
 .navbar-default .navbar-toggle{border:none;padding-top:10px;}
 .navbar-default .navbar-toggle{background-color:transparent;}
 .navbar-default .navbar-toggle .icon-bar{background:#000000;border-color:transparent;}
-#home{background:url('../images/gophercon2019-welcome.jpeg') 50% 0 repeat-y fixed;background-size:cover;background-position:center center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:100vh;position:relative;text-align:center;}
+#home{background:url('../images/collage.jpg') 50% 0 repeat-y fixed;background-size:cover;background-position:center center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:100vh;position:relative;text-align:center;}
 #home h4{color:#989898;}
 #home strong{color:#e9e9e9;}
 #about{padding-top:100px;}
