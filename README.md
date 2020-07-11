@@ -11,8 +11,6 @@
 * Trainer (Go, serverless, cloud architecture, software engineering)
 * Public Speaker
 
----
-
 ## What I'm up to lately
 
 * Trainer - [Go Next Steps](https://learning.oreilly.com/live-training/courses/go-next-steps/0636920433330) (O'Reilly Media, July 2020)
@@ -24,7 +22,6 @@
 * Trainer - [Serverless Go](https://learning.oreilly.com/live-training/courses/serverless-go/0636920407034/) (O'Reilly Media, May 2020)
 * Panelist - [The Art & Science of Remote Work](https://www.linkedin.com/events/theart-scienceofremotework/)
 * Host - [Go Time Podcast](https://changelog.com/gotime) (2019-Current)
----
 
 ## About me
 
