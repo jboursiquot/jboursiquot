@@ -1,4 +1,4 @@
-![Johnny Boursiquot](./static/images/collage.jpg)
+![Johnny Boursiquot](https://github.com/jboursiquot/jboursiquot/blob/master/static/images/collage.jpg)
 
 # Hi, I'm Johnny.
 
