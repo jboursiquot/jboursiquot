@@ -14,6 +14,7 @@
 ## What I'm up to lately
 
 * Trainer - [Go Next Steps](https://learning.oreilly.com/live-training/courses/go-next-steps/0636920433330) (O'Reilly Media, July 2020)
+* Trainer - Go Foundation @ Cisco Systems (July 2020)
 * Trainer - [Serverless Go](https://t.co/ZN1VkaYPjU?amp=1) (O'Reilly Media, July 2020)
 * Guest on Agency of Record Podcast - [On Developers owning the Experience, not just delivering it](https://aor.maark.com/episode/johnny-boursiquot) (MAARK, July 2020)
 * Guest on InfoQ Podcast - [On Serverless Go and Site Reliability Engineering at Heroku](https://www.infoq.com/podcasts/serverless-go-site-reliability-engineering/) (InfoQ, July 2020)
