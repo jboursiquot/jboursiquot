@@ -3,6 +3,7 @@
 # Hi, I'm Johnny.
 
 * Site Reliability Engineer (SRE) [@Heroku](https://twitter.com/Heroku)
+* CTO [@Skilltype](https://twitter.com/skilltype)
 * [@BaltimoreGolang](https://twitter.com/BaltimoreGolang) Founder/Organizer
 * [@GolangBridge](https://twitter.com/GolangBridge) Core Member
 * [@GoTimeFM](https://twitter.com/GoTimeFM) Host
