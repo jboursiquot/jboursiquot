@@ -14,6 +14,7 @@
 
 ## What I'm up to lately
 
+* Speaker - National Information Standards Organization's [Transforming Search: What the Information Community Can and Should Build](https://www.niso.org/events/2020/08/transforming-search-what-information-community-can-and-should-build) (August, 2020)
 * Trainer - Go Foundation @ Cisco Systems (August 2020)
 * Trainer - [Go Next Steps](https://learning.oreilly.com/live-training/courses/go-next-steps/0636920433330) (O'Reilly Media, July 2020)
 * Trainer - Go Foundation @ Cisco Systems (July 2020)
