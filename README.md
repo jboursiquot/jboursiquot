@@ -56,3 +56,16 @@ Formal education and certifications include:
 * AWS Certified Solutions Architect
 * AWS Certified Developer
 * AWS Certified Cloud Practitioner
+
+## Speaker Bio (Specific to Go community)
+
+Johnny Boursiquot is a multi-disciplined software engineer with over two decades of experience and a love for teaching. His passion for technology is matched only by his devotion to community service. He is a GoBridge Core Member, the founder and organizer of the Baltimore Go User Group, and a previous organizer of both the Boston Ruby User Group and the Boston Go User Group. He stays busy as a speaker, trainer, and diversity advocate within the Go community, as well as a Site Reliability Engineer at Salesforce’s Heroku.
+
+## Speaker Bio (General)
+
+Johnny Boursiquot is a multi-disciplined software engineer with over two decades of experience and a love for teaching and community-building. He stays busy as a trainer, speaker, and diversity advocate within the Go programming language community where he also frequently serves as podcast host, user group organizer, and conference program committee member. He is a Site Reliability Engineer at Salesforce’s Heroku while also leading engineering at a burgeoning startup.
+
+## Headshot
+
+[http://bit.ly/johnny-boursiquot-headshot](http://bit.ly/johnny-boursiquot-headshot)
+
