@@ -14,11 +14,12 @@
 
 ## What I'm up to lately
 
-* Trainer - Go Foundation @ Cisco Systems (September 2020)
+* Trainer - Advanced Go (October 2020)
+* Trainer - Go Foundation (September 2020)
 * Speaker - National Information Standards Organization: [Transforming Search: What the Information Community Can and Should Build](https://www.niso.org/niso-io/2020/09/privacy-and-effective-search-experience-johnny-boursiquot) (August, 2020) | [NISO Newsline](https://nationalinformationstandardsorganization.cmail19.com/t/ViewEmail/j/2F5C83CD4A4E02CD2540EF23F30FEDED/A1281FF9892A439F46778398EADC2510) (September 2020) 
-* Trainer - Go Foundation @ Cisco Systems (August 2020)
+* Trainer - Go Foundation (August 2020)
 * Trainer - [Go Next Steps](https://learning.oreilly.com/live-training/courses/go-next-steps/0636920433330) (O'Reilly Media, July 2020)
-* Trainer - Go Foundation @ Cisco Systems (July 2020)
+* Trainer - Go Foundation (July 2020)
 * Trainer - [Serverless Go](https://t.co/ZN1VkaYPjU?amp=1) (O'Reilly Media, July 2020)
 * Guest on Agency of Record Podcast - [On Developers owning the Experience, not just delivering it](https://aor.maark.com/episode/johnny-boursiquot) (MAARK, July 2020)
 * Guest on InfoQ Podcast - [On Serverless Go and Site Reliability Engineering at Heroku](https://www.infoq.com/podcasts/serverless-go-site-reliability-engineering/) (InfoQ, July 2020)
