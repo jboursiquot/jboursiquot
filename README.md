@@ -14,6 +14,7 @@
 
 ## What I'm up to lately
 
+* Speaker - [Keynote at QCon](https://plus.qconferences.com/plus2020/speakers/johnny-boursiquot) (November 2020)
 * Trainer - Advanced Go (October 2020)
 * Trainer - Go Foundation (September 2020)
 * Speaker - National Information Standards Organization: [Transforming Search: What the Information Community Can and Should Build](https://www.niso.org/niso-io/2020/09/privacy-and-effective-search-experience-johnny-boursiquot) (August, 2020) | [NISO Newsline](https://nationalinformationstandardsorganization.cmail19.com/t/ViewEmail/j/2F5C83CD4A4E02CD2540EF23F30FEDED/A1281FF9892A439F46778398EADC2510) (September 2020) 
