@@ -62,7 +62,7 @@ Formal education and certifications include:
 
 ## Speaker Bio (Specific to Go community)
 
-Johnny Boursiquot is a multi-disciplined software engineer with over two decades of experience and a love for teaching. His passion for technology is matched only by his devotion to community service. He is a GoBridge Core Member, the founder and organizer of the Baltimore Go User Group, and a previous organizer of both the Boston Ruby User Group and the Boston Go User Group. He stays busy as a speaker, trainer, and diversity advocate within the Go community, as well as a Site Reliability Engineer at Salesforce’s Heroku.
+Johnny Boursiquot is a multi-disciplined software engineer with a love for teaching and community-building. He is the founder and organizer of the Baltimore Go User Group and has served as an organizer of both the Boston Ruby User Group and the Boston Go User Group. He stays busy as a speaker, trainer, podcast host, and diversity advocate within the Go community through GoBridge. He is a Site Reliability Engineer at Salesforce’s Heroku while also leading engineering at a burgeoning startup.
 
 ## Speaker Bio (General)
 
