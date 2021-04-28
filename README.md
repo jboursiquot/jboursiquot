@@ -14,16 +14,19 @@
 
 ## What I'm up to lately
 
+* Speaker - [Open Source Software Superstream Series: Go—Generics, Extensibility, and the Future of Go in Open Source Programming](https://www.oreilly.com/attend/open-source-software-superstream-series-gogenerics-extensibility-and-the-future-of-go-in-open-source-programming/0636920053215/0636920053214/) (April 2021)
+* Speaker - [Golang NYC](https://www.meetup.com/golanguagenewyork/events/276460855) - "Unbounded Concurrency" (March 2021) 
+* Speaker - [Lagos Gophers](https://www.meetup.com/GolangNigeria/events/274776873) - "Let's build a port scanner with Go." (January 2021)
 * Speaker - [Keynote at QCon](https://plus.qconferences.com/plus2020/speakers/johnny-boursiquot) (November 2020)
 * Trainer - Advanced Go (October 2020)
 * Trainer - Go Foundation (September 2020)
-* Speaker - National Information Standards Organization: [Transforming Search: What the Information Community Can and Should Build](https://www.niso.org/niso-io/2020/09/privacy-and-effective-search-experience-johnny-boursiquot) (August, 2020) | [NISO Newsline](https://nationalinformationstandardsorganization.cmail19.com/t/ViewEmail/j/2F5C83CD4A4E02CD2540EF23F30FEDED/A1281FF9892A439F46778398EADC2510) (September 2020) 
+* Speaker - National Information Standards Organization. [Transforming Search: What the Information Community Can and Should Build](https://www.niso.org/niso-io/2020/09/privacy-and-effective-search-experience-johnny-boursiquot) (August, 2020) | [NISO Newsline](https://nationalinformationstandardsorganization.cmail19.com/t/ViewEmail/j/2F5C83CD4A4E02CD2540EF23F30FEDED/A1281FF9892A439F46778398EADC2510) (September 2020) 
 * Trainer - Go Foundation (August 2020)
 * Trainer - [Go Next Steps](https://learning.oreilly.com/live-training/courses/go-next-steps/0636920433330) (O'Reilly Media, July 2020)
 * Trainer - Go Foundation (July 2020)
 * Trainer - [Serverless Go](https://t.co/ZN1VkaYPjU?amp=1) (O'Reilly Media, July 2020)
-* Guest on Agency of Record Podcast - [On Developers owning the Experience, not just delivering it](https://aor.maark.com/episode/johnny-boursiquot) (MAARK, July 2020)
-* Guest on InfoQ Podcast - [On Serverless Go and Site Reliability Engineering at Heroku](https://www.infoq.com/podcasts/serverless-go-site-reliability-engineering/) (InfoQ, July 2020)
+* Guest - Agency of Record Podcast - [On Developers owning the Experience, not just delivering it](https://aor.maark.com/episode/johnny-boursiquot) (MAARK, July 2020)
+* Guest - InfoQ Podcast - [On Serverless Go and Site Reliability Engineering at Heroku](https://www.infoq.com/podcasts/serverless-go-site-reliability-engineering/) (InfoQ, July 2020)
 * Speaker - Keynote at [Go Get Community]((https://www.gogetcommunity.com/speakers/johnny-boursiquot/)) Conference (May 2020)
 * Trainer - [Go Next Steps](https://learning.oreilly.com/live-training/courses/go-next-steps/0636920386711/) (O'Reilly Media, May 2020)
 * Trainer - [Serverless Go](https://learning.oreilly.com/live-training/courses/serverless-go/0636920407034/) (O'Reilly Media, May 2020)
