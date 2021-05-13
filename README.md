@@ -69,7 +69,7 @@ Johnny Boursiquot is a multi-disciplined software engineer with a love for teach
 
 ## Speaker Bio (General)
 
-Johnny Boursiquot is a multi-disciplined software engineer with over two decades of experience and a love for teaching and community-building. He stays busy as a trainer, speaker, and diversity advocate within the Go programming language community where he also frequently serves as podcast host, user group organizer, and conference program committee member. He is currently a Site Reliability Engineer at Salesforce’s Heroku.
+Johnny Boursiquot is a multi-disciplined software engineer with over two decades of experience and a love for teaching and community-building. He stays busy as a trainer, speaker, and diversity advocate within the Go programming language community where he also frequently serves as podcast host, user group organizer, and conference program committee member. He is currently a Platform Observability Engineer at Salesforce’s Heroku.
 
 ## Headshot
 
