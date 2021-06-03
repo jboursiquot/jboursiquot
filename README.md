@@ -3,7 +3,7 @@
 # Hi, I'm Johnny.
 
 * Platform Observability Engineer [@Salesforce/Heroku](https://twitter.com/Heroku)
-* Site Reliability Engineer (SRE) [@Salesforce/Heroku](https://twitter.com/Heroku)
+* (Formerly) Site Reliability Engineer (SRE) [@Salesforce/Heroku](https://twitter.com/Heroku)
 * Chief Technical Advisor [@Skilltype](https://twitter.com/skilltype)
 * [@BaltimoreGolang](https://twitter.com/BaltimoreGolang) Founder/Organizer
 * [@GolangBridge](https://twitter.com/GolangBridge) Core Member
