@@ -15,6 +15,8 @@
 
 ## What I'm up to lately
 
+* Speaker - [Craft Conference](https://craft-conf.com/speaker/JohnnyBoursiquot) (June 2021)
+* Trainer - [GopherCon EU](https://gophercon.eu/) - Practical Go Workshop (May 2021)
 * Speaker - [Open Source Software Superstream Series: Go—Generics, Extensibility, and the Future of Go in Open Source Programming](https://www.oreilly.com/attend/open-source-software-superstream-series-gogenerics-extensibility-and-the-future-of-go-in-open-source-programming/0636920053215/0636920053214/) (April 2021)
 * Speaker - [Golang NYC](https://www.meetup.com/golanguagenewyork/events/276460855) - "Unbounded Concurrency" (March 2021) 
 * Speaker - [Lagos Gophers](https://www.meetup.com/GolangNigeria/events/274776873) - "Let's build a port scanner with Go." (January 2021)
