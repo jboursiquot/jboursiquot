@@ -2,9 +2,9 @@
 
 # Hi, I'm Johnny.
 
+* Chief Technnology Officer [@Skilltype](https://twitter.com/skilltype)
 * Platform Observability Engineer [@Salesforce/Heroku](https://twitter.com/Heroku)
 * (Formerly) Site Reliability Engineer (SRE) [@Salesforce/Heroku](https://twitter.com/Heroku)
-* Chief Technical Advisor [@Skilltype](https://twitter.com/skilltype)
 * [@BaltimoreGolang](https://twitter.com/BaltimoreGolang) Founder/Organizer
 * [@GolangBridge](https://twitter.com/GolangBridge) Core Member
 * [@GoTimeFM](https://twitter.com/GoTimeFM) Host
