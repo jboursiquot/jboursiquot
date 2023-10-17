@@ -66,11 +66,11 @@ Formal education and certifications include:
 
 ## Speaker Bio (Specific to Go community)
 
-Johnny Boursiquot is a multi-disciplined software engineer with a love for teaching and community-building. He is the founder and organizer of the Baltimore Go User Group and has served as an organizer of both the Boston Ruby User Group and the Boston Go User Group. He stays busy as a speaker, trainer, podcast host, and advocate within the Go community. His Go trainings are available on various platforms, including O'Reilly, LinkedIn Learning, and Packt. He is currently the Chief Technology Officer at [Skilltype](https://www.skilltype.com).
+Johnny Boursiquot is a multi-disciplined software engineer with a love for teaching and community-building. He is the founder and organizer of the Baltimore Go User Group and has served as an organizer of both the Boston Ruby User Group and the Boston Go User Group. He stays busy as a speaker, trainer, podcast host, and advocate within the Go community. His trainings are available on various platforms, including O'Reilly, LinkedIn Learning, and Packt. He is currently the Chief Technology Officer at [Skilltype](https://www.skilltype.com).
 
 ## Speaker Bio (General)
 
-Johnny Boursiquot is a multi-disciplined software engineer with over two decades of experience and a love for teaching and community-building. He stays busy as a trainer, speaker, and advocate within the Go programming language community where he also frequently serves as podcast host, user group organizer, and conference program committee member. His Go trainings are available on various platforms, including O'Reilly, LinkedIn Learning, and Packt. He is currently the Chief Technology Officer at [Skilltype](https://www.skilltype.com).
+Johnny Boursiquot is a multi-disciplined software engineer with over two decades of experience and a love for teaching and community-building. He stays busy as a trainer, speaker, and advocate within the Go programming language community where he also frequently serves as podcast host, user group organizer, and conference program chair. His trainings are available on various platforms, including O'Reilly, LinkedIn Learning, and Packt. He is currently the Chief Technology Officer at [Skilltype](https://www.skilltype.com).
 
 ## Headshot
 
