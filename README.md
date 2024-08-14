@@ -78,4 +78,4 @@ Johnny Boursiquot is a multi-disciplined software engineer with over two decades
 
 ## Resume
 
-[Download PDF](https://github.com/jboursiquot/jboursiquot/blob/master/content/JohnnyBoursiquot.pdf)
+[PDF](https://github.com/jboursiquot/jboursiquot/blob/master/content/JohnnyBoursiquot.pdf)
