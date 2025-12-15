@@ -8,7 +8,7 @@
 * [@GoTimeFM](https://twitter.com/GoTimeFM) Host
 * [@GoStdLibSol](https://twitter.com/GoStdLibSol) Author
 * [@GopherCon](https://twitter.com/gophercon) Program Commitee
-* Trainer (Go, serverless, cloud architecture, software engineering)
+* Trainer (Go, serverless, cloud architecture, software engineering, ai)
 * Public Speaker
 
 ## What I'm up to lately
