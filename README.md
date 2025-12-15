@@ -75,7 +75,3 @@ Johnny Boursiquot is a multi-disciplined software engineer with over two decades
 ## Headshot
 
 [http://bit.ly/johnny-boursiquot-headshot](http://bit.ly/johnny-boursiquot-headshot)
-
-## Resume
-
-[PDF](https://github.com/jboursiquot/jboursiquot/blob/master/content/JohnnyBoursiquot.pdf)
