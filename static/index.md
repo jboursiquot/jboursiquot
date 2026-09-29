@@ -167,6 +167,7 @@ Most recent first, with length of each role. Some roles overlapped.
 ### AI
 
 - Production AI features: Human Agency, Skilltype
+- AI agents: Human Agency, Skilltype
 - RAG: Skilltype
 - Tool calling: Skilltype
 - MCP: Skilltype
@@ -174,7 +175,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - Anthropic: Skilltype
 - OpenAI: Skilltype
 - AI-assisted workflows: Human Agency
-- AI-assisted development: Human Agency, Skilltype
+- AI-assisted development: Human Agency, Chick-fil-A, Skilltype
 
 ### Security & Compliance
 

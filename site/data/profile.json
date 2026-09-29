@@ -1102,6 +1102,14 @@
           ]
         },
         {
+          "name": "AI agents",
+          "roles": [
+            "skilltype",
+            "humanagency"
+          ],
+          "inferred": []
+        },
+        {
           "name": "RAG",
           "roles": [
             "skilltype"
@@ -1154,11 +1162,10 @@
           "name": "AI-assisted development",
           "roles": [
             "skilltype",
-            "humanagency"
+            "humanagency",
+            "cfa"
           ],
-          "inferred": [
-            "humanagency"
-          ]
+          "inferred": []
         }
       ]
     },
