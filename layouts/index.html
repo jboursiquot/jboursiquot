@@ -359,9 +359,11 @@ ol.log time, ol.log span { color: var(--muted); }
 .orbit { margin-top: 36px; }
 .orbit-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .orbit-chips button { font: inherit; font-size: 14px; font-weight: 500; padding: 7px 14px; border-radius: 999px; cursor: pointer;
-  color: var(--ink); background: var(--card); border: 1px solid var(--line); transition: background .2s, color .2s, border-color .2s; }
+  color: var(--ink); background: var(--card); border: 1px solid var(--line); transition: background .2s, color .2s, border-color .2s, opacity .2s; }
 .orbit-chips button:hover { border-color: var(--indigo-fill); }
 .orbit-chips button[aria-pressed="true"] { background: var(--indigo-fill); border-color: var(--indigo-fill); color: #fff; }
+.orbit-chips.skill button:not(.lit) { opacity: .4; }
+.orbit-chips button.lit:not([aria-pressed="true"]) { background: var(--indigo-soft); border-color: var(--indigo-fill); color: var(--indigo); }
 .orbit-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 28px; align-items: stretch; }
 .orbit-chart { background: var(--card); border-radius: 28px; padding: 16px; box-shadow: var(--shadow); display: flex; align-items: center; }
 .orbit-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
@@ -733,7 +735,7 @@ ul.highlights + p.keynotes + .oss-h, ol.recent + .oss-h { margin-top: 56px; }
   var svg = document.getElementById("orbit");
   var NS = "http://www.w3.org/2000/svg", TAU = Math.PI * 2;
   var panels = [].slice.call(root.querySelectorAll(".orbit-panel .rd"));
-  var chips = [].slice.call(root.querySelectorAll(".orbit-chips button"));
+  var chipRow = root.querySelector(".orbit-chips"), chips = [].slice.call(chipRow.querySelectorAll("button"));
   var orgName = {};
   data.orgs.forEach(function (o) { orgName[o.id] = o.name; });
 
@@ -810,6 +812,8 @@ ul.highlights + p.keynotes + .oss-h, ol.recent + .oss-h { margin-top: 56px; }
   function clearMarks() {
     labels.forEach(function (l) { l.classList.remove("on"); });
     spokes.forEach(function (l) { l.classList.remove("on"); });
+    chipRow.classList.remove("skill");
+    chips.forEach(function (b) { b.classList.remove("lit"); });
   }
   function center() {
     if (org) {
@@ -829,6 +833,9 @@ ul.highlights + p.keynotes + .oss-h, ol.recent + .oss-h { margin-top: 56px; }
     clearMarks();
     lab.classList.add("on");
     line.classList.add("on");
+    // Light the chips for the organizations that used this skill, and dim the rest.
+    chipRow.classList.add("skill");
+    chips.forEach(function (b) { b.classList.toggle("lit", s.roles.indexOf(b.getAttribute("data-org")) >= 0); });
     var p = root.querySelector(".rd-skill");
     p.querySelector("h3").textContent = s.name;
     p.querySelector(".rd-meta").textContent = c.name + ", used at " + s.roles.length + (s.roles.length === 1 ? " organization" : " organizations");

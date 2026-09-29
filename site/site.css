@@ -272,9 +272,11 @@ ol.log time, ol.log span { color: var(--muted); }
 .orbit { margin-top: 36px; }
 .orbit-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .orbit-chips button { font: inherit; font-size: 14px; font-weight: 500; padding: 7px 14px; border-radius: 999px; cursor: pointer;
-  color: var(--ink); background: var(--card); border: 1px solid var(--line); transition: background .2s, color .2s, border-color .2s; }
+  color: var(--ink); background: var(--card); border: 1px solid var(--line); transition: background .2s, color .2s, border-color .2s, opacity .2s; }
 .orbit-chips button:hover { border-color: var(--indigo-fill); }
 .orbit-chips button[aria-pressed="true"] { background: var(--indigo-fill); border-color: var(--indigo-fill); color: #fff; }
+.orbit-chips.skill button:not(.lit) { opacity: .4; }
+.orbit-chips button.lit:not([aria-pressed="true"]) { background: var(--indigo-soft); border-color: var(--indigo-fill); color: var(--indigo); }
 .orbit-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 28px; align-items: stretch; }
 .orbit-chart { background: var(--card); border-radius: 28px; padding: 16px; box-shadow: var(--shadow); display: flex; align-items: center; }
 .orbit-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
