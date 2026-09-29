@@ -1,60 +1,51 @@
 (function () {
   var root = document.documentElement;
   var hero = document.querySelector(".hero");
-  var me = document.querySelector(".hero .me, .hero .portrait img");
+  var me = document.querySelector(".hero .portrait img");
 
   // Entrance: start once the portrait has decoded so the sequence plays as one piece.
   function go() { requestAnimationFrame(function () { root.classList.add("ready"); }); }
   if (!me || me.complete) { go(); } else { me.addEventListener("load", go); me.addEventListener("error", go); }
   setTimeout(go, 1500);
 
-  // Orbit: on wide screens, place the capability bubbles on an ellipse around the portrait,
-  // clockwise from just clear of the name card, over the top, and down the right side.
-  var portrait = hero.querySelector(".portrait");
-  var ORBIT = ["o6", "o8", "o1", "o7", "o4", "o3", "o2", "o5"];
-  var cards = [].slice.call(hero.querySelectorAll(".card"));
-  function box(e) { return { l: e.offsetLeft, t: e.offsetTop, r: e.offsetLeft + e.offsetWidth, b: e.offsetTop + e.offsetHeight }; }
-  function overlaps(a, b) { return a.l < b.r && b.l < a.r && a.t < b.b && b.t < a.b; }
-  function layoutOrbit() {
-    var orbs = ORBIT.map(function (k) { return hero.querySelector(".orb." + k); }).filter(Boolean);
-    if (!portrait || window.innerWidth <= 900) {
-      orbs.forEach(function (o) { o.style.left = o.style.top = o.style.right = ""; });
-      return;
+  // Capabilities: on wide screens they sit on an arc concentric with the portrait, in evenly spaced
+  // rows, with a faint rail drawn along the arc. At 900px and below they fall back to a plain list.
+  var stage = hero.querySelector(".hero-stage");
+  var portrait = stage.querySelector(".portrait"), rail = stage.querySelector(".hero-rail");
+  var orbs = [].slice.call(stage.querySelectorAll(".fan-orb"));
+  var SPAN = 64 * Math.PI / 180, railDrawn = false;
+  var motion = window.matchMedia("(prefers-reduced-motion: no-preference)");
+  function layoutFan() {
+    rail.textContent = "";
+    if (window.innerWidth <= 900) { hero.classList.add("fanned"); return; }
+    var W = stage.clientWidth, H = stage.clientHeight, pr = portrait.offsetWidth / 2;
+    var cx = portrait.offsetLeft + pr, cy = H / 2, ball = orbs[0].querySelector(".fan-ball").offsetWidth, n = orbs.length;
+    var labelW = Math.max.apply(null, orbs.map(function (o) { return o.querySelector(".fan-lbl").offsetWidth; }));
+    // Largest radius that keeps the widest label inside the stage and the arc inside its height.
+    var byW = (W - cx - ball / 2 - 14 - labelW) / Math.cos(Math.asin(Math.sin(SPAN) / (n - 1)));
+    var byH = (H / 2 - ball / 2 - 4) / Math.sin(SPAN);
+    var R = Math.max(pr + 70, Math.min(pr + 150, byW, byH)), ym = R * Math.sin(SPAN);
+    orbs.forEach(function (o, i) {
+      var a = Math.asin((-ym + i * (2 * ym / (n - 1))) / R);
+      o.parentNode.style.transform = "translate(" + (cx + R * Math.cos(a) - ball / 2) + "px," + (cy + R * Math.sin(a) - o.offsetHeight / 2) + "px)";
+    });
+    var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", "M" + (cx + R * Math.cos(SPAN)) + "," + (cy - ym) + " A" + R + "," + R + " 0 0 1 " + (cx + R * Math.cos(SPAN)) + "," + (cy + ym));
+    rail.appendChild(path);
+    if (!railDrawn && motion.matches) {
+      var L = path.getTotalLength();
+      path.style.strokeDasharray = L; path.style.strokeDashoffset = L;
+      path.getBoundingClientRect();
+      path.style.transition = "stroke-dashoffset 1s cubic-bezier(.3, .7, .2, 1) .5s";
+      path.style.strokeDashoffset = 0;
+      orbs.forEach(function (o, i) { o.style.transitionDelay = (0.7 + i * 0.07) + "s"; });
+      setTimeout(function () { orbs.forEach(function (o) { o.style.transitionDelay = ""; }); }, 2200);
     }
-    var cx = portrait.offsetLeft, cy = portrait.offsetTop, pr = portrait.offsetWidth / 2;
-    var rx = pr + 150, ry = pr + 100, rad = Math.PI / 180;
-    function place(o, a) {
-      var ball = o.querySelector(".ball").offsetHeight;
-      o.style.right = "auto";
-      o.style.left = (cx + rx * Math.sin(a) - o.offsetWidth / 2) + "px";
-      o.style.top = (cy - ry * Math.cos(a) - ball / 2) + "px";
-    }
-    function clearOfCards(o) { return !cards.some(function (c) { return overlaps(box(o), box(c)); }); }
-    var start = 0, end = 150 * rad, deg;
-    for (deg = -40; deg <= 10; deg += 2) { start = deg * rad; place(orbs[0], start); if (clearOfCards(orbs[0])) break; }
-    for (deg = 150; deg >= 110; deg -= 2) {
-      end = deg * rad; place(orbs[orbs.length - 1], end);
-      if (box(orbs[orbs.length - 1]).b <= hero.clientHeight - 8) break;
-    }
-    var step = (end - start) / (orbs.length - 1);
-    orbs.forEach(function (o, i) { place(o, start + i * step); });
+    railDrawn = true;
+    hero.classList.add("fanned");
   }
-  layoutOrbit();
-  window.addEventListener("resize", layoutOrbit);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutOrbit);
-
-  // Pointer parallax on the floating cards and orbs (fine pointers, motion allowed, wide screens only).
-  var motionOK = window.matchMedia("(prefers-reduced-motion: no-preference) and (pointer: fine) and (min-width: 901px)");
-  hero.querySelectorAll("[data-depth]").forEach(function (el) { el.style.setProperty("--d", el.dataset.depth); });
-  hero.addEventListener("pointermove", function (e) {
-    if (!motionOK.matches) return;
-    var r = hero.getBoundingClientRect();
-    hero.style.setProperty("--px", ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
-    hero.style.setProperty("--py", ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
-  });
-  hero.addEventListener("pointerleave", function () {
-    hero.style.setProperty("--px", 0); hero.style.setProperty("--py", 0);
-  });
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(function () { requestAnimationFrame(layoutFan); });
+  window.addEventListener("resize", layoutFan);
 
   // Section dots and header links follow the section in view. A section is
   // current once its top passes a line just below the sticky header. The hero

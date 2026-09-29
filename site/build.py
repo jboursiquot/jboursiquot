@@ -153,11 +153,10 @@ def page():
     xurl = next(l["url"] for l in P["links"] if l["name"] == "X")
     caps = {c["id"]: c for c in P["capabilities"]}
 
-    def orb(cid, cls, label=None):
-        c = caps[cid]
-        depth = {"o1": 18, "o2": 10, "o3": 24, "o4": 14, "o5": 16, "o6": 20, "o7": 12, "o8": 22}[cls]
-        return (f'<a class="orb {cls}" href="#cap-{cid}" data-depth="{depth}">'
-                f'<span class="ball">{icon(c["icon"], 26)}</span><span class="lbl">{E(label or c["name"])}</span></a>')
+    fan = "".join(
+        f'<li><a class="fan-orb" href="#cap-{c}"><span class="fan-ball">{icon(caps[c]["icon"], 24)}</span>'
+        f'<span class="fan-lbl"><b>{E(caps[c]["name"])}</b><small>{E(caps[c]["short"])}</small></span></a></li>'
+        for c in ["ai", "dist", "cloud", "sre", "sec", "fullstack", "product", "lead"])
 
     orgs = [x for x in P["experience"] if x["id"] != "earlier"]
     orgs_az = sorted(orgs, key=lambda x: x["org"].lower())
@@ -241,25 +240,21 @@ def page():
 </header>
 <main id="main">
 <section class="hero" id="top">
-
-  <div class="disc" aria-hidden="true"></div>
-  <figure class="portrait"><img src="{D}johnny-headshot-round.jpg" alt="Johnny Boursiquot smiling, in glasses, a striped collar, and a navy sweater" width="1200" height="1200"></figure>
-  <div class="card name" data-depth="8">
-    <p class="hello">Hello, I'm</p>
-    <h1>Johnny Boursiquot</h1>
+  <div class="hero-cards">
+    <div class="hero-card name">
+      <p class="hello">Hello, I'm</p>
+      <h1>Johnny Boursiquot</h1>
+    </div>
+    <div class="hero-card role">
+      <p><strong>Experienced software engineer and professional maker</strong></p>
+      <p>Over two decades of building software</p>
+    </div>
   </div>
-  <div class="card role" data-depth="12">
-    <p><strong>Experienced software engineer and professional maker</strong></p>
-    <p>Over two decades of building software</p>
+  <div class="hero-stage">
+    <svg class="hero-rail" aria-hidden="true"></svg>
+    <figure class="portrait"><img src="{D}johnny-headshot-round.jpg" alt="Johnny Boursiquot smiling, in glasses, a striped collar, and a navy sweater" width="1200" height="1200"></figure>
+    <ul class="fan" aria-label="Capabilities">{fan}</ul>
   </div>
-  {orb("ai", "o1")}
-  <a class="orb o4" href="#cap-dist" data-depth="14"><span class="ball">{icon("nodes", 26)}</span><span class="lbl">Distributed Systems</span></a>
-  {orb("sre", "o2")}
-  {orb("cloud", "o3")}
-  {orb("sec", "o5")}
-  {orb("lead", "o6")}
-  {orb("fullstack", "o7")}
-  {orb("product", "o8")}
 </section>
 <nav class="dots" aria-label="Page sections">
   <a href="#top" aria-label="Top" class="on"></a><a href="#about" aria-label="About"></a><a href="#experience" aria-label="Experience"></a><a href="#capabilities" aria-label="Capabilities"></a><a href="#photos" aria-label="On Stage"></a><a href="#works" aria-label="Works"></a><a href="#contact" aria-label="Contact"></a>
