@@ -6,7 +6,7 @@ Last updated: 2026-09-28. Contact: message on LinkedIn (https://www.linkedin.com
 
 ## Facts
 
-- Roles, most recent first, with length: Director of Technology, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Contract engineer, Rocket Farm (4 mos); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, The Achievement Network (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
+- Roles, most recent first, with length: Director of Technology, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Contract engineer, Rocket Farm (4 mos); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, ANet (The Achievement Network) (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
 - Founder of Idiomat LLC, a software engineering training and consulting company (https://idiomat.co/).
 - Software engineer for over two decades; earlier roles before MAARK are not listed.
 - GopherCon: program chair; workshop instructor at GopherCon US, EU, and Singapore (most recently August 2026); closing keynotes 2019 and 2021; emcee 2024 and 2026.
@@ -70,7 +70,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - Served as incident commander during major production incidents, coordinating mitigation and communication.
 - Helped Salesforce engineering teams adopt Heroku, and mentored engineers in Go, cloud infrastructure, and distributed systems.
 
-### The Achievement Network: Principal Cloud Engineer (2 yrs 10 mos)
+### ANet (The Achievement Network): Principal Cloud Engineer (2 yrs 10 mos)
 
 - Led backend engineering and AWS modernization for an education SaaS product.
 - Built CI/CD pipelines and deployment automation on AWS, and designed backend services and APIs.
@@ -105,12 +105,12 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Languages
 
-- Go: Chick-fil-A, Rocket Farm, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData
-- Java: Skilltype, The Achievement Network
+- Go: Chick-fil-A, Rocket Farm, Salesforce, Skilltype, Heroku, ANet (The Achievement Network), InfluxData
+- Java: Skilltype, ANet (The Achievement Network)
 - TypeScript: Skilltype
 - JavaScript: Skilltype, MAARK
 - Python: Human Agency, Skilltype
-- SQL: Skilltype, The Achievement Network, One Door, MAARK
+- SQL: Skilltype, ANet (The Achievement Network), One Door, MAARK
 - Ruby on Rails: Heroku, One Door, Launch Academy
 - HTML and CSS: Skilltype, MAARK
 
@@ -128,34 +128,34 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Cloud & Delivery
 
-- AWS: Human Agency, Chick-fil-A, Rocket Farm, Skilltype, The Achievement Network
-- Lambda: Rocket Farm, Skilltype, The Achievement Network
+- AWS: Human Agency, Chick-fil-A, Rocket Farm, Skilltype, ANet (The Achievement Network)
+- Lambda: Rocket Farm, Skilltype, ANet (The Achievement Network)
 - ECS Fargate: Skilltype
-- SQS and SNS: Rocket Farm, Skilltype, The Achievement Network
-- Docker: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData
+- SQS and SNS: Rocket Farm, Skilltype, ANet (The Achievement Network)
+- Docker: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, ANet (The Achievement Network), InfluxData
 - Kubernetes: Chick-fil-A, Salesforce, Heroku
-- CI/CD: Human Agency, Rocket Farm, Skilltype, The Achievement Network
-- Deployment automation: Rocket Farm, Heroku, The Achievement Network
+- CI/CD: Human Agency, Rocket Farm, Skilltype, ANet (The Achievement Network)
+- Deployment automation: Rocket Farm, Heroku, ANet (The Achievement Network)
 - CloudFormation and SAM: Rocket Farm
 - Heroku platform: Salesforce, Heroku
 
 ### Architecture & APIs
 
-- Architecture: Chick-fil-A, Rocket Farm, Skilltype, The Achievement Network, One Door, MAARK
-- API design: Rocket Farm, Skilltype, The Achievement Network, One Door, MAARK
-- Backend services: Rocket Farm, Skilltype, Heroku, The Achievement Network, InfluxData, MAARK, One Door
+- Architecture: Chick-fil-A, Rocket Farm, Skilltype, ANet (The Achievement Network), One Door, MAARK
+- API design: Rocket Farm, Skilltype, ANet (The Achievement Network), One Door, MAARK
+- Backend services: Rocket Farm, Skilltype, Heroku, ANet (The Achievement Network), InfluxData, MAARK, One Door
 - Distributed systems: Chick-fil-A, Rocket Farm, Salesforce, Heroku, InfluxData
-- Event-driven design: Chick-fil-A, Rocket Farm, Skilltype, The Achievement Network
+- Event-driven design: Chick-fil-A, Rocket Farm, Skilltype, ANet (The Achievement Network)
 - Caching strategy: Chick-fil-A
 - Data integrations: Skilltype, MAARK
-- Messaging: Rocket Farm, The Achievement Network, One Door
+- Messaging: Rocket Farm, ANet (The Achievement Network), One Door
 - AWS IoT and MQTT: Rocket Farm
 - OTA firmware updates: Rocket Farm
 
 ### Data
 
-- PostgreSQL: Skilltype, Heroku, The Achievement Network, One Door
-- DynamoDB: Chick-fil-A, Rocket Farm, Skilltype, The Achievement Network
+- PostgreSQL: Skilltype, Heroku, ANet (The Achievement Network), One Door
+- DynamoDB: Chick-fil-A, Rocket Farm, Skilltype, ANet (The Achievement Network)
 - Redis: Chick-fil-A, Skilltype, Heroku, One Door
 - MySQL: One Door
 - Oracle Database: MAARK
@@ -203,7 +203,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - Engineering leadership: Human Agency, Chick-fil-A, Salesforce, Skilltype, MAARK, One Door
 - Hiring: Chick-fil-A, Skilltype, MAARK
 - Mentoring: Salesforce, Skilltype, Heroku, Launch Academy
-- Design and code review: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData, One Door, Launch Academy, MAARK
+- Design and code review: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, ANet (The Achievement Network), InfluxData, One Door, Launch Academy, MAARK
 - Product direction: Human Agency, Skilltype, MAARK
 - Program leadership: Chick-fil-A
 - Cross-functional delivery: Chick-fil-A, Heroku, MAARK
@@ -220,7 +220,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - Loyalty and retail: Chick-fil-A, One Door
 - Talent management: Skilltype
 - Connected devices: Rocket Farm
-- Education: The Achievement Network, Launch Academy
+- Education: ANet (The Achievement Network), Launch Academy
 - Developer platforms: Salesforce, Heroku
 - Payments: MAARK
 

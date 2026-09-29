@@ -346,7 +346,7 @@ def page():
 
 def facts():
     return [
-        "Roles, most recent first, with length: " + "; ".join(f"{x['role']}, {x['org']}" + (f" via {x['via']}" if x.get('via') else "") + (f" ({span_of(x)})" if span_of(x) else "") for x in P["experience"] if x["url"]) + ".",
+        "Roles, most recent first, with length: " + "; ".join(f"{x['role']}, {x.get('org_full', x['org'])}" + (f" via {x['via']}" if x.get('via') else "") + (f" ({span_of(x)})" if span_of(x) else "") for x in P["experience"] if x["url"]) + ".",
         "Founder of Idiomat LLC, a software engineering training and consulting company (https://idiomat.co/).",
         "Software engineer for over two decades; earlier roles before MAARK are not listed.",
         "GopherCon: program chair; workshop instructor at GopherCon US, EU, and Singapore (most recently August 2026); closing keynotes 2019 and 2021; emcee 2024 and 2026.",
@@ -367,7 +367,7 @@ def llms_txt():
           f"- [Full profile]({SITE}index.md): bios, work history, stack, training catalog, and the complete engagement archive in Markdown",
           f"- [Website]({SITE}): the same content as HTML", ""]
     L += ["## Experience", ""]
-    L += [f"- [{x['org']}]({x['url'] or SITE}): {x['role']}" + (f", {span_of(x)}" if span_of(x) else "") + f". {x['what']}" for x in P["experience"]]
+    L += [f"- [{x.get('org_full', x['org'])}]({x['url'] or SITE}): {x['role']}" + (f", {span_of(x)}" if span_of(x) else "") + f". {x['what']}" for x in P["experience"]]
     L += ["", "## Workshops and courses", ""]
     L += [f"- [{w['title']}]({w['url'] or SITE + 'index.md#workshops'}): {w['length']}; for: {w['audience']}; last delivered {w['last']}"
           for w in P["workshops"]]
@@ -393,7 +393,7 @@ def index_md():
     L += ["", "## Work history", "", "Most recent first, with length of each role. Some roles overlapped.", ""]
     dmap = {d["id"]: d["name"] for d in P["domains"]}
     for x in P["experience"]:
-        L += [f"### {x['org']}" + (f" (via {x['via']})" if x.get("via") else "") + f": {x['role']}" + (f" ({span_of(x)})" if span_of(x) else ""), ""] + [f"- {b}" for b in x["bullets"]]
+        L += [f"### {x.get('org_full', x['org'])}" + (f" (via {x['via']})" if x.get("via") else "") + f": {x['role']}" + (f" ({span_of(x)})" if span_of(x) else ""), ""] + [f"- {b}" for b in x["bullets"]]
         if x["tech"]:
             L += [f"- Technologies: {x['tech']}"]
         L += [""]
@@ -401,7 +401,7 @@ def index_md():
     rm = {x["id"]: x for x in P["experience"]}
     for cat in P["skillmap"]:
         L += [f"### {cat['name']}", ""]
-        L += [f"- {sk['name']}: " + ", ".join(rm[r]["org"] for r in sorted(sk["roles"], key=lambda r: rm[r]["start"], reverse=True)) for sk in cat["skills"]]
+        L += [f"- {sk['name']}: " + ", ".join(rm[r].get("org_full", rm[r]["org"]) for r in sorted(sk["roles"], key=lambda r: rm[r]["start"], reverse=True)) for sk in cat["skills"]]
         L += [""]
     L += ["## Stack", ""]
     L += [f"- {s['area']}: {s['items']}" for s in P["stack"]]

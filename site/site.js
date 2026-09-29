@@ -132,14 +132,26 @@
   var rank = data.orgs.map(function (o) { return o.id; }).sort(function (a, b) { return breadth[b] - breadth[a]; });
 
   var dots = [], labels = [], spokes = [], acc = 0, n = 0;
+  var defs = el("defs", {});
+  svg.appendChild(defs);
   data.cats.forEach(function (c, ci) {
     var span = c.skills.length / total * TAU, a0 = acc, mid = a0 + span / 2;
     acc += span;
     svg.appendChild(el("path", { "class": "o-cat", d: arc(96, 146, a0 + 0.01, a0 + span - 0.01), style: "opacity:" + (ci % 2 ? 0.78 : 1) }));
-    if (span > 0.36) {
-      var lp = pol(121, mid), t = el("text", { "class": "o-cat-lab", x: lp[0], y: lp[1] + 3.5 });
-      t.textContent = c.short;
+    // Label follows the ring. Bottom-half labels run the other way so they read upright.
+    {
+      var lower = mid > Math.PI / 2 && mid < Math.PI * 1.5;
+      var s0 = pol(121, lower ? a0 + span : a0), s1 = pol(121, lower ? a0 : a0 + span);
+      var guide = el("path", { id: "o-lab-" + ci, d: "M" + s0 + " A121,121 0 " + (span > Math.PI ? 1 : 0) + " " + (lower ? 0 : 1) + " " + s1 });
+      defs.appendChild(guide);
+      var t = el("text", { "class": "o-cat-lab", dy: 3.5 });
+      var tp = el("textPath", { href: "#o-lab-" + ci, startOffset: "50%" });
+      tp.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#o-lab-" + ci);
+      tp.textContent = c.short;
+      t.appendChild(tp);
       svg.appendChild(t);
+      // Keep only labels that fit their arc with a little breathing room.
+      if (t.getComputedTextLength() > span * 121 - 6) svg.removeChild(t);
     }
     c.skills.forEach(function (s, si) {
       var m = a0 + (si + 0.5) * span / c.skills.length, roles = s.roles.slice().sort(function (a, b) { return rank.indexOf(a) - rank.indexOf(b); });
