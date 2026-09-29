@@ -892,7 +892,8 @@
             "skilltype",
             "anet",
             "influx",
-            "maark"
+            "maark",
+            "onedoor"
           ],
           "inferred": []
         },
@@ -950,7 +951,8 @@
           "name": "PostgreSQL",
           "roles": [
             "skilltype",
-            "anet"
+            "anet",
+            "onedoor"
           ],
           "inferred": []
         },
@@ -967,7 +969,8 @@
           "name": "Redis",
           "roles": [
             "cfa",
-            "skilltype"
+            "skilltype",
+            "onedoor"
           ],
           "inferred": [
             "cfa",

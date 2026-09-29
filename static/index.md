@@ -134,7 +134,7 @@ Most recent first, with length of each role. Some roles overlapped.
 
 - Architecture: Chick-fil-A, Skilltype, The Achievement Network, One Door, MAARK
 - API design: Skilltype, The Achievement Network, One Door, MAARK
-- Backend services: Skilltype, The Achievement Network, InfluxData, MAARK
+- Backend services: Skilltype, The Achievement Network, InfluxData, MAARK, One Door
 - Distributed systems: Chick-fil-A, Salesforce, Heroku, InfluxData
 - Event-driven design: Chick-fil-A, Skilltype, The Achievement Network
 - Caching strategy: Chick-fil-A
@@ -143,9 +143,9 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Data
 
-- PostgreSQL: Skilltype, The Achievement Network
+- PostgreSQL: Skilltype, The Achievement Network, One Door
 - DynamoDB: Chick-fil-A, Skilltype, The Achievement Network
-- Redis: Chick-fil-A, Skilltype
+- Redis: Chick-fil-A, Skilltype, One Door
 - MySQL: One Door
 - Oracle Database: MAARK
 - RabbitMQ: One Door
