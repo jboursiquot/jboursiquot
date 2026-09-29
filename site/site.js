@@ -8,6 +8,41 @@
   if (!me || me.complete) { go(); } else { me.addEventListener("load", go); me.addEventListener("error", go); }
   setTimeout(go, 1500);
 
+  // Orbit: on wide screens, place the capability bubbles on an ellipse around the portrait,
+  // clockwise from just clear of the name card, over the top, and down the right side.
+  var portrait = hero.querySelector(".portrait");
+  var ORBIT = ["o6", "o8", "o1", "o7", "o4", "o3", "o2", "o5"];
+  var cards = [].slice.call(hero.querySelectorAll(".card"));
+  function box(e) { return { l: e.offsetLeft, t: e.offsetTop, r: e.offsetLeft + e.offsetWidth, b: e.offsetTop + e.offsetHeight }; }
+  function overlaps(a, b) { return a.l < b.r && b.l < a.r && a.t < b.b && b.t < a.b; }
+  function layoutOrbit() {
+    var orbs = ORBIT.map(function (k) { return hero.querySelector(".orb." + k); }).filter(Boolean);
+    if (!portrait || window.innerWidth <= 900) {
+      orbs.forEach(function (o) { o.style.left = o.style.top = o.style.right = ""; });
+      return;
+    }
+    var cx = portrait.offsetLeft, cy = portrait.offsetTop, pr = portrait.offsetWidth / 2;
+    var rx = pr + 150, ry = pr + 100, rad = Math.PI / 180;
+    function place(o, a) {
+      var ball = o.querySelector(".ball").offsetHeight;
+      o.style.right = "auto";
+      o.style.left = (cx + rx * Math.sin(a) - o.offsetWidth / 2) + "px";
+      o.style.top = (cy - ry * Math.cos(a) - ball / 2) + "px";
+    }
+    function clearOfCards(o) { return !cards.some(function (c) { return overlaps(box(o), box(c)); }); }
+    var start = 0, end = 150 * rad, deg;
+    for (deg = -40; deg <= 10; deg += 2) { start = deg * rad; place(orbs[0], start); if (clearOfCards(orbs[0])) break; }
+    for (deg = 150; deg >= 110; deg -= 2) {
+      end = deg * rad; place(orbs[orbs.length - 1], end);
+      if (box(orbs[orbs.length - 1]).b <= hero.clientHeight - 8) break;
+    }
+    var step = (end - start) / (orbs.length - 1);
+    orbs.forEach(function (o, i) { place(o, start + i * step); });
+  }
+  layoutOrbit();
+  window.addEventListener("resize", layoutOrbit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutOrbit);
+
   // Pointer parallax on the floating cards and orbs (fine pointers, motion allowed, wide screens only).
   var motionOK = window.matchMedia("(prefers-reduced-motion: no-preference) and (pointer: fine) and (min-width: 901px)");
   hero.querySelectorAll("[data-depth]").forEach(function (el) { el.style.setProperty("--d", el.dataset.depth); });
