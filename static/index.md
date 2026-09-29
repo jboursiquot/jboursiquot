@@ -124,7 +124,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - Lambda: Skilltype, The Achievement Network
 - ECS Fargate: Skilltype
 - SQS and SNS: Skilltype, The Achievement Network
-- Docker: Human Agency, Skilltype
+- Docker: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData
 - Kubernetes: Chick-fil-A, Salesforce, Heroku
 - CI/CD: Human Agency, Skilltype, The Achievement Network
 - Deployment automation: Heroku, The Achievement Network
