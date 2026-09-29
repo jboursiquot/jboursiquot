@@ -534,48 +534,56 @@
       "id": "ai",
       "icon": "spark",
       "name": "AI Systems",
+      "short": "RAG, tool calling, MCP, evals",
       "body": "Designing and shipping production AI features, from RAG and tool calling to MCP integrations, on Bedrock, Anthropic, and OpenAI, with explicit control flow, guardrails, evaluation, and the same observability and testing as any other service."
     },
     {
       "id": "cloud",
       "icon": "cloud",
       "name": "Cloud Architecture",
+      "short": "Containers, serverless, IaC",
       "body": "Designing and running cloud platforms for global user bases, from containers and serverless functions to event streams, queues, and infrastructure as code, with data handling built for privacy rules like GDPR."
     },
     {
       "id": "sre",
       "icon": "pulse",
       "name": "Reliability",
+      "short": "Incident command, tracing",
       "body": "Incident command, SRE tooling, and release diagnostics, and instrumenting systems with OpenTelemetry, Honeycomb, and Datadog so teams can see what production is doing."
     },
     {
       "id": "dist",
       "icon": "nodes",
       "name": "Distributed Systems",
+      "short": "Caching, events, coordination",
       "body": "Caching, event propagation, and distributed coordination for high-traffic workloads, plus time-series infrastructure and data stores from PostgreSQL and MySQL to DynamoDB and Redis."
     },
     {
       "id": "sec",
       "icon": "shield",
       "name": "Security & Compliance",
+      "short": "SOC 2, GDPR, PII protection",
       "body": "Running SOC 2 readiness with automated security controls, vendor tracking, and audit evidence collection, and building GDPR-aware architecture, PII protection across vendors and regions, and TX-RAMP compliance into how products ship."
     },
     {
       "id": "fullstack",
       "icon": "layers",
       "name": "Full-Stack Engineering",
+      "short": "React, TypeScript, Go, Java",
       "body": "Building across the whole stack, from React and TypeScript front ends to Go and Java services, APIs, data stores, and the pipelines that ship them, with testing and accessibility checks along the way."
     },
     {
       "id": "product",
       "icon": "rocket",
       "name": "Product Engineering",
+      "short": "SaaS from concept to launch",
       "body": "Two decades of taking SaaS products from concept to launch across enterprise software, loyalty and retail, education, and payments, working with product and executive teams to decide what to build and how to deliver it."
     },
     {
       "id": "lead",
       "icon": "people",
       "name": "Leadership",
+      "short": "CTO, director, program lead",
       "body": "Leading engineering as a CTO, director, and program lead: hiring and mentoring engineers, setting architecture, testing, and delivery standards, running SOC 2 and cost-control programs, and working with executives on what to build."
     }
   ],
