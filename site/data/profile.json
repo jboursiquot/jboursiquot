@@ -818,12 +818,15 @@
         {
           "name": "Docker",
           "roles": [
+            "humanagency",
+            "cfa",
             "skilltype",
-            "humanagency"
+            "salesforce",
+            "heroku",
+            "anet",
+            "influx"
           ],
-          "inferred": [
-            "humanagency"
-          ]
+          "inferred": []
         },
         {
           "name": "Kubernetes",
