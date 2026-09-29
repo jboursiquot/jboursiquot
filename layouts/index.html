@@ -369,7 +369,11 @@ ol.log time, ol.log span { color: var(--muted); }
 .orbit-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 28px; align-items: start; }
 .orbit-chart { background: var(--card); border-radius: 28px; padding: 16px; box-shadow: var(--shadow); }
 .orbit-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
-.orbit-panel { background: var(--card); border-radius: 22px; padding: 24px 28px; box-shadow: var(--shadow); position: sticky; top: 100px; }
+.orbit-panel { background: var(--card); border-radius: 22px; padding: 24px 28px; box-shadow: var(--shadow); position: sticky; top: 100px;
+  display: grid; }
+/* Every panel occupies the same cell, so the box is always as tall as the longest one and the page never shifts. */
+.orbit-panel > .rd { grid-area: 1 / 1; }
+.orbit-panel > .rd[hidden] { display: block; visibility: hidden; }
 .o-cat { fill: var(--indigo-fill); }
 .o-cat-lab { fill: #fff; font-size: 10.5px; font-weight: 700; text-anchor: middle; pointer-events: none; }
 .o-spoke { stroke: var(--line); stroke-width: 1; transition: stroke .2s; }
