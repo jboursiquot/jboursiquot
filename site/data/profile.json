@@ -534,7 +534,7 @@
       "id": "ai",
       "icon": "spark",
       "name": "AI Systems",
-      "short": "RAG, tool calling, MCP, evals",
+      "short": "Agents, RAG, tool calling, MCP, evals",
       "body": "Designing and shipping production AI features, from RAG and tool calling to MCP integrations, on Bedrock, Anthropic, and OpenAI, with explicit control flow, guardrails, evaluation, and the same observability and testing as any other service."
     },
     {
