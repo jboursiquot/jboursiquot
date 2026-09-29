@@ -28,9 +28,40 @@
     entries.forEach(function (en) {
       if (!en.isIntersecting) return;
       links.forEach(function (l) { l.classList.toggle("on", l.getAttribute("href") === "#" + en.target.id); });
+      if (!hovered) restDot();
     });
   }, { rootMargin: "-45% 0px -50% 0px" });
   ids.forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
+
+  // Header gets a solid background once the page scrolls under it.
+  var bar = document.querySelector(".bar");
+  function stick() { bar.classList.toggle("stuck", window.scrollY > 8); }
+  window.addEventListener("scroll", stick, { passive: true });
+  stick();
+
+  // Header underline: follows the pointer or keyboard focus, then returns to the active section.
+  var nav = document.querySelector(".bar nav");
+  var dot = nav && nav.querySelector(".nav-line");
+  var hovered = null;
+  function moveDot(link) {
+    if (!dot) return;
+    if (!link) { dot.classList.remove("show"); return; }
+    var n = nav.getBoundingClientRect(), r = link.getBoundingClientRect();
+    dot.style.width = r.width + "px";
+    dot.style.transform = "translateX(" + (r.left - n.left) + "px)";
+    dot.classList.add("show");
+  }
+  function restDot() { moveDot(nav && nav.querySelector("a.on")); }
+  if (nav) {
+    nav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("mouseenter", function () { hovered = a; moveDot(a); });
+      a.addEventListener("focus", function () { hovered = a; moveDot(a); });
+    });
+    nav.addEventListener("mouseleave", function () { hovered = null; restDot(); });
+    nav.addEventListener("focusout", function (e) { if (!nav.contains(e.relatedTarget)) { hovered = null; restDot(); } });
+    window.addEventListener("resize", restDot);
+    restDot();
+  }
 })();
 
 (function () {
