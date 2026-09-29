@@ -123,7 +123,7 @@
       "id": "humanagency",
       "org": "Human Agency",
       "url": "https://www.humanagency.com/",
-      "role": "Director of Engineering",
+      "role": "Director of Technology",
       "start": "2026-08",
       "end": "2026-10",
       "domains": [
@@ -503,7 +503,7 @@
   ],
   "about_1p": [
     "I'm a software engineer with over two decades of experience building and running production systems. These days I focus on AI engineering, cloud architecture, and distributed systems. Much of my recent work is getting LLM-powered and agentic systems ready for production, which means explicit control flow, guardrails, and the same observability and testing any other service gets.",
-    "I've been on several startup founding teams, including co-founding Skilltype, a cloud-based SaaS platform for workforce development, where I'm CTO. Along the way I was a Program Lead at Chick-fil-A and Director of Engineering at Human Agency, and I helped establish site reliability engineering practices at Salesforce/Heroku. Knowing how systems behave once real users arrive shapes most of the engineering decisions I make.",
+    "I've been on several startup founding teams, including co-founding Skilltype, a cloud-based SaaS platform for workforce development, where I'm CTO. Along the way I was a Program Lead at Chick-fil-A and Director of Technology at Human Agency, and I helped establish site reliability engineering practices at Salesforce/Heroku. Knowing how systems behave once real users arrive shapes most of the engineering decisions I make.",
     "I also speak and teach: conference keynotes, courses on O'Reilly and LinkedIn Learning, and years as a host of the Go Time podcast."
   ],
   "capabilities": [
