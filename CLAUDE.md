@@ -1,13 +1,15 @@
 # jboursiquot.com
 
-Personal site, built with Hugo and hosted on Netlify. The page is aimed at potential employers: a LinkedIn-style profile with a skill map of past roles.
+Personal site, built with Hugo and hosted on S3 and CloudFront in a personal AWS account. The page is aimed at potential employers: a LinkedIn-style profile with a skill map of past roles.
 
 ## Deploy
 
-- Every push to `master` deploys to production. The Netlify GitHub app builds the commit and publishes it to https://www.jboursiquot.com (the apex domain 301s to `www`). No CI or deploy config lives in this repo.
-- Build settings (command, Hugo version, publish dir) are set in the Netlify UI; there is no `netlify.toml`. The live build has reported `Hugo 0.85.0` with minified output, so the command is probably `hugo --minify`. Keep `config.toml` compatible with that old version (for example, `languageCode` stays even though newer Hugo prefers `locale`).
-- DNS: Route 53 (AWS nameservers). `www` is a CNAME to `jboursiquot.netlify.com`.
-- To verify a deploy, `curl -s https://www.jboursiquot.com/ | grep -c '<new text>'` should be nonzero within a minute or two of the push.
+- Every push to `master` deploys to production through `.github/workflows/deploy.yml`: it checks the generated files are current, builds with a pinned, checksum-verified Hugo (`HUGO_VERSION`), syncs `public/` to S3, and invalidates CloudFront. Pull requests run the build job only.
+- Hosting is a personal AWS account (`071567069400`), CloudFormation stack `jboursiquot-site` in us-east-1 from `infra/site.yaml`: private S3 bucket, CloudFront with OAC, ACM certificate, a CloudFront Function that 301s the apex to `www` and maps `/` paths to `index.html`, Route 53 alias records, and the GitHub OIDC deploy role (master of this repo only).
+- The workflow reads repo variables `AWS_DEPLOY_ROLE_ARN`, `SITE_BUCKET`, and `CF_DISTRIBUTION_ID` (from `make outputs`). No AWS keys are stored in GitHub.
+- AWS CLI work uses the `personal` profile only (IAM Identity Center at `https://boursiquot.awsapps.com/start`, SSO session `personal`). Never use the Skilltype profiles or the DNSimple CLI for this site. The git-ignored `.envrc` sets `AWS_PROFILE=personal` via direnv; still pass `--profile personal` explicitly, since a shell without direnv may export another profile. Stack changes: `make infra HOSTED_ZONE_ID=Z08684383JS6YO36N529E MANAGE_DNS=true`.
+- DNS: Route 53 hosted zone `Z08684383JS6YO36N529E` in the same account; the domain is registered with Amazon Registrar. Leave the `blog` CNAME (GitHub Pages) and the `_atproto` TXT record (Bluesky) alone.
+- To verify a deploy, `curl -s https://www.jboursiquot.com/ | grep -c '<new text>'` should be nonzero a minute or two after the workflow finishes.
 
 ## Where to edit
 
@@ -26,4 +28,4 @@ Personal site, built with Hugo and hosted on Netlify. The page is aimed at poten
 
 ## Local preview
 
-`python3 site/build.py && hugo server`, then open http://localhost:1313. `public/` is the git-ignored build output.
+`make serve`, then open http://localhost:1313. `make build` runs the production build. `public/` is the git-ignored build output.
