@@ -1,0 +1,1430 @@
+{
+  "name": "Johnny Boursiquot",
+  "site": "https://www.jboursiquot.com/",
+  "updated": "2026-09-28",
+  "summary": "Software engineer with over two decades of building and running production systems, on startup founding teams and inside large technology companies. Co-founder and CTO of Skilltype. Works across AI systems, cloud architecture, distributed systems, and reliability engineering. Also a conference keynote speaker and instructor, with courses on O'Reilly, LinkedIn Learning, and Packt.",
+  "now": [
+    {
+      "org": "Skilltype",
+      "url": "https://www.skilltype.com/",
+      "role": "Co-founder and CTO",
+      "what": "I co-founded this cloud-based SaaS platform for workforce development in libraries and information professions, and I architect the platform and its LLM-powered features."
+    },
+    {
+      "org": "Idiomat",
+      "url": "https://idiomat.co/",
+      "role": "Founder",
+      "what": "Training and consulting on Go, AWS, serverless and event-driven architecture, SRE practice, and building with LLMs."
+    },
+    {
+      "org": "GopherCon",
+      "url": "https://www.gophercon.com/",
+      "role": "Program chair and workshop instructor",
+      "what": "Workshops at GopherCon US, EU, and Singapore since 2018; closing keynotes in 2019 and 2021; emcee and closing-panel moderator at GopherCon US 2026."
+    }
+  ],
+  "workshops": [
+    {
+      "title": "Agents the Hard Way: Building Agentic Systems in Go",
+      "length": "Two half-days",
+      "audience": "Engineers building agentic systems",
+      "last": "GopherCon US, Aug 2026",
+      "url": "https://www.gophercon.com/agenda/session/1801556"
+    },
+    {
+      "title": "Building and Deploying AI Agents with Go",
+      "length": "Full day",
+      "audience": "Go developers adding LLM features",
+      "last": "GopherCon US, Aug 2025",
+      "url": "https://www.gophercon.com/agenda/session/1590663"
+    },
+    {
+      "title": "Advanced Go for Experienced Programmers",
+      "length": "Full day",
+      "audience": "Working Go developers",
+      "last": "GopherCon US, Aug 2025",
+      "url": "https://www.gophercon.com/agenda/session/1545650"
+    },
+    {
+      "title": "Serverless Go",
+      "length": "Live training",
+      "audience": "Developers building on AWS Lambda",
+      "last": "O'Reilly, May 2020",
+      "url": "https://learning.oreilly.com/live-training/courses/serverless-go/0636920407034/"
+    },
+    {
+      "title": "Backend development cohort",
+      "length": "7 weeks",
+      "audience": "Career-change cohort of 25, in Go",
+      "last": "Pivot Technology School, Oct 2022",
+      "url": "https://pivottechschool.com"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Hands-On Introduction: Go",
+      "where": "LinkedIn Learning",
+      "year": "2022",
+      "url": "https://www.linkedin.com/learning/hands-on-introduction-go/hands-on-with-go",
+      "image": "LIL-HandsOnGo.jpeg"
+    },
+    {
+      "title": "Go Standard Library Solutions",
+      "where": "Packt",
+      "year": "",
+      "url": "https://bitly.com/gostdsol",
+      "image": "GoStdLibSolCover.png"
+    }
+  ],
+  "keynotes": [
+    {
+      "date": "2021-12",
+      "venue": "GopherCon",
+      "title": "Unbounded Concurrency in Go (live, with Aaron Schlesinger)",
+      "url": "https://www.youtube.com/watch?v=PAUjYyBfELk"
+    },
+    {
+      "date": "2020-11",
+      "venue": "QCon Plus",
+      "title": "The SRE as a Diplomat",
+      "url": "https://www.infoq.com/presentations/sre-build-trust/"
+    },
+    {
+      "date": "2020-05",
+      "venue": "Go Get Community",
+      "title": "Closing keynote",
+      "url": "https://www.gogetcommunity.com/"
+    },
+    {
+      "date": "2019-07",
+      "venue": "GopherCon",
+      "title": "Closing keynote",
+      "url": "https://www.youtube.com/watch?v=_Pc0bzz4-gM"
+    }
+  ],
+  "writing": [
+    {
+      "title": "97 Things Every SRE Should Know",
+      "role": "Contributing author",
+      "where": "O'Reilly, 2020",
+      "url": "https://www.amazon.com/Things-Every-SRE-Should-Know/dp/1492081493",
+      "image": "97-things-every-sre-should-know.jpeg"
+    },
+    {
+      "title": "Go Time",
+      "role": "Host, 2017 to the show's final episode in December 2024",
+      "where": "Changelog Media",
+      "url": "https://changelog.com/person/jboursiquot",
+      "image": "gotime.png"
+    }
+  ],
+  "experience": [
+    {
+      "id": "humanagency",
+      "org": "Human Agency",
+      "url": "https://www.humanagency.com/",
+      "role": "Director of Engineering",
+      "start": "2026-08",
+      "end": "2026-10",
+      "domains": [
+        "ai",
+        "lead"
+      ],
+      "what": "Led engineering for an AI platform launch, including SOC 2 readiness and commercial controls.",
+      "bullets": [
+        "Restarted a stalled SOC 2 readiness program, delivering automated security controls across all active company systems, vendor tracking, and audit evidence collection.",
+        "Built a commercial controls program ahead of the product's beta launch, including per-customer cost and margin tracking, usage attribution, vendor cost monitoring, and AI-assisted invoice processing workflows.",
+        "Fixed inefficiencies and set up guardrails in a codebase written mostly by non-engineers with AI tools."
+      ],
+      "tech": ""
+    },
+    {
+      "id": "cfa",
+      "org": "Chick-fil-A",
+      "url": "https://www.chick-fil-a.com/",
+      "role": "Principal Software Engineer and Program Lead",
+      "start": "2025-09",
+      "end": "",
+      "domains": [
+        "arch",
+        "cloud",
+        "data",
+        "lead"
+      ],
+      "what": "Lead architecture and delivery for Chick-fil-A's Loyalty Platform initiatives.",
+      "bullets": [
+        "Lead architecture and delivery for Chick-fil-A's Loyalty Platform initiatives, working with product, engineering, and business teams.",
+        "Cut cache infrastructure costs by 39% and improved latency for high-traffic promotion workloads.",
+        "Traced DynamoDB throttling to thundering-herd cache expiration and designed a phased fix using TTL jitter, request deduplication, and distributed coordination.",
+        "Designed location-scoped cache invalidation and event propagation that reduced promotion-data staleness from minutes to near real time.",
+        "Hire engineers at Stable Kernel, document failure modes, and build Datadog diagnostics for release performance."
+      ],
+      "tech": "DynamoDB, caching, event propagation, Datadog",
+      "via": "Stable Kernel"
+    },
+    {
+      "id": "skilltype",
+      "org": "Skilltype",
+      "url": "https://www.skilltype.com/",
+      "role": "Co-founder and CTO (fractional)",
+      "start": "2019-11",
+      "end": "",
+      "domains": [
+        "arch",
+        "product",
+        "cloud",
+        "ai",
+        "lead"
+      ],
+      "what": "Own product direction and engineering for library talent-management software, from concept through launch.",
+      "bullets": [
+        "Own product direction and engineering for Skilltype's library talent-management software, from initial concept through launch.",
+        "Build across backend services and React front ends using Go, Java, JavaScript, TypeScript, PostgreSQL, DynamoDB, and AWS; rebuilt the web front end with React, TypeScript, and Vite.",
+        "Build production AI features with Bedrock, Anthropic, and OpenAI, including RAG and tool-calling for customer workflows, and design APIs and MCP integrations for customers.",
+        "Set testing, CI/CD, observability, and secure delivery standards, supporting GDPR-aware architecture, SOC 2-aligned practices, and TX-RAMP compliance.",
+        "Hire and mentor engineers, review designs and code, and work with executive and product teams on what to build."
+      ],
+      "tech": "Go, Java, TypeScript, React, Vite, PostgreSQL, DynamoDB, AWS, Bedrock"
+    },
+    {
+      "id": "salesforce",
+      "org": "Salesforce",
+      "url": "https://www.salesforce.com/",
+      "role": "Platform Observability Engineer",
+      "start": "2021-05",
+      "end": "2023-03",
+      "domains": [
+        "cloud",
+        "sre",
+        "data"
+      ],
+      "what": "Wrote shared Go instrumentation libraries for OpenTelemetry adoption and led the move to Honeycomb and distributed tracing.",
+      "bullets": [
+        "Wrote shared Go instrumentation libraries to help service teams adopt OpenTelemetry, and standardized instrumentation patterns across services.",
+        "Led the move from legacy monitoring to Honeycomb and distributed tracing, and helped service owners diagnose production behavior.",
+        "Mentored engineers in Go, observability, and distributed systems."
+      ],
+      "tech": "Go, OpenTelemetry, Honeycomb"
+    },
+    {
+      "id": "heroku",
+      "org": "Heroku",
+      "url": "https://www.heroku.com/",
+      "role": "Site Reliability Engineer",
+      "start": "2019-06",
+      "end": "2021-05",
+      "domains": [
+        "cloud",
+        "sre",
+        "lead"
+      ],
+      "what": "Built tooling and incident-response workflows, and served as incident commander during major incidents.",
+      "bullets": [
+        "Built tooling and improved incident-response, deployment, and monitoring workflows for Heroku services.",
+        "Served as incident commander during major production incidents, coordinating mitigation and communication.",
+        "Helped Salesforce engineering teams adopt Heroku, and mentored engineers in Go, cloud infrastructure, and distributed systems."
+      ],
+      "tech": ""
+    },
+    {
+      "id": "anet",
+      "org": "The Achievement Network",
+      "url": "https://achievementnetwork.org/",
+      "role": "Principal Cloud Engineer",
+      "start": "2016-08",
+      "end": "2019-05",
+      "domains": [
+        "arch",
+        "product",
+        "cloud"
+      ],
+      "what": "Led backend engineering and AWS modernization for an education SaaS product.",
+      "bullets": [
+        "Led backend engineering and AWS modernization for an education SaaS product.",
+        "Built CI/CD pipelines and deployment automation on AWS, and designed backend services and APIs.",
+        "Guided engineering teams on AWS architecture and implementation."
+      ],
+      "tech": "Go, Java, PostgreSQL, Lambda, SQS, DynamoDB"
+    },
+    {
+      "id": "influx",
+      "org": "InfluxData",
+      "url": "https://influxdata.com/",
+      "role": "Senior Software Engineer",
+      "start": "2016-03",
+      "end": "2016-06",
+      "domains": [
+        "product",
+        "data"
+      ],
+      "what": "Worked on distributed time-series database infrastructure and enterprise SaaS services in Go.",
+      "bullets": [
+        "Worked on distributed time-series database infrastructure and enterprise SaaS services in Go."
+      ],
+      "tech": "Go"
+    },
+    {
+      "id": "onedoor",
+      "org": "One Door",
+      "url": "https://onedoor.com/",
+      "role": "Software Architect and Principal Software Engineer",
+      "start": "",
+      "end": "",
+      "domains": [
+        "arch",
+        "product"
+      ],
+      "what": "Built retail-merchandising SaaS applications, APIs, and messaging.",
+      "bullets": [
+        "Built retail-merchandising SaaS applications, APIs, and messaging."
+      ],
+      "tech": "Ruby on Rails, MySQL, RabbitMQ"
+    },
+    {
+      "id": "launch",
+      "org": "Launch Academy",
+      "url": "https://www.launchacademy.com/",
+      "role": "Software Engineering Instructor",
+      "start": "",
+      "end": "",
+      "domains": [
+        "teach"
+      ],
+      "what": "Taught Ruby on Rails and web application development, and mentored new engineers.",
+      "bullets": [
+        "Taught Ruby on Rails and web application development, and mentored new engineers."
+      ],
+      "tech": "Ruby on Rails"
+    },
+    {
+      "id": "maark",
+      "org": "MAARK",
+      "url": "https://www.maark.com/",
+      "role": "Engineering leadership roles",
+      "start": "",
+      "end": "",
+      "domains": [
+        "product",
+        "lead"
+      ],
+      "what": "Owned products from concept through launch, hired engineers, and built enterprise SaaS, payments, and web applications.",
+      "bullets": [
+        "Owned products from concept through launch, hired engineers, and built enterprise SaaS, payments, and web applications across backend and HTML, CSS, and JavaScript."
+      ],
+      "tech": ""
+    },
+    {
+      "id": "earlier",
+      "org": "Earlier roles",
+      "url": "",
+      "role": "Software engineer",
+      "start": "",
+      "end": "",
+      "domains": [
+        "product"
+      ],
+      "what": "Additional software engineering roles preceded MAARK.",
+      "bullets": [
+        "Additional software engineering roles preceded MAARK."
+      ],
+      "tech": ""
+    }
+  ],
+  "community": [
+    {
+      "name": "GopherCon",
+      "role": "Program chair",
+      "url": "https://www.gophercon.com/",
+      "former": false
+    },
+    {
+      "name": "GoBridge",
+      "role": "Leadership team",
+      "url": "https://golangbridge.org/",
+      "former": false
+    },
+    {
+      "name": "Baltimore Go User Group",
+      "role": "Founder and organizer",
+      "url": "https://baltimoregolang.org/",
+      "former": false
+    },
+    {
+      "name": "Haiti School Project",
+      "role": "Board of directors",
+      "url": "https://haitischoolproject.org/",
+      "former": false
+    },
+    {
+      "name": "Boston Golang",
+      "role": "Organizer",
+      "url": "https://bostongolang.org/",
+      "former": true
+    },
+    {
+      "name": "Boston Ruby Group",
+      "role": "Organizer",
+      "url": "https://bostonrb.org/",
+      "former": true
+    },
+    {
+      "name": "RailsBridge Boston",
+      "role": "Instructor",
+      "url": "https://www.railsbridgeboston.org/",
+      "former": true
+    }
+  ],
+  "education": [
+    "M.S., Cloud Computing Architecture, University of Maryland Global Campus",
+    "B.S., Computer and Information Science, University of Maryland Global Campus"
+  ],
+  "certifications": [],
+  "links": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/jboursiquot"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/jboursiquot"
+    },
+    {
+      "name": "X",
+      "url": "https://x.com/jboursiquot"
+    },
+    {
+      "name": "Changelog",
+      "url": "https://changelog.com/person/jboursiquot"
+    },
+    {
+      "name": "Medium",
+      "url": "https://medium.com/@jboursiquot"
+    }
+  ],
+  "knows_about": [
+    "Software architecture",
+    "Distributed systems",
+    "Cloud computing",
+    "Amazon Web Services",
+    "Serverless computing",
+    "Site reliability engineering",
+    "Large language models",
+    "Internet of things",
+    "Go (programming language)",
+    "Technical training"
+  ],
+  "tagline": "Two decades of building and running production systems.",
+  "domains": [
+    {
+      "id": "arch",
+      "name": "Architecture"
+    },
+    {
+      "id": "product",
+      "name": "Product engineering"
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud and serverless"
+    },
+    {
+      "id": "sre",
+      "name": "Reliability"
+    },
+    {
+      "id": "data",
+      "name": "Data systems"
+    },
+    {
+      "id": "iot",
+      "name": "Devices and IoT"
+    },
+    {
+      "id": "ai",
+      "name": "AI and LLMs"
+    },
+    {
+      "id": "lead",
+      "name": "Leading teams"
+    },
+    {
+      "id": "teach",
+      "name": "Teaching"
+    }
+  ],
+  "stack": [
+    {
+      "area": "Languages",
+      "items": "Go, TypeScript, JavaScript, Python, Ruby, Java"
+    },
+    {
+      "area": "Front End",
+      "items": "React, TypeScript, Vite, Vitest, Playwright, Material UI"
+    },
+    {
+      "area": "Cloud",
+      "items": "AWS: Lambda, ECS and Fargate, S3, SQS, SNS, Kinesis, Cognito, CloudFront, Bedrock"
+    },
+    {
+      "area": "Architecture",
+      "items": "Microservices, serverless, event-driven and distributed systems"
+    },
+    {
+      "area": "Data",
+      "items": "Postgres, MySQL, DynamoDB, Redis, time-series databases"
+    },
+    {
+      "area": "APIs & Messaging",
+      "items": "REST, GraphQL, gRPC, MQTT"
+    },
+    {
+      "area": "Delivery & Operations",
+      "items": "Docker, Kubernetes, CI/CD, CloudFormation, Terraform, OpenTelemetry, SRE practice"
+    },
+    {
+      "area": "AI",
+      "items": "LLM applications, AI agents, Amazon Bedrock, OpenAI models, Anthropic models"
+    }
+  ],
+  "training_topics": "Cloud architecture on AWS, serverless and event-driven systems, reliability and observability, containers and delivery pipelines, API design, Go, and building LLM applications and agents.",
+  "bio_general": "Johnny Boursiquot is a software engineer with over two decades of experience building and running production systems, on startup founding teams and inside large technology companies. He is co-founder and Chief Technology Officer of Skilltype, where he builds LLM-powered products, and he trains and advises engineering teams through his company, Idiomat. Earlier he helped establish Site Reliability Engineering practices at Heroku and contributed to O'Reilly's 97 Things Every SRE Should Know. His courses on Go, cloud, and AI engineering are available on O'Reilly, LinkedIn Learning, and Packt.",
+  "bio_go": "Johnny Boursiquot is a multi-disciplined software engineer with a love for teaching and community-building. He founded the Baltimore Go User Group and has organized both the Boston Ruby and Boston Go user groups. He is a GopherCon program chair, delivered GopherCon closing keynotes in 2019 and 2021, and teaches workshops at GopherCon events in the US, Europe, and Singapore. He hosted the Go Time podcast from 2017 until its final episode in December 2024. He is co-founder and Chief Technology Officer of Skilltype.",
+  "approach": "Much of my recent work is getting LLM-powered and agentic systems ready for production, which means explicit control flow, guardrails, and the same observability and testing any other service gets. Knowing how systems behave once real users arrive shapes most of the engineering decisions I make.",
+  "intro": "I've built and run production systems on startup founding teams and inside large technology companies. I co-founded Skilltype and serve as its CTO. My work spans AI engineering, cloud architecture, and distributed systems, and I teach what I use through O'Reilly, LinkedIn Learning, Packt, and conference workshops.",
+  "training_topics_list": [
+    "Cloud architecture on AWS",
+    "Serverless and event-driven systems",
+    "Distributed systems",
+    "Reliability and observability",
+    "Containers and delivery pipelines",
+    "API design",
+    "LLM applications and agents",
+    "Go"
+  ],
+  "about_1p": [
+    "I'm a software engineer with over two decades of experience building and running production systems. These days I focus on AI engineering, cloud architecture, and distributed systems. Much of my recent work is getting LLM-powered and agentic systems ready for production, which means explicit control flow, guardrails, and the same observability and testing any other service gets.",
+    "I've been on several startup founding teams, including co-founding Skilltype, a cloud-based SaaS platform for workforce development, where I'm CTO. Along the way I was a Program Lead at Chick-fil-A and Director of Engineering at Human Agency, and I helped establish site reliability engineering practices at Salesforce/Heroku. Knowing how systems behave once real users arrive shapes most of the engineering decisions I make.",
+    "I also speak and teach: conference keynotes, courses on O'Reilly and LinkedIn Learning, and years as a host of the Go Time podcast."
+  ],
+  "capabilities": [
+    {
+      "id": "ai",
+      "icon": "spark",
+      "name": "AI Systems",
+      "body": "Designing and shipping production AI features, from RAG and tool calling to MCP integrations, on Bedrock, Anthropic, and OpenAI, with explicit control flow, guardrails, evaluation, and the same observability and testing as any other service."
+    },
+    {
+      "id": "cloud",
+      "icon": "cloud",
+      "name": "Cloud Architecture",
+      "body": "Designing and running cloud platforms for global user bases, from containers and serverless functions to event streams, queues, and infrastructure as code, with data handling built for privacy rules like GDPR."
+    },
+    {
+      "id": "sre",
+      "icon": "pulse",
+      "name": "Reliability",
+      "body": "Incident command, SRE tooling, and release diagnostics, and instrumenting systems with OpenTelemetry, Honeycomb, and Datadog so teams can see what production is doing."
+    },
+    {
+      "id": "dist",
+      "icon": "nodes",
+      "name": "Distributed Systems",
+      "body": "Caching, event propagation, and distributed coordination for high-traffic workloads, plus time-series infrastructure and data stores from PostgreSQL and MySQL to DynamoDB and Redis."
+    },
+    {
+      "id": "sec",
+      "icon": "shield",
+      "name": "Security & Compliance",
+      "body": "Running SOC 2 readiness with automated security controls, vendor tracking, and audit evidence collection, and building GDPR-aware architecture, PII protection across vendors and regions, and TX-RAMP compliance into how products ship."
+    },
+    {
+      "id": "product",
+      "icon": "layers",
+      "name": "Full-Stack Product Engineering",
+      "body": "Two decades of taking SaaS products from concept to production across enterprise software, loyalty and retail, education, and payments, owning everything from the React and TypeScript front end to the API, the data layer, and the deploy."
+    },
+    {
+      "id": "lead",
+      "icon": "people",
+      "name": "Leadership",
+      "body": "Leading engineering as a CTO, director, and program lead: hiring and mentoring engineers, setting architecture, testing, and delivery standards, running SOC 2 and cost-control programs, and working with executives on what to build."
+    }
+  ],
+  "photos": [
+    {
+      "src": "gc26-panel.jpg",
+      "alt": "Johnny moderating a five-person panel on the GopherCon main stage",
+      "cap": "Moderating the closing panel with the Go team, GopherCon 2026",
+      "size": "xl",
+      "pos": "50% 50%"
+    },
+    {
+      "src": "gc26-emcee.jpg",
+      "alt": "Johnny on stage in a green GopherCon shirt",
+      "cap": "Emcee, GopherCon 2026",
+      "size": "tall"
+    },
+    {
+      "src": "gc24-emcee.jpg",
+      "alt": "Johnny speaking into a headset mic on the GopherCon stage, gesturing with one hand",
+      "cap": "Emcee, GopherCon 2024",
+      "size": "",
+      "pos": "50% 0%"
+    },
+    {
+      "src": "gc26-seated.jpg",
+      "alt": "Johnny seated on stage, speaking and gesturing",
+      "cap": "On stage, GopherCon 2026",
+      "size": "",
+      "pos": "40% 40%"
+    },
+    {
+      "src": "gc26-teaching.jpg",
+      "alt": "Johnny teaching at the front of a workshop room, attendees at laptops in the foreground",
+      "cap": "Teaching a workshop, GopherCon 2026",
+      "size": "wide",
+      "pos": "78% 30%"
+    },
+    {
+      "src": "gc26-mainstage.jpg",
+      "alt": "Johnny and his co-host on the GopherCon 2026 main stage",
+      "cap": "Main stage, GopherCon 2026",
+      "size": "wide",
+      "pos": "50% 50%"
+    },
+    {
+      "src": "laptop.jpg",
+      "alt": "Johnny working at a laptop covered in developer stickers",
+      "cap": "At work",
+      "size": ""
+    },
+    {
+      "src": "keynote-2019.jpg",
+      "alt": "Johnny at the GopherCon podium, hand on heart",
+      "cap": "Closing keynote, GopherCon 2019",
+      "size": "",
+      "pos": "65% 40%"
+    },
+    {
+      "src": "serverless-2018.jpg",
+      "alt": "Johnny presenting Orchestrating Serverless on AWS",
+      "cap": "Serverless on AWS, 2018",
+      "size": "",
+      "pos": "70% 60%"
+    },
+    {
+      "src": "podcast.jpg",
+      "alt": "Johnny beside a studio microphone wearing headphones",
+      "cap": "Podcast recording",
+      "size": ""
+    }
+  ],
+  "education_short": [
+    "M.S., Cloud Computing Architecture",
+    "B.S., Computer and Information Science",
+    "University of Maryland Global Campus"
+  ],
+  "skillmap": [
+    {
+      "name": "Languages",
+      "skills": [
+        {
+          "name": "Go",
+          "roles": [
+            "skilltype",
+            "salesforce",
+            "heroku",
+            "anet",
+            "influx",
+            "cfa"
+          ],
+          "inferred": [
+            "cfa"
+          ]
+        },
+        {
+          "name": "Java",
+          "roles": [
+            "skilltype",
+            "anet"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "TypeScript",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "JavaScript",
+          "roles": [
+            "skilltype",
+            "maark"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Python",
+          "roles": [
+            "skilltype",
+            "humanagency"
+          ],
+          "inferred": [
+            "skilltype",
+            "humanagency"
+          ]
+        },
+        {
+          "name": "SQL",
+          "roles": [
+            "skilltype",
+            "anet",
+            "onedoor"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Ruby on Rails",
+          "roles": [
+            "onedoor",
+            "launch"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "HTML and CSS",
+          "roles": [
+            "skilltype",
+            "maark"
+          ],
+          "inferred": []
+        }
+      ]
+    },
+    {
+      "name": "Front End",
+      "skills": [
+        {
+          "name": "React",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Vite",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Vitest",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "React Testing Library",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Playwright",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Accessibility testing",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Material UI",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "React Router",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Algolia InstantSearch",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        }
+      ]
+    },
+    {
+      "name": "Cloud & Delivery",
+      "skills": [
+        {
+          "name": "AWS",
+          "roles": [
+            "skilltype",
+            "anet",
+            "cfa",
+            "humanagency"
+          ],
+          "inferred": [
+            "humanagency"
+          ]
+        },
+        {
+          "name": "Lambda",
+          "roles": [
+            "anet",
+            "skilltype"
+          ],
+          "inferred": [
+            "skilltype"
+          ]
+        },
+        {
+          "name": "ECS Fargate",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "SQS and SNS",
+          "roles": [
+            "skilltype",
+            "anet"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Docker",
+          "roles": [
+            "skilltype",
+            "humanagency"
+          ],
+          "inferred": [
+            "humanagency"
+          ]
+        },
+        {
+          "name": "CI/CD",
+          "roles": [
+            "skilltype",
+            "anet",
+            "humanagency"
+          ],
+          "inferred": [
+            "humanagency"
+          ]
+        },
+        {
+          "name": "Deployment automation",
+          "roles": [
+            "anet",
+            "heroku"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Heroku platform",
+          "roles": [
+            "heroku",
+            "salesforce"
+          ],
+          "inferred": []
+        }
+      ]
+    },
+    {
+      "name": "Architecture & APIs",
+      "skills": [
+        {
+          "name": "Architecture",
+          "roles": [
+            "cfa",
+            "skilltype",
+            "anet",
+            "onedoor"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "API design",
+          "roles": [
+            "skilltype",
+            "anet",
+            "onedoor"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Backend services",
+          "roles": [
+            "skilltype",
+            "anet",
+            "influx"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Distributed systems",
+          "roles": [
+            "cfa",
+            "salesforce",
+            "heroku",
+            "influx"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Event-driven design",
+          "roles": [
+            "cfa",
+            "skilltype",
+            "anet"
+          ],
+          "inferred": [
+            "skilltype",
+            "anet"
+          ]
+        },
+        {
+          "name": "Caching strategy",
+          "roles": [
+            "cfa"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Data integrations",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Messaging",
+          "roles": [
+            "onedoor",
+            "anet"
+          ],
+          "inferred": []
+        }
+      ]
+    },
+    {
+      "name": "Data",
+      "skills": [
+        {
+          "name": "PostgreSQL",
+          "roles": [
+            "skilltype",
+            "anet"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "DynamoDB",
+          "roles": [
+            "cfa",
+            "skilltype",
+            "anet"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Redis",
+          "roles": [
+            "cfa",
+            "skilltype"
+          ],
+          "inferred": [
+            "cfa",
+            "skilltype"
+          ]
+        },
+        {
+          "name": "MySQL",
+          "roles": [
+            "onedoor"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "RabbitMQ",
+          "roles": [
+            "onedoor"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Time-series data",
+          "roles": [
+            "influx"
+          ],
+          "inferred": []
+        }
+      ]
+    },
+    {
+      "name": "Reliability & Observability",
+      "skills": [
+        {
+          "name": "OpenTelemetry",
+          "roles": [
+            "salesforce"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Honeycomb",
+          "roles": [
+            "salesforce"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Datadog",
+          "roles": [
+            "cfa"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Distributed tracing",
+          "roles": [
+            "salesforce"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Incident command",
+          "roles": [
+            "heroku"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "SRE tooling",
+          "roles": [
+            "heroku"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Performance tuning",
+          "roles": [
+            "cfa"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Failure-mode analysis",
+          "roles": [
+            "cfa"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Testing standards",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Observability standards",
+          "roles": [
+            "skilltype",
+            "salesforce"
+          ],
+          "inferred": []
+        }
+      ]
+    },
+    {
+      "name": "AI",
+      "skills": [
+        {
+          "name": "Production AI features",
+          "roles": [
+            "skilltype",
+            "humanagency"
+          ],
+          "inferred": [
+            "humanagency"
+          ]
+        },
+        {
+          "name": "RAG",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Tool calling",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "MCP",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Amazon Bedrock",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Anthropic",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "OpenAI",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "AI-assisted workflows",
+          "roles": [
+            "humanagency"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "AI-assisted development",
+          "roles": [
+            "skilltype",
+            "humanagency"
+          ],
+          "inferred": [
+            "humanagency"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Security & Compliance",
+      "skills": [
+        {
+          "name": "SOC 2",
+          "roles": [
+            "humanagency",
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Security controls",
+          "roles": [
+            "humanagency"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "GDPR",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "TX-RAMP",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Secure delivery",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Audit evidence",
+          "roles": [
+            "humanagency"
+          ],
+          "inferred": []
+        }
+      ]
+    },
+    {
+      "name": "Leadership & Business",
+      "skills": [
+        {
+          "name": "Engineering leadership",
+          "roles": [
+            "humanagency",
+            "cfa",
+            "skilltype",
+            "maark"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Hiring",
+          "roles": [
+            "cfa",
+            "skilltype",
+            "maark"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Mentoring",
+          "roles": [
+            "skilltype",
+            "salesforce",
+            "heroku",
+            "launch"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Design and code review",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Product direction",
+          "roles": [
+            "skilltype",
+            "maark"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Program leadership",
+          "roles": [
+            "cfa"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Cross-functional delivery",
+          "roles": [
+            "cfa",
+            "heroku"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Executive partnership",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Cost and margin controls",
+          "roles": [
+            "humanagency",
+            "cfa"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Vendor management",
+          "roles": [
+            "humanagency"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Codebase guardrails",
+          "roles": [
+            "humanagency"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Teaching",
+          "roles": [
+            "launch"
+          ],
+          "inferred": []
+        }
+      ]
+    },
+    {
+      "name": "Industries",
+      "skills": [
+        {
+          "name": "Enterprise SaaS",
+          "roles": [
+            "skilltype",
+            "influx",
+            "onedoor",
+            "maark"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Enterprise AI",
+          "roles": [
+            "humanagency"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Loyalty and retail",
+          "roles": [
+            "cfa",
+            "onedoor"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Talent management",
+          "roles": [
+            "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Education",
+          "roles": [
+            "anet"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Developer platforms",
+          "roles": [
+            "heroku",
+            "salesforce"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Payments",
+          "roles": [
+            "maark"
+          ],
+          "inferred": []
+        }
+      ]
+    }
+  ],
+  "recent_work": [
+    {
+      "when": "Aug 2026",
+      "kind": "Workshop",
+      "title": "Agents the Hard Way: Building Agentic Systems in Go",
+      "where": "GopherCon US, Seattle",
+      "url": "https://www.gophercon.com/agenda/session/1801556",
+      "note": "Two half-day workshops on building agentic systems in Go, with the workshop code on GitHub.",
+      "code": "https://github.com/jboursiquot/gc26buildingagenticsystems"
+    },
+    {
+      "when": "Aug 2026",
+      "kind": "Panel",
+      "title": "A Slice of Go's Future",
+      "where": "GopherCon US closing panel",
+      "url": "https://www.gophercon.com/agenda/session/1880696",
+      "note": "Moderated the closing conversation with members of the Go team.",
+      "code": ""
+    },
+    {
+      "when": "Aug 2026",
+      "kind": "Emcee",
+      "title": "Main stage and lightning talks",
+      "where": "GopherCon US",
+      "url": "https://www.gophercon.com/agenda/session/1801580",
+      "note": "Hosted opening day, the lightning talks, and the United Go Meetup.",
+      "code": ""
+    },
+    {
+      "when": "Jun 2026",
+      "kind": "Workshop",
+      "title": "Building with AI",
+      "where": "Nexus Louisiana Startup School, Baton Rouge",
+      "url": "https://www.nexusla.org/",
+      "note": "Workshop for the founders in Nexus Louisiana's Startup School.",
+      "code": ""
+    },
+    {
+      "when": "Aug 2025",
+      "kind": "Workshop",
+      "title": "Building and Deploying AI Agents with Go",
+      "where": "GopherCon US",
+      "url": "https://www.gophercon.com/agenda/session/1590663",
+      "note": "Full-day workshop, taught alongside Advanced Go for Experienced Programmers.",
+      "code": ""
+    },
+    {
+      "when": "Jan 2025",
+      "kind": "Workshop",
+      "title": "Go for Experienced Programmers",
+      "where": "GopherCon Singapore",
+      "url": "",
+      "note": "Full-day workshop for developers moving to Go from other languages.",
+      "code": "https://github.com/jboursiquot/go-for-experienced-programmers"
+    }
+  ],
+  "repos": [
+    {
+      "name": "pantry-agent",
+      "url": "https://github.com/jboursiquot/pantry-agent",
+      "desc": "An AI agent in Go, built for teaching how agents work end to end.",
+      "when": "2026"
+    },
+    {
+      "name": "mermaid-mcp",
+      "url": "https://github.com/jboursiquot/mermaid-mcp",
+      "desc": "An MCP server that generates Mermaid diagrams.",
+      "when": "2026"
+    },
+    {
+      "name": "embedder",
+      "url": "https://github.com/jboursiquot/embedder",
+      "desc": "Working with embeddings and LLMs from Go.",
+      "when": "2026"
+    },
+    {
+      "name": "gc26buildingagenticsystems",
+      "url": "https://github.com/jboursiquot/gc26buildingagenticsystems",
+      "desc": "Code for the GopherCon 2026 agentic systems workshop.",
+      "when": "2026"
+    },
+    {
+      "name": "shoutouts",
+      "url": "https://github.com/jboursiquot/shoutouts",
+      "desc": "A serverless Go app on AWS used for teaching serverless architecture.",
+      "when": "2025"
+    }
+  ]
+}

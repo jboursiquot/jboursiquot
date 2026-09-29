@@ -1,568 +1,718 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11255160-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johnny Boursiquot</title>
+<meta name="description" content="Software engineer with over two decades of building and running production systems, on startup founding teams and inside large technology companies. Co-founder and CTO of Skilltype. Works across AI systems, cloud architecture, distributed systems, and reliability engineering. Also a conference keynote speaker and instructor, with courses on O&#x27;Reilly, LinkedIn Learning, and Packt.">
+<link rel="alternate" type="text/markdown" href="index.md" title="This site as Markdown">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://www.jboursiquot.com/#person",
+   "name": "Johnny Boursiquot",
+   "url": "https://www.jboursiquot.com/",
+   "image": "https://www.jboursiquot.com/img/johnny-headshot-round.jpg",
+   "description": "Software engineer with over two decades of building and running production systems, on startup founding teams and inside large technology companies. Co-founder and CTO of Skilltype. Works across AI systems, cloud architecture, distributed systems, and reliability engineering. Also a conference keynote speaker and instructor, with courses on O'Reilly, LinkedIn Learning, and Packt.",
+   "jobTitle": "Chief Technology Officer",
+   "worksFor": {
+    "@type": "Organization",
+    "name": "Skilltype",
+    "url": "https://www.skilltype.com/"
+   },
+   "affiliation": {
+    "@id": "https://www.jboursiquot.com/#idiomat"
+   },
+   "knowsAbout": [
+    "Software architecture",
+    "Distributed systems",
+    "Cloud computing",
+    "Amazon Web Services",
+    "Serverless computing",
+    "Site reliability engineering",
+    "Large language models",
+    "Internet of things",
+    "Go (programming language)",
+    "Technical training"
+   ],
+   "sameAs": [
+    "https://github.com/jboursiquot",
+    "https://www.linkedin.com/in/jboursiquot",
+    "https://x.com/jboursiquot",
+    "https://changelog.com/person/jboursiquot",
+    "https://medium.com/@jboursiquot"
+   ],
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "degree",
+     "name": "M.S., Cloud Computing Architecture, University of Maryland Global Campus"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "degree",
+     "name": "B.S., Computer and Information Science, University of Maryland Global Campus"
+    }
+   ]
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://www.jboursiquot.com/#idiomat",
+   "name": "Idiomat",
+   "url": "https://idiomat.co/",
+   "founder": {
+    "@id": "https://www.jboursiquot.com/#person"
+   },
+   "description": "Software engineering training and consulting."
+  },
+  {
+   "@type": "ProfilePage",
+   "@id": "https://www.jboursiquot.com/",
+   "url": "https://www.jboursiquot.com/",
+   "mainEntity": {
+    "@id": "https://www.jboursiquot.com/#person"
+   },
+   "dateModified": "2026-09-28"
+  }
+ ]
+}
+</script>
+<style>
+:root {
+  --mist: #edf1f7;
+  --ink: #151a2d;
+  --muted: #5d6680;
+  --indigo: #3036a8;
+  --indigo-fill: #3036a8;
+  --indigo-soft: #e6e8fa;
+  --card: #ffffff;
+  --line: #dce2ec;
+  --disc-a: #e3e8f1;
+  --disc-b: #d5dce9;
+  --shadow: 0 30px 60px -24px rgba(40, 52, 99, .22), 0 10px 20px -12px rgba(40, 52, 99, .12);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --mist: #0f1320; --ink: #e8ebf4; --muted: #9aa3bc; --indigo: #9aa0ff; --indigo-fill: #4148c8;
+    --indigo-soft: #1f2446; --card: #181d2e; --line: #283048; --disc-a: #1a2033; --disc-b: #141a2b;
+    --shadow: 0 30px 60px -24px rgba(0, 0, 0, .6), 0 10px 20px -12px rgba(0, 0, 0, .4);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --mist: #0f1320; --ink: #e8ebf4; --muted: #9aa3bc; --indigo: #9aa0ff; --indigo-fill: #4148c8;
+  --indigo-soft: #1f2446; --card: #181d2e; --line: #283048; --disc-a: #1a2033; --disc-b: #141a2b;
+  --shadow: 0 30px 60px -24px rgba(0, 0, 0, .6), 0 10px 20px -12px rgba(0, 0, 0, .4);
+  color-scheme: dark;
+}
 
-        gtag('config', 'UA-11255160-2');
-    </script>
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--mist); color: var(--ink);
+  font: 17px/1.65 "Plus Jakarta Sans", system-ui, sans-serif; overflow-x: hidden; }
+a { color: var(--indigo); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+:focus-visible { outline: 3px solid var(--indigo); outline-offset: 3px; border-radius: 4px; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 16px; top: 16px; background: var(--card); padding: 8px 12px; z-index: 20; }
+.i { display: block; }
+.wrap { max-width: 1160px; margin-inline: auto; padding-inline: 32px; }
+section.wrap, section.band, section.contact { margin-block: 104px; }
+h2 { font-size: 42px; line-height: 1.1; font-weight: 800; letter-spacing: -0.025em; margin: 0 0 20px; }
+h3 { margin: 0; }
+p { margin: 0 0 16px; }
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description"
-        content="Johnny Boursiquot is a Software Engineer, Cloud Engineer, Site Reliability Engineer (SRE), Community Organizer, Speaker, and Trainer.">
-    <meta name="keywords" content="Johnny Boursiquot Software Engineer Cloud Community Organizer Speaker Trainer SRE">
-    <meta name="author" content="Johnny Boursiquot">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+/* Header */
+.bar { position: relative; z-index: 5; max-width: 1360px; margin: 0 auto; padding: 36px 64px 0;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.mark { font-size: 24px; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); text-decoration: none; }
+.mark span { color: var(--indigo); }
+.bar nav { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
+.bar nav a { color: var(--muted); text-decoration: none; position: relative; }
+.bar nav a:hover, .bar nav a.on { color: var(--indigo); }
+.bar nav a.on::before { content: ""; position: absolute; left: 50%; top: -10px; width: 4px; height: 4px;
+  margin-left: -2px; border-radius: 50%; background: var(--indigo); }
+.actions { justify-self: end; display: flex; gap: 10px; }
+.round { width: 46px; height: 46px; border-radius: 50%; background: var(--indigo-fill); color: #fff;
+  display: grid; place-items: center; box-shadow: var(--shadow); }
 
-    <title>Johnny Boursiquot | Software Engineer • Educator</title>
+/* Hero stage */
+.hero { position: relative; max-width: 1360px; margin: -82px auto 0; height: clamp(760px, 100vh, 940px); overflow: hidden; }
+.disc { position: absolute; left: 50%; top: 24%; width: 640px; height: 640px; margin-left: -320px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--disc-a), var(--disc-b)); }
+.me { position: absolute; left: 50%; bottom: 0; height: 86%; width: auto; transform: translateX(-50%);
+  filter: drop-shadow(0 30px 40px rgba(20, 26, 45, .18)); }
+.sphere { position: absolute; border-radius: 50%; background: radial-gradient(circle at 30% 25%, var(--card), var(--disc-b)); }
+.s1 { left: 9%; top: 76%; width: 130px; height: 130px; }
+.s2 { right: 27%; bottom: 6%; width: 86px; height: 86px; }
+.dot { position: absolute; left: 31%; top: 90%; width: 14px; height: 14px; border-radius: 50%; background: #9aa0d8; }
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+.card { position: absolute; background: var(--card); border-radius: 26px; box-shadow: var(--shadow); z-index: 2; }
+.card.name { left: 7%; top: 31%; padding: 26px 40px 30px; }
+.hello { font-size: 15px; color: var(--muted); margin: 0 0 4px; }
+h1 { font-size: 46px; line-height: 1.02; font-weight: 800; letter-spacing: -0.03em; margin: 0; max-width: 8ch; }
+.card.role { left: 12%; top: 58%; padding: 16px 24px; border-radius: 18px; font-size: 14px; line-height: 1.5; }
+.card.role p { margin: 0; }
+.card.role p + p { color: var(--muted); }
 
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
+.orb { position: absolute; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 12px;
+  color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 700; }
+.orb .ball { width: 92px; height: 92px; border-radius: 50%; background: var(--card); box-shadow: var(--shadow);
+  display: grid; place-items: center; color: var(--indigo); transition: transform .2s; }
+.orb:hover .ball, .orb:focus-visible .ball { transform: translateY(-3px); background: var(--indigo-fill); color: #fff; }
+.orb .ball { transition: transform .2s, background .2s, color .2s; }
+.o1 { right: 22%; top: 18%; }
+.o2 { right: 20%; top: 68%; }
+.o3 { left: 20%; top: 70%; }
+.o3 .ball, .o2 .ball { width: 76px; height: 76px; }
+.orb.big { right: 8%; top: 38%; }
+.orb.big .ball { width: 128px; height: 128px; }
+.orb.big .ball .i { width: 48px; height: 48px; }
 
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+.social { position: absolute; left: 64px; bottom: 64px; list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; z-index: 3; }
+.social a { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; color: var(--ink);
+  background: var(--card); box-shadow: 0 4px 10px -4px rgba(40, 52, 99, .25); }
+.social li:first-child a { background: var(--indigo-fill); color: #fff; }
+.now { position: absolute; right: 64px; bottom: 56px; text-align: right; font-size: 13px; font-weight: 600;
+  line-height: 1.5; margin: 0; z-index: 3; }
 
-    <!-- FAVICONS -->
-    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+.dots { position: fixed; right: 28px; top: 50%; transform: translateY(-50%); display: grid; gap: 14px; z-index: 10; }
+.dots a { width: 8px; height: 8px; border-radius: 50%; background: #b9c0cf; transition: background .2s, transform .2s; }
+.dots a.on { background: var(--indigo-fill); transform: scale(1.3); }
 
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+/* One orchestrated entrance, only when JS is on and motion is allowed */
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero .disc { transform: scale(.85); opacity: 0; transition: transform 1s cubic-bezier(.2, .8, .2, 1), opacity .8s; }
+  .js .hero .me { transform: translate(-50%, 48px); opacity: 0; transition: transform 1s cubic-bezier(.2, .8, .2, 1) .15s, opacity .8s .15s; }
+  .js .hero .card, .js .hero .orb { opacity: 0; transform: translateY(18px) scale(.96);
+    transition: transform .8s cubic-bezier(.2, .8, .2, 1), opacity .6s; }
+  .js .hero .card.name { transition-delay: .45s; }
+  .js .hero .card.role { transition-delay: .6s; }
+  .js .hero .o1 { transition-delay: .7s; }
+  .js .hero .big { transition-delay: .8s; }
+  .js .hero .o2 { transition-delay: .9s; }
+  .js .hero .o3 { transition-delay: 1s; }
+  .ready .hero .disc { transform: none; opacity: 1; }
+  .ready .hero .me { transform: translateX(-50%); opacity: 1; }
+  .ready .hero .card, .ready .hero .orb { opacity: 1; transform: none; }
+  .hero [data-depth] { translate: calc(var(--px, 0) * var(--d, 0) * 1px) calc(var(--py, 0) * var(--d, 0) * 1px); }
+}
+
+/* About */
+.about { display: grid; grid-template-columns: 5fr 6fr; gap: 72px; align-items: center; }
+.about-photo { margin: 0; }
+.about-photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%;
+  border-radius: 32px; box-shadow: var(--shadow); }
+.about p { font-size: 18px; max-width: 60ch; }
+
+/* Experience */
+.sub { color: var(--muted); max-width: 62ch; }
+.exp-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 48px; align-items: start; margin-top: 40px; }
+.glance { position: sticky; top: 32px; background: var(--card); border-radius: 24px; padding: 28px; box-shadow: var(--shadow); }
+.glance h3 { font-size: 17px; font-weight: 800; margin-bottom: 12px; }
+.glance dl { margin: 0; }
+.glance dl div { padding: 10px 0; border-top: 1px solid var(--line); }
+.glance dt { font-size: 13px; font-weight: 600; color: var(--muted); }
+.glance dd { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.45; }
+.gl-links { display: flex; gap: 16px; margin: 14px 0 0; font-weight: 700; font-size: 15px; }
+ol.timeline { list-style: none; margin: 0; padding: 0 0 0 36px; position: relative; }
+ol.timeline::before { content: ""; position: absolute; left: 8px; top: 12px; bottom: 12px; width: 2px; background: var(--line); }
+ol.timeline li { position: relative; background: var(--card); border-radius: 20px; padding: 22px 28px; margin-bottom: 14px;
+  box-shadow: 0 1px 0 var(--line); }
+ol.timeline li::before { content: ""; position: absolute; left: -34px; top: 30px; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--mist); border: 3px solid var(--indigo-fill); }
+ol.timeline li:first-child::before { background: var(--indigo-fill); }
+.exp-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 6px; }
+.exp-head h3 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; }
+.exp-head h3 a { color: var(--ink); text-decoration: none; }
+.exp-head h3 a:hover { color: var(--indigo); }
+.exp-head .role { color: var(--indigo); font-weight: 600; font-size: 15px; }
+ol.timeline p, ol.timeline ul { margin: 0; color: var(--muted); }
+ol.timeline ul { padding-left: 18px; }
+ol.timeline ul li { background: none; box-shadow: none; padding: 0; margin: 0 0 4px; border-radius: 0; }
+ol.timeline ul li::before { display: none; }
+.exp-head .when { margin-left: auto; font-size: 14px; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+ol.timeline .tech { margin-top: 10px; font-size: 14px; color: var(--ink); opacity: .75; }
+
+/* Capabilities */
+.band { background: var(--card); padding-block: 96px; border-radius: 48px; max-width: 1360px; margin-inline: auto; }
+ul.caps { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 44px 64px; }
+ul.caps li { display: grid; grid-template-columns: 60px 1fr; gap: 22px; scroll-margin-top: 40px; }
+ul.caps .ball { width: 60px; height: 60px; border-radius: 50%; background: var(--indigo-soft); color: var(--indigo);
+  display: grid; place-items: center; }
+ul.caps h3 { font-size: 21px; font-weight: 800; margin: 4px 0 8px; }
+ul.caps p { margin: 0 0 8px; }
+ul.caps .where { font-size: 14px; font-weight: 600; color: var(--muted); }
+.stack-h { font-size: 21px; font-weight: 800; margin: 72px 0 16px; }
+dl.stack { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 64px; }
+dl.stack dt { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+dl.stack dd { margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+dl.stack span { font-size: 14px; padding: 4px 12px; border-radius: 999px; background: var(--mist); }
+
+/* Photo mosaic */
+.mosaic { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 230px; grid-auto-flow: dense; gap: 16px; margin-top: 36px; }
+.ph { position: relative; margin: 0; border-radius: 24px; overflow: hidden; background: var(--disc-b); }
+.ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ph.xl { grid-column: span 2; grid-row: span 2; }
+.ph.tall { grid-row: span 2; }
+.ph.wide { grid-column: span 2; }
+.ph figcaption { position: absolute; left: 14px; bottom: 14px; right: 14px; width: fit-content; background: var(--card); color: var(--ink);
+  font-size: 13px; font-weight: 600; line-height: 1.35; padding: 7px 14px; border-radius: 999px; box-shadow: 0 6px 16px -8px rgba(0, 0, 0, .35); }
+
+/* Public work */
+.pub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 32px; }
+.public h3 { font-size: 15px; font-weight: 700; color: var(--muted); margin-bottom: 12px; }
+ul.keys, ul.plain { list-style: none; padding: 0; margin: 0; }
+ul.keys li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+ul.keys .yr { font-weight: 800; color: var(--indigo); }
+ul.keys small { display: block; color: var(--muted); font-size: 14px; }
+ul.plain li { padding: 12px 0; border-top: 1px solid var(--line); }
+details.all { margin-top: 48px; }
+details.all summary { cursor: pointer; font-weight: 700; color: var(--indigo); }
+ol.log { list-style: none; padding: 0; margin: 16px 0 0; font-size: 15px; }
+ol.log li { display: grid; grid-template-columns: 96px 240px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--line); }
+ol.log time, ol.log span { color: var(--muted); }
+
+/* Contact */
+.contact .wrap { background: var(--indigo-fill); color: #fff; border-radius: 40px; padding: 72px; }
+.contact h2 { color: #fff; }
+.contact p { color: #d9dbf7; font-size: 19px; }
+.cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 999px; font-weight: 700;
+  text-decoration: none; background: #fff; color: #242894; }
+.btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .6); }
+.contact :focus-visible { outline-color: #fff; }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; color: var(--muted); font-size: 14px; padding-block: 0 48px; }
+.foot p { margin: 0; }
+
+/* Tablet and phone: the stage becomes a stack */
+@media (max-width: 1100px) {
+  .card.name { left: 4%; }
+  .card.role { left: 6%; }
+  .o1 { right: 18%; } .o2 { right: 14%; } .orb.big { right: 2%; }
+  .orb.big .ball { width: 116px; height: 116px; }
+  .bar nav { gap: 20px; }
+}
+@media (max-width: 900px) {
+  .bar { grid-template-columns: 1fr auto; padding: 20px 16px 0; }
+  .bar nav { display: none; }
+  .dots { display: none; }
+  .hero { height: auto; margin-top: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 24px 16px 0; overflow: visible; }
+  .hero > .card, .hero > .me, .hero > .social, .hero > .now { grid-column: 1 / -1; }
+  .hero > * { position: static !important; }
+  .disc, .sphere, .dot { display: none; }
+  .card.name { order: 1; padding: 20px 24px; border-radius: 22px; }
+  h1 { font-size: 38px; max-width: none; }
+  .card.role { order: 3; margin: -40px 12px 10px; justify-self: start; }
+  .orb { order: 3; flex-direction: row; gap: 10px; font-size: 13px; }
+  .orb .ball, .o3 .ball, .o2 .ball { width: 44px; height: 44px; }
+  .orb .ball .i { width: 20px; height: 20px; }
+  .hero .orb { order: 4; background: var(--card); border-radius: 999px; padding: 6px 12px 6px 6px; box-shadow: 0 4px 12px -6px rgba(40, 52, 99, .25); }
+  .hero .orb .ball { box-shadow: none; background: var(--indigo-soft); }
+  .hero .orb.big .ball { width: 44px; height: 44px; }
+  .hero .orb.big .ball .i { width: 22px; height: 22px; }
+  .me { order: 2; transform: none !important; width: 100%; height: auto; max-width: 380px; justify-self: center; margin-top: 8px;
+    background: radial-gradient(circle at 50% 62%, var(--disc-b) 0 58%, transparent 59%); }
+  .social { order: 5; display: flex; justify-content: center; margin-top: 20px; }
+  .now { order: 6; text-align: center; margin-top: 12px; }
+  .wrap { padding-inline: 16px; }
+  section.wrap, section.band, section.contact { margin-block: 80px; }
+  h2 { font-size: 32px; }
+  .about { grid-template-columns: 1fr; gap: 32px; }
+  .about-photo img { aspect-ratio: 4 / 3; }
+  .exp-grid { grid-template-columns: 1fr; }
+  .glance { position: static; }
+  ol.timeline { padding-left: 28px; }
+  ol.timeline li { padding: 18px 20px; }
+  ol.timeline li::before { left: -26px; }
+  ol.timeline::before { left: 4px; }
+  .band { border-radius: 28px; padding-block: 64px; }
+  ul.caps, dl.stack, .pub-grid { grid-template-columns: 1fr; gap: 32px; }
+  .mosaic { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; gap: 10px; }
+  .ph.xl { grid-column: span 2; }
+  .ph.tall { grid-row: span 2; }
+  .ph figcaption { font-size: 12px; padding: 5px 10px; left: 8px; bottom: 8px; right: 8px; }
+  ol.log li { grid-template-columns: 1fr; gap: 0; }
+  .contact .wrap { padding: 40px 24px; border-radius: 28px; margin-inline: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .orb .ball, :root:not([data-theme="light"]) .sphere, :root:not([data-theme="light"]) .card { box-shadow: 0 0 0 1px var(--line), var(--shadow); }
+}
+:root[data-theme="dark"] .orb .ball, :root[data-theme="dark"] .sphere, :root[data-theme="dark"] .card { box-shadow: 0 0 0 1px var(--line), var(--shadow); }
+
+/* Skill map: roles on the left, skills on the right, wires between them */
+.skillmap { position: relative; display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 88px; margin-top: 40px; }
+.wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; z-index: 0; }
+.wires path { fill: none; stroke: var(--indigo); stroke-width: 1.5; opacity: .45; }
+@media (prefers-reduced-motion: no-preference) {
+  .wires path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: wire .5s ease-out forwards; }
+  @keyframes wire { to { stroke-dashoffset: 0; } }
+}
+.sm-roles, .sm-board { position: relative; z-index: 1; min-width: 0; }
+ol.roles { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.role-btn { width: 100%; display: grid; gap: 2px; text-align: left; font: inherit; color: var(--ink); cursor: pointer;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px 16px;
+  transition: border-color .15s, background .15s, opacity .15s, box-shadow .15s; }
+.rb-org { font-weight: 800; font-size: 16px; }
+.rb-title { font-size: 14px; color: var(--muted); line-height: 1.35; }
+.rb-meta { display: flex; justify-content: space-between; min-height: 1em; gap: 12px; font-size: 12.5px; color: var(--muted); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.role-btn:hover, .role-btn.lit { border-color: var(--indigo-fill); box-shadow: 0 0 0 1px var(--indigo-fill); }
+.role-btn.lit { background: var(--indigo-soft); }
+.role-btn.dim > * { opacity: .38; }
+.role-btn > * { transition: opacity .15s; }
+.earlier { font-size: 14px; color: var(--muted); margin: 12px 4px 0; }
+
+.detail { background: var(--card); border-radius: 22px; padding: 24px 28px; box-shadow: var(--shadow); margin-bottom: 28px; min-height: 196px; }
+.rd h3 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 4px; }
+.rd h3 a { color: var(--ink); text-decoration: none; }
+.rd p, .rd ul { margin: 0; color: var(--muted); font-size: 15.5px; }
+.rd ul { padding-left: 18px; margin-top: 8px; }
+.rd ul li { margin-bottom: 4px; }
+.rd .rd-meta { color: var(--indigo); font-weight: 600; font-size: 14px; }
+.rd .rd-where { margin-top: 8px; color: var(--ink); }
+.rd .tech { margin-top: 10px; font-size: 13.5px; color: var(--ink); opacity: .75; }
+.rd-default p { max-width: 58ch; margin-top: 6px; }
+
+.board { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 36px; }
+.cat h3 { font-size: 13px; font-weight: 700; color: var(--muted); margin-bottom: 10px; }
+.cat ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 9px; font: inherit; font-size: 14px; font-weight: 500; color: var(--ink);
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer;
+  transition: background .15s, color .15s, opacity .15s, border-color .15s; }
+.chip:hover { border-color: var(--indigo-fill); }
+.pips { display: inline-flex; gap: 2px; }
+.pips i { width: 5px; height: 5px; border-radius: 50%; background: var(--line); }
+.pips i.on { background: var(--indigo); }
+.chip.lit { background: var(--indigo-fill); border-color: var(--indigo-fill); color: #fff; }
+.chip.lit .pips i { background: rgba(255, 255, 255, .3); }
+.chip.lit .pips i.on { background: #fff; }
+.chip.dim > * { opacity: .3; }
+.chip > * { transition: opacity .15s; }
+
+dl.facts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 48px 0 0; }
+dl.facts div { padding: 4px 20px; border-left: 2px solid var(--line); }
+dl.facts dt { font-size: 13px; font-weight: 600; color: var(--muted); }
+dl.facts dd { margin: 2px 0 0; font-size: 15px; font-weight: 600; line-height: 1.45; }
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .skillmap { grid-template-columns: 280px minmax(0, 1fr); gap: 56px; }
+  .board { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .skillmap { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .wires { display: none; }
+  ol.roles { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 8px; padding: 2px 2px 8px; margin: 0 -16px; padding-inline: 16px; scrollbar-width: none; }
+  ol.roles li { flex: 0 0 68%; scroll-snap-align: start; display: flex; }
+  ol.roles .role-btn { height: 100%; }
+  .earlier { margin-top: 4px; }
+  .rb-meta { flex-direction: column; gap: 0; }
+  .board { grid-template-columns: 1fr; gap: 20px; }
+  .detail { padding: 20px; min-height: 0; }
+  dl.facts { grid-template-columns: 1fr 1fr; gap: 16px 0; }
+}
+@media (min-width: 1200px) {
+  .skillmap { grid-template-columns: 300px minmax(0, 1fr); gap: 72px; }
+  .board { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px 24px; }
+  .chip { font-size: 13.5px; padding: 5px 11px; gap: 7px; white-space: nowrap; }
+}
+@media (max-width: 1100px) and (min-width: 901px) { dl.facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 0; } }
+.round.alt { background: var(--card); color: var(--ink); box-shadow: 0 0 0 1px var(--line), var(--shadow); }
+.round.alt:hover { color: var(--indigo); }
+
+
+/* Round studio portrait, centered in the disc so the disc reads as a halo */
+.portrait { position: absolute; left: 50%; top: calc(24% + 320px); width: 548px; aspect-ratio: 1; margin: 0;
+  transform: translate(-50%, -50%); border-radius: 50%; overflow: hidden; z-index: 1;
+  box-shadow: 0 0 0 10px var(--card), 0 0 0 11px var(--line), var(--shadow); }
+.portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero .portrait { opacity: 0; transform: translate(-50%, -46%) scale(.96);
+    transition: transform 1s cubic-bezier(.2, .8, .2, 1) .15s, opacity .8s .15s; }
+  .ready .hero .portrait { opacity: 1; transform: translate(-50%, -50%); }
+}
+@media (max-width: 1100px) and (min-width: 901px) { .portrait { width: 480px; } }
+@media (max-width: 900px) {
+  .hero > .portrait { grid-column: 1 / -1; order: 2; justify-self: center; width: min(300px, 78vw); margin: 20px 0 28px;
+    transform: none !important; opacity: 1 !important; }
+}
+.rd h3 .via { font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: 0; margin-left: 6px; }
+/* Role card wraps to a narrow column so it sits beside the portrait, not over the face */
+@media (min-width: 901px) {
+  .card.role { left: 8%; max-width: 250px; }
+  .card.role p:first-child { line-height: 1.35; margin-bottom: 4px; }
+}
+@media (max-width: 1100px) and (min-width: 901px) { .card.role { left: 3%; } }
+@media (min-width: 901px) { .hero .o3 { top: 76%; left: 17%; } }
+@media (max-width: 1100px) and (min-width: 901px) { .card.role { left: 2%; max-width: 230px; } .hero .o3 { left: 12%; } }
+
+/* Fifth bubble: lower right, clear of Reliability and the Distributed Systems label */
+.o5 { right: 5%; top: 70%; }
+.o5 .ball { width: 76px; height: 76px; }
+@media (prefers-reduced-motion: no-preference) { .js .hero .o5 { transition-delay: 1.1s; } }
+@media (max-width: 1100px) and (min-width: 901px) { .o5 { right: 2%; } }
+@media (max-width: 1300px) and (min-width: 901px) { .o1 { right: 15%; } }
+@media (max-width: 1100px) and (min-width: 901px) { .o5 { right: 3%; top: 82%; } .o2 { right: 12%; } }
+@media (max-width: 900px) {
+  .hero .o5 .ball { width: 44px; height: 44px; }
+  .hero .o5 { grid-column: 1 / -1; justify-self: start; }
+}
+
+/* Works: recent cards, open source list, earlier highlights */
+ol.recent { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+ol.recent li { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px 24px; display: flex; flex-direction: column; }
+.rw-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 13px; }
+.rw-kind { font-weight: 700; color: var(--indigo); background: var(--indigo-soft); padding: 3px 10px; border-radius: 999px; }
+.rw-meta time { color: var(--muted); font-weight: 600; font-variant-numeric: tabular-nums; }
+ol.recent h4 { font-size: 17px; line-height: 1.35; font-weight: 800; margin: 0 0 4px; }
+ol.recent h4 a { color: var(--ink); text-decoration: none; }
+ol.recent h4 a:hover { color: var(--indigo); }
+.rw-where { font-size: 14px; font-weight: 600; color: var(--muted); margin: 0 0 10px; }
+ol.recent li > p:not(.rw-where) { font-size: 15px; color: var(--muted); margin: 0; flex: 1; }
+.rw-code { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 14px; font-weight: 700; text-decoration: none; align-self: flex-start; }
+.oss-h { font-size: 21px; font-weight: 800; margin: 56px 0 12px; color: var(--ink) !important; }
+ul.oss { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; }
+ul.oss li { display: grid; grid-template-columns: 320px 1fr; gap: 16px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--line); }
+ul.oss a { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; }
+ul.oss a .i { flex: none; }
+.oss-name { overflow-wrap: anywhere; }
+.oss-desc { font-size: 15px; color: var(--muted); }
+.earlier-work { margin-top: 48px; padding: 24px 28px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); }
+.earlier-work h3 { margin-bottom: 8px; }
+.earlier-work p { margin: 0; color: var(--muted); max-width: 90ch; }
+@media (max-width: 1100px) { ol.recent { grid-template-columns: 1fr 1fr; } ul.oss { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { ol.recent { grid-template-columns: 1fr; } ul.oss li { grid-template-columns: 1fr; gap: 2px; } .earlier-work { padding: 20px; } }
+
+</style>
+<link rel="preload" as="image" href="img/johnny-headshot-round.jpg">
+<script>document.documentElement.classList.add("js")</script>
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="mark" href="#top" aria-label="Johnny Boursiquot, home">JB<span>.</span></a>
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#capabilities">Capabilities</a><a href="#works">Works</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="actions">
+    <a class="round alt" href="https://github.com/jboursiquot" aria-label="GitHub profile"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
+    <a class="round" href="https://www.linkedin.com/in/jboursiquot" aria-label="LinkedIn profile"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 9.5V18M6.5 6.2v.1M10.5 18v-5a3 3 0 0 1 6 0v5M10.5 9.5V18"/></svg></a>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
 
-    <!-- PRE LOADER -->
-    <div class="preloader">
-        <div class="spinner">
-            <span class="spinner-rotate"></span>
-        </div>
+  <div class="disc" aria-hidden="true"></div>
+  <figure class="portrait"><img src="img/johnny-headshot-round.jpg" alt="Johnny Boursiquot smiling, in glasses, a striped collar, and a navy sweater" width="1200" height="1200"></figure>
+  <div class="card name" data-depth="8">
+    <p class="hello">Hello, I'm</p>
+    <h1>Johnny Boursiquot</h1>
+  </div>
+  <div class="card role" data-depth="12">
+    <p><strong>Experienced software engineer and professional maker</strong></p>
+    <p>Over two decades of building software</p>
+  </div>
+  <a class="orb o1" href="#cap-ai" data-depth="18"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4l1.9 5.1L17 11l-5.1 1.9L10 18l-1.9-5.1L3 11l5.1-1.9z"/><path d="M18 3v4M16 5h4M18.5 15.5v3M17 17h3"/></svg></span><span class="lbl">AI Systems</span></a>
+  <a class="orb big" href="#cap-dist" data-depth="6"><span class="ball"><svg class="i" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 7.3l2.6 8.4M15.8 7.3l-2.6 8.4M8.5 6h7"/></svg></span><span class="lbl">Distributed Systems</span></a>
+  <a class="orb o2" href="#cap-sre" data-depth="10"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"/></svg></span><span class="lbl">Reliability</span></a>
+  <a class="orb o3" href="#cap-cloud" data-depth="24"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.2 4.5 4.5 0 0 0 7 18z"/></svg></span><span class="lbl">Cloud Architecture</span></a>
+  <a class="orb o5" href="#cap-sec" data-depth="16"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.1-7 9.5-4.1-1.4-7-5.2-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><span class="lbl">Security &amp; Compliance</span></a>
+</section>
+<nav class="dots" aria-label="Page sections">
+  <a href="#top" aria-label="Top" class="on"></a><a href="#about" aria-label="About"></a><a href="#experience" aria-label="Experience"></a><a href="#capabilities" aria-label="Capabilities"></a><a href="#works" aria-label="Works"></a><a href="#contact" aria-label="Contact"></a>
+</nav>
+
+<section class="wrap about" id="about">
+  <figure class="about-photo"><img src="img/about-stage.jpg" alt="Johnny smiling, seated on stage during a GopherCon 2026 conversation" loading="lazy"></figure>
+  <div>
+    <h2>About</h2>
+    <p>I&#x27;m a software engineer with over two decades of experience building and running production systems. These days I focus on AI engineering, cloud architecture, and distributed systems. Much of my recent work is getting LLM-powered and agentic systems ready for production, which means explicit control flow, guardrails, and the same observability and testing any other service gets.</p><p>I&#x27;ve been on several startup founding teams, including co-founding Skilltype, a cloud-based SaaS platform for workforce development, where I&#x27;m CTO. Along the way I was a Program Lead at Chick-fil-A and Director of Engineering at Human Agency, and I helped establish site reliability engineering practices at Salesforce/Heroku. Knowing how systems behave once real users arrive shapes most of the engineering decisions I make.</p><p>I also speak and teach: conference keynotes, courses on O&#x27;Reilly and LinkedIn Learning, and years as a host of the Go Time podcast.</p>
+  </div>
+</section>
+
+<section class="wrap" id="experience">
+  <h2>Experience</h2>
+  <div class="skillmap">
+  <svg class="wires" aria-hidden="true"></svg>
+  <div class="sm-roles">
+    <ol class="roles"><li><button type="button" class="role-btn" data-role="humanagency" aria-pressed="false"><span class="rb-org">Human Agency</span><span class="rb-title">Director of Engineering</span><span class="rb-meta"><span>3 mos</span><span>15 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="cfa" aria-pressed="false"><span class="rb-org">Chick-fil-A</span><span class="rb-title">Principal Software Engineer and Program Lead</span><span class="rb-meta"><span>1 yr 1 mo</span><span>17 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="skilltype" aria-pressed="false"><span class="rb-org">Skilltype</span><span class="rb-title">Co-founder and CTO (fractional)</span><span class="rb-meta"><span>6 yrs 11 mos</span><span>52 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="salesforce" aria-pressed="false"><span class="rb-org">Salesforce</span><span class="rb-title">Platform Observability Engineer</span><span class="rb-meta"><span>1 yr 11 mos</span><span>9 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="heroku" aria-pressed="false"><span class="rb-org">Heroku</span><span class="rb-title">Site Reliability Engineer</span><span class="rb-meta"><span>2 yrs</span><span>9 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="anet" aria-pressed="false"><span class="rb-org">The Achievement Network</span><span class="rb-title">Principal Cloud Engineer</span><span class="rb-meta"><span>2 yrs 10 mos</span><span>16 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="influx" aria-pressed="false"><span class="rb-org">InfluxData</span><span class="rb-title">Senior Software Engineer</span><span class="rb-meta"><span>4 mos</span><span>5 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="onedoor" aria-pressed="false"><span class="rb-org">One Door</span><span class="rb-title">Software Architect and Principal Software Engineer</span><span class="rb-meta"><span></span><span>9 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="launch" aria-pressed="false"><span class="rb-org">Launch Academy</span><span class="rb-title">Software Engineering Instructor</span><span class="rb-meta"><span></span><span>3 skills</span></span></button></li><li><button type="button" class="role-btn" data-role="maark" aria-pressed="false"><span class="rb-org">MAARK</span><span class="rb-title">Engineering leadership roles</span><span class="rb-meta"><span></span><span>7 skills</span></span></button></li></ol>
+    <p class="earlier">Plus earlier software engineering roles before MAARK.</p>
+  </div>
+  <div class="sm-board">
+    <div class="detail" aria-live="polite">
+      <div class="rd rd-default"><h3>What I've used, and where</h3>
+        <p>Pick a role to see the skills I used there, or a skill to see where I used it. Dots show how many roles used each skill.</p></div>
+      <div class="rd rd-skill" hidden><h3></h3><p class="rd-meta"></p><p class="rd-where"></p></div>
+      <div class="rd" data-role="humanagency" hidden><h3><a href="https://www.humanagency.com/">Human Agency</a></h3><p class="rd-meta">Director of Engineering, 3 mos</p><ul><li>Restarted a stalled SOC 2 readiness program, delivering automated security controls across all active company systems, vendor tracking, and audit evidence collection.</li><li>Built a commercial controls program ahead of the product&#x27;s beta launch, including per-customer cost and margin tracking, usage attribution, vendor cost monitoring, and AI-assisted invoice processing workflows.</li><li>Fixed inefficiencies and set up guardrails in a codebase written mostly by non-engineers with AI tools.</li></ul></div><div class="rd" data-role="cfa" hidden><h3><a href="https://www.chick-fil-a.com/">Chick-fil-A</a> <span class="via">via Stable Kernel</span></h3><p class="rd-meta">Principal Software Engineer and Program Lead, 1 yr 1 mo</p><ul><li>Lead architecture and delivery for Chick-fil-A&#x27;s Loyalty Platform initiatives, working with product, engineering, and business teams.</li><li>Cut cache infrastructure costs by 39% and improved latency for high-traffic promotion workloads.</li><li>Traced DynamoDB throttling to thundering-herd cache expiration and designed a phased fix using TTL jitter, request deduplication, and distributed coordination.</li><li>Designed location-scoped cache invalidation and event propagation that reduced promotion-data staleness from minutes to near real time.</li><li>Hire engineers at Stable Kernel, document failure modes, and build Datadog diagnostics for release performance.</li></ul><p class="tech">DynamoDB, caching, event propagation, Datadog</p></div><div class="rd" data-role="skilltype" hidden><h3><a href="https://www.skilltype.com/">Skilltype</a></h3><p class="rd-meta">Co-founder and CTO (fractional), 6 yrs 11 mos</p><ul><li>Own product direction and engineering for Skilltype&#x27;s library talent-management software, from initial concept through launch.</li><li>Build across backend services and React front ends using Go, Java, JavaScript, TypeScript, PostgreSQL, DynamoDB, and AWS; rebuilt the web front end with React, TypeScript, and Vite.</li><li>Build production AI features with Bedrock, Anthropic, and OpenAI, including RAG and tool-calling for customer workflows, and design APIs and MCP integrations for customers.</li><li>Set testing, CI/CD, observability, and secure delivery standards, supporting GDPR-aware architecture, SOC 2-aligned practices, and TX-RAMP compliance.</li><li>Hire and mentor engineers, review designs and code, and work with executive and product teams on what to build.</li></ul><p class="tech">Go, Java, TypeScript, React, Vite, PostgreSQL, DynamoDB, AWS, Bedrock</p></div><div class="rd" data-role="salesforce" hidden><h3><a href="https://www.salesforce.com/">Salesforce</a></h3><p class="rd-meta">Platform Observability Engineer, 1 yr 11 mos</p><ul><li>Wrote shared Go instrumentation libraries to help service teams adopt OpenTelemetry, and standardized instrumentation patterns across services.</li><li>Led the move from legacy monitoring to Honeycomb and distributed tracing, and helped service owners diagnose production behavior.</li><li>Mentored engineers in Go, observability, and distributed systems.</li></ul><p class="tech">Go, OpenTelemetry, Honeycomb</p></div><div class="rd" data-role="heroku" hidden><h3><a href="https://www.heroku.com/">Heroku</a></h3><p class="rd-meta">Site Reliability Engineer, 2 yrs</p><ul><li>Built tooling and improved incident-response, deployment, and monitoring workflows for Heroku services.</li><li>Served as incident commander during major production incidents, coordinating mitigation and communication.</li><li>Helped Salesforce engineering teams adopt Heroku, and mentored engineers in Go, cloud infrastructure, and distributed systems.</li></ul></div><div class="rd" data-role="anet" hidden><h3><a href="https://achievementnetwork.org/">The Achievement Network</a></h3><p class="rd-meta">Principal Cloud Engineer, 2 yrs 10 mos</p><ul><li>Led backend engineering and AWS modernization for an education SaaS product.</li><li>Built CI/CD pipelines and deployment automation on AWS, and designed backend services and APIs.</li><li>Guided engineering teams on AWS architecture and implementation.</li></ul><p class="tech">Go, Java, PostgreSQL, Lambda, SQS, DynamoDB</p></div><div class="rd" data-role="influx" hidden><h3><a href="https://influxdata.com/">InfluxData</a></h3><p class="rd-meta">Senior Software Engineer, 4 mos</p><ul><li>Worked on distributed time-series database infrastructure and enterprise SaaS services in Go.</li></ul><p class="tech">Go</p></div><div class="rd" data-role="onedoor" hidden><h3><a href="https://onedoor.com/">One Door</a></h3><p class="rd-meta">Software Architect and Principal Software Engineer</p><ul><li>Built retail-merchandising SaaS applications, APIs, and messaging.</li></ul><p class="tech">Ruby on Rails, MySQL, RabbitMQ</p></div><div class="rd" data-role="launch" hidden><h3><a href="https://www.launchacademy.com/">Launch Academy</a></h3><p class="rd-meta">Software Engineering Instructor</p><ul><li>Taught Ruby on Rails and web application development, and mentored new engineers.</li></ul><p class="tech">Ruby on Rails</p></div><div class="rd" data-role="maark" hidden><h3><a href="https://www.maark.com/">MAARK</a></h3><p class="rd-meta">Engineering leadership roles</p><ul><li>Owned products from concept through launch, hired engineers, and built enterprise SaaS, payments, and web applications across backend and HTML, CSS, and JavaScript.</li></ul></div>
     </div>
+    <div class="board"><div class="cat"><h3>Languages</h3><ul><li><button type="button" class="chip" data-roles="skilltype salesforce heroku anet influx cfa" data-where="Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); Salesforce (1 yr 11 mos); Heroku (2 yrs); The Achievement Network (2 yrs 10 mos); InfluxData (4 mos)" data-count="6" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); Salesforce (1 yr 11 mos); Heroku (2 yrs); The Achievement Network (2 yrs 10 mos); InfluxData (4 mos)"><span>Go</span><span class="pips" aria-label="6 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype anet" data-where="Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)" data-count="2" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)"><span>Java</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>TypeScript</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype maark" data-where="Skilltype (6 yrs 11 mos); MAARK" data-count="2" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); MAARK"><span>JavaScript</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype humanagency" data-where="Human Agency (3 mos); Skilltype (6 yrs 11 mos)" data-count="2" aria-pressed="false" title="Used at Human Agency (3 mos); Skilltype (6 yrs 11 mos)"><span>Python</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype anet onedoor" data-where="Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos); One Door" data-count="3" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos); One Door"><span>SQL</span><span class="pips" aria-label="3 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="onedoor launch" data-where="One Door; Launch Academy" data-count="2" aria-pressed="false" title="Used at One Door; Launch Academy"><span>Ruby on Rails</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype maark" data-where="Skilltype (6 yrs 11 mos); MAARK" data-count="2" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); MAARK"><span>HTML and CSS</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>Front End</h3><ul><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>React</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Vite</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Vitest</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>React Testing Library</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Playwright</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Accessibility testing</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Material UI</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>React Router</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Algolia InstantSearch</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>Cloud &amp; Delivery</h3><ul><li><button type="button" class="chip" data-roles="skilltype anet cfa humanagency" data-where="Human Agency (3 mos); Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)" data-count="4" aria-pressed="false" title="Used at Human Agency (3 mos); Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)"><span>AWS</span><span class="pips" aria-label="4 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="anet skilltype" data-where="Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)" data-count="2" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)"><span>Lambda</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>ECS Fargate</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype anet" data-where="Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)" data-count="2" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)"><span>SQS and SNS</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype humanagency" data-where="Human Agency (3 mos); Skilltype (6 yrs 11 mos)" data-count="2" aria-pressed="false" title="Used at Human Agency (3 mos); Skilltype (6 yrs 11 mos)"><span>Docker</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype anet humanagency" data-where="Human Agency (3 mos); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)" data-count="3" aria-pressed="false" title="Used at Human Agency (3 mos); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)"><span>CI/CD</span><span class="pips" aria-label="3 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="anet heroku" data-where="Heroku (2 yrs); The Achievement Network (2 yrs 10 mos)" data-count="2" aria-pressed="false" title="Used at Heroku (2 yrs); The Achievement Network (2 yrs 10 mos)"><span>Deployment automation</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="heroku salesforce" data-where="Salesforce (1 yr 11 mos); Heroku (2 yrs)" data-count="2" aria-pressed="false" title="Used at Salesforce (1 yr 11 mos); Heroku (2 yrs)"><span>Heroku platform</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>Architecture &amp; APIs</h3><ul><li><button type="button" class="chip" data-roles="cfa skilltype anet onedoor" data-where="Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos); One Door" data-count="4" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos); One Door"><span>Architecture</span><span class="pips" aria-label="4 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype anet onedoor" data-where="Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos); One Door" data-count="3" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos); One Door"><span>API design</span><span class="pips" aria-label="3 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype anet influx" data-where="Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos); InfluxData (4 mos)" data-count="3" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos); InfluxData (4 mos)"><span>Backend services</span><span class="pips" aria-label="3 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa salesforce heroku influx" data-where="Chick-fil-A (1 yr 1 mo); Salesforce (1 yr 11 mos); Heroku (2 yrs); InfluxData (4 mos)" data-count="4" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); Salesforce (1 yr 11 mos); Heroku (2 yrs); InfluxData (4 mos)"><span>Distributed systems</span><span class="pips" aria-label="4 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa skilltype anet" data-where="Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)" data-count="3" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)"><span>Event-driven design</span><span class="pips" aria-label="3 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa" data-where="Chick-fil-A (1 yr 1 mo)" data-count="1" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo)"><span>Caching strategy</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Data integrations</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="onedoor anet" data-where="The Achievement Network (2 yrs 10 mos); One Door" data-count="2" aria-pressed="false" title="Used at The Achievement Network (2 yrs 10 mos); One Door"><span>Messaging</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>Data</h3><ul><li><button type="button" class="chip" data-roles="skilltype anet" data-where="Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)" data-count="2" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)"><span>PostgreSQL</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa skilltype anet" data-where="Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)" data-count="3" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); The Achievement Network (2 yrs 10 mos)"><span>DynamoDB</span><span class="pips" aria-label="3 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa skilltype" data-where="Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos)" data-count="2" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos)"><span>Redis</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="onedoor" data-where="One Door" data-count="1" aria-pressed="false" title="Used at One Door"><span>MySQL</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="onedoor" data-where="One Door" data-count="1" aria-pressed="false" title="Used at One Door"><span>RabbitMQ</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="influx" data-where="InfluxData (4 mos)" data-count="1" aria-pressed="false" title="Used at InfluxData (4 mos)"><span>Time-series data</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>Reliability &amp; Observability</h3><ul><li><button type="button" class="chip" data-roles="salesforce" data-where="Salesforce (1 yr 11 mos)" data-count="1" aria-pressed="false" title="Used at Salesforce (1 yr 11 mos)"><span>OpenTelemetry</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="salesforce" data-where="Salesforce (1 yr 11 mos)" data-count="1" aria-pressed="false" title="Used at Salesforce (1 yr 11 mos)"><span>Honeycomb</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa" data-where="Chick-fil-A (1 yr 1 mo)" data-count="1" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo)"><span>Datadog</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="salesforce" data-where="Salesforce (1 yr 11 mos)" data-count="1" aria-pressed="false" title="Used at Salesforce (1 yr 11 mos)"><span>Distributed tracing</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="heroku" data-where="Heroku (2 yrs)" data-count="1" aria-pressed="false" title="Used at Heroku (2 yrs)"><span>Incident command</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="heroku" data-where="Heroku (2 yrs)" data-count="1" aria-pressed="false" title="Used at Heroku (2 yrs)"><span>SRE tooling</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa" data-where="Chick-fil-A (1 yr 1 mo)" data-count="1" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo)"><span>Performance tuning</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa" data-where="Chick-fil-A (1 yr 1 mo)" data-count="1" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo)"><span>Failure-mode analysis</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Testing standards</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype salesforce" data-where="Skilltype (6 yrs 11 mos); Salesforce (1 yr 11 mos)" data-count="2" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); Salesforce (1 yr 11 mos)"><span>Observability standards</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>AI</h3><ul><li><button type="button" class="chip" data-roles="skilltype humanagency" data-where="Human Agency (3 mos); Skilltype (6 yrs 11 mos)" data-count="2" aria-pressed="false" title="Used at Human Agency (3 mos); Skilltype (6 yrs 11 mos)"><span>Production AI features</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>RAG</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Tool calling</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>MCP</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Amazon Bedrock</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Anthropic</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>OpenAI</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="humanagency" data-where="Human Agency (3 mos)" data-count="1" aria-pressed="false" title="Used at Human Agency (3 mos)"><span>AI-assisted workflows</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype humanagency" data-where="Human Agency (3 mos); Skilltype (6 yrs 11 mos)" data-count="2" aria-pressed="false" title="Used at Human Agency (3 mos); Skilltype (6 yrs 11 mos)"><span>AI-assisted development</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>Security &amp; Compliance</h3><ul><li><button type="button" class="chip" data-roles="humanagency skilltype" data-where="Human Agency (3 mos); Skilltype (6 yrs 11 mos)" data-count="2" aria-pressed="false" title="Used at Human Agency (3 mos); Skilltype (6 yrs 11 mos)"><span>SOC 2</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="humanagency" data-where="Human Agency (3 mos)" data-count="1" aria-pressed="false" title="Used at Human Agency (3 mos)"><span>Security controls</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>GDPR</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>TX-RAMP</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Secure delivery</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="humanagency" data-where="Human Agency (3 mos)" data-count="1" aria-pressed="false" title="Used at Human Agency (3 mos)"><span>Audit evidence</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>Leadership &amp; Business</h3><ul><li><button type="button" class="chip" data-roles="humanagency cfa skilltype maark" data-where="Human Agency (3 mos); Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); MAARK" data-count="4" aria-pressed="false" title="Used at Human Agency (3 mos); Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); MAARK"><span>Engineering leadership</span><span class="pips" aria-label="4 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa skilltype maark" data-where="Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); MAARK" data-count="3" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); Skilltype (6 yrs 11 mos); MAARK"><span>Hiring</span><span class="pips" aria-label="3 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype salesforce heroku launch" data-where="Skilltype (6 yrs 11 mos); Salesforce (1 yr 11 mos); Heroku (2 yrs); Launch Academy" data-count="4" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); Salesforce (1 yr 11 mos); Heroku (2 yrs); Launch Academy"><span>Mentoring</span><span class="pips" aria-label="4 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Design and code review</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype maark" data-where="Skilltype (6 yrs 11 mos); MAARK" data-count="2" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); MAARK"><span>Product direction</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa" data-where="Chick-fil-A (1 yr 1 mo)" data-count="1" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo)"><span>Program leadership</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa heroku" data-where="Chick-fil-A (1 yr 1 mo); Heroku (2 yrs)" data-count="2" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); Heroku (2 yrs)"><span>Cross-functional delivery</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Executive partnership</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="humanagency cfa" data-where="Human Agency (3 mos); Chick-fil-A (1 yr 1 mo)" data-count="2" aria-pressed="false" title="Used at Human Agency (3 mos); Chick-fil-A (1 yr 1 mo)"><span>Cost and margin controls</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="humanagency" data-where="Human Agency (3 mos)" data-count="1" aria-pressed="false" title="Used at Human Agency (3 mos)"><span>Vendor management</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="humanagency" data-where="Human Agency (3 mos)" data-count="1" aria-pressed="false" title="Used at Human Agency (3 mos)"><span>Codebase guardrails</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="launch" data-where="Launch Academy" data-count="1" aria-pressed="false" title="Used at Launch Academy"><span>Teaching</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div><div class="cat"><h3>Industries</h3><ul><li><button type="button" class="chip" data-roles="skilltype influx onedoor maark" data-where="Skilltype (6 yrs 11 mos); InfluxData (4 mos); One Door; MAARK" data-count="4" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos); InfluxData (4 mos); One Door; MAARK"><span>Enterprise SaaS</span><span class="pips" aria-label="4 roles"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="humanagency" data-where="Human Agency (3 mos)" data-count="1" aria-pressed="false" title="Used at Human Agency (3 mos)"><span>Enterprise AI</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="cfa onedoor" data-where="Chick-fil-A (1 yr 1 mo); One Door" data-count="2" aria-pressed="false" title="Used at Chick-fil-A (1 yr 1 mo); One Door"><span>Loyalty and retail</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="skilltype" data-where="Skilltype (6 yrs 11 mos)" data-count="1" aria-pressed="false" title="Used at Skilltype (6 yrs 11 mos)"><span>Talent management</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="anet" data-where="The Achievement Network (2 yrs 10 mos)" data-count="1" aria-pressed="false" title="Used at The Achievement Network (2 yrs 10 mos)"><span>Education</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="heroku salesforce" data-where="Salesforce (1 yr 11 mos); Heroku (2 yrs)" data-count="2" aria-pressed="false" title="Used at Salesforce (1 yr 11 mos); Heroku (2 yrs)"><span>Developer platforms</span><span class="pips" aria-label="2 roles"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></button></li><li><button type="button" class="chip" data-roles="maark" data-where="MAARK" data-count="1" aria-pressed="false" title="Used at MAARK"><span>Payments</span><span class="pips" aria-label="1 role"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></button></li></ul></div></div>
+  </div>
+</div>
+  <dl class="facts">
+      <div><dt>Community</dt><dd>GopherCon program chair</dd></div>
+      <div><dt>Education</dt><dd>M.S., Cloud Computing Architecture<br>B.S., Computer and Information Science</dd></div>
+      <div><dt>Published</dt><dd>Contributing author, 97 Things Every SRE Should Know</dd></div>
+      <div><dt>Keynotes</dt><dd>QCon Plus 2020; GopherCon 2019 and 2021</dd></div>
+      <div><dt>Trainer</dt><dd>GopherCon workshops nearly every year since 2021: Advanced Go, serverless architectures, and agentic systems</dd></div>
+    </dl>
+</section>
 
+<section class="band" id="capabilities">
+  <div class="wrap">
+    <h2>Capabilities</h2>
+    <ul class="caps"><li id="cap-ai"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4l1.9 5.1L17 11l-5.1 1.9L10 18l-1.9-5.1L3 11l5.1-1.9z"/><path d="M18 3v4M16 5h4M18.5 15.5v3M17 17h3"/></svg></span><div><h3>AI Systems</h3><p>Designing and shipping production AI features, from RAG and tool calling to MCP integrations, on Bedrock, Anthropic, and OpenAI, with explicit control flow, guardrails, evaluation, and the same observability and testing as any other service.</p></div></li><li id="cap-cloud"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.2 4.5 4.5 0 0 0 7 18z"/></svg></span><div><h3>Cloud Architecture</h3><p>Designing and running cloud platforms for global user bases, from containers and serverless functions to event streams, queues, and infrastructure as code, with data handling built for privacy rules like GDPR.</p></div></li><li id="cap-sre"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"/></svg></span><div><h3>Reliability</h3><p>Incident command, SRE tooling, and release diagnostics, and instrumenting systems with OpenTelemetry, Honeycomb, and Datadog so teams can see what production is doing.</p></div></li><li id="cap-dist"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 7.3l2.6 8.4M15.8 7.3l-2.6 8.4M8.5 6h7"/></svg></span><div><h3>Distributed Systems</h3><p>Caching, event propagation, and distributed coordination for high-traffic workloads, plus time-series infrastructure and data stores from PostgreSQL and MySQL to DynamoDB and Redis.</p></div></li><li id="cap-sec"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.1-7 9.5-4.1-1.4-7-5.2-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><div><h3>Security &amp; Compliance</h3><p>Running SOC 2 readiness with automated security controls, vendor tracking, and audit evidence collection, and building GDPR-aware architecture, PII protection across vendors and regions, and TX-RAMP compliance into how products ship.</p></div></li><li id="cap-product"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><div><h3>Full-Stack Product Engineering</h3><p>Two decades of taking SaaS products from concept to production across enterprise software, loyalty and retail, education, and payments, owning everything from the React and TypeScript front end to the API, the data layer, and the deploy.</p></div></li><li id="cap-lead"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.8.3 5 2.6 5 5.8"/></svg></span><div><h3>Leadership</h3><p>Leading engineering as a CTO, director, and program lead: hiring and mentoring engineers, setting architecture, testing, and delivery standards, running SOC 2 and cost-control programs, and working with executives on what to build.</p></div></li></ul>
+    <h3 class="stack-h">Stack</h3>
+    <dl class="stack"><div><dt>Languages</dt><dd><span>Go</span><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Ruby</span><span>Java</span></dd></div><div><dt>Front End</dt><dd><span>React</span><span>TypeScript</span><span>Vite</span><span>Vitest</span><span>Playwright</span><span>Material UI</span></dd></div><div><dt>Cloud</dt><dd><span>Lambda</span><span>ECS and Fargate</span><span>S3</span><span>SQS</span><span>SNS</span><span>Kinesis</span><span>Cognito</span><span>CloudFront</span><span>Bedrock</span></dd></div><div><dt>Architecture</dt><dd><span>Microservices</span><span>serverless</span><span>event-driven and distributed systems</span></dd></div><div><dt>Data</dt><dd><span>Postgres</span><span>MySQL</span><span>DynamoDB</span><span>Redis</span><span>time-series databases</span></dd></div><div><dt>APIs &amp; Messaging</dt><dd><span>REST</span><span>GraphQL</span><span>gRPC</span><span>MQTT</span></dd></div><div><dt>Delivery &amp; Operations</dt><dd><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>CloudFormation</span><span>Terraform</span><span>OpenTelemetry</span><span>SRE practice</span></dd></div><div><dt>AI</dt><dd><span>LLM applications</span><span>AI agents</span><span>Amazon Bedrock</span><span>OpenAI models</span><span>Anthropic models</span></dd></div></dl>
+  </div>
+</section>
 
-    <!-- NAVIGATION SECTION -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
+<section class="wrap" id="photos">
+  <h2>On Stage and at Work</h2>
+  <div class="mosaic"><figure class="ph xl"><img src="img/gc26-panel.jpg" alt="Johnny moderating a five-person panel on the GopherCon main stage" loading="lazy" style="object-position: 50% 50%"><figcaption>Moderating the closing panel with the Go team, GopherCon 2026</figcaption></figure><figure class="ph tall"><img src="img/gc26-emcee.jpg" alt="Johnny on stage in a green GopherCon shirt" loading="lazy" style="object-position: 50% 50%"><figcaption>Emcee, GopherCon 2026</figcaption></figure><figure class="ph "><img src="img/gc24-emcee.jpg" alt="Johnny speaking into a headset mic on the GopherCon stage, gesturing with one hand" loading="lazy" style="object-position: 50% 0%"><figcaption>Emcee, GopherCon 2024</figcaption></figure><figure class="ph "><img src="img/gc26-seated.jpg" alt="Johnny seated on stage, speaking and gesturing" loading="lazy" style="object-position: 40% 40%"><figcaption>On stage, GopherCon 2026</figcaption></figure><figure class="ph wide"><img src="img/gc26-teaching.jpg" alt="Johnny teaching at the front of a workshop room, attendees at laptops in the foreground" loading="lazy" style="object-position: 78% 30%"><figcaption>Teaching a workshop, GopherCon 2026</figcaption></figure><figure class="ph wide"><img src="img/gc26-mainstage.jpg" alt="Johnny and his co-host on the GopherCon 2026 main stage" loading="lazy" style="object-position: 50% 50%"><figcaption>Main stage, GopherCon 2026</figcaption></figure><figure class="ph "><img src="img/laptop.jpg" alt="Johnny working at a laptop covered in developer stickers" loading="lazy" style="object-position: 50% 50%"><figcaption>At work</figcaption></figure><figure class="ph "><img src="img/keynote-2019.jpg" alt="Johnny at the GopherCon podium, hand on heart" loading="lazy" style="object-position: 65% 40%"><figcaption>Closing keynote, GopherCon 2019</figcaption></figure><figure class="ph "><img src="img/serverless-2018.jpg" alt="Johnny presenting Orchestrating Serverless on AWS" loading="lazy" style="object-position: 70% 60%"><figcaption>Serverless on AWS, 2018</figcaption></figure><figure class="ph "><img src="img/podcast.jpg" alt="Johnny beside a studio microphone wearing headphones" loading="lazy" style="object-position: 50% 50%"><figcaption>Podcast recording</figcaption></figure></div>
+</section>
 
-            <!-- NAVBAR HEADER -->
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                </button>
-                <!-- lOGO TEXT HERE -->
-                <a href="index.html" class="navbar-brand">Johnny Boursiquot</a>
-            </div>
+<section class="wrap public" id="works">
+  <h2>Works</h2>
+  <p class="sub">Recent talks, workshops, and open source. The full record goes back to 2013.</p>
+  <ol class="recent"><li><div class="rw-meta"><span class="rw-kind">Workshop</span><time>Aug 2026</time></div><h4><a href="https://www.gophercon.com/agenda/session/1801556">Agents the Hard Way: Building Agentic Systems in Go</a></h4><p class="rw-where">GopherCon US, Seattle</p><p>Two half-day workshops on building agentic systems in Go, with the workshop code on GitHub.</p><a class=rw-code href="https://github.com/jboursiquot/gc26buildingagenticsystems"><svg class="i" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>Code</a></li><li><div class="rw-meta"><span class="rw-kind">Panel</span><time>Aug 2026</time></div><h4><a href="https://www.gophercon.com/agenda/session/1880696">A Slice of Go&#x27;s Future</a></h4><p class="rw-where">GopherCon US closing panel</p><p>Moderated the closing conversation with members of the Go team.</p></li><li><div class="rw-meta"><span class="rw-kind">Emcee</span><time>Aug 2026</time></div><h4><a href="https://www.gophercon.com/agenda/session/1801580">Main stage and lightning talks</a></h4><p class="rw-where">GopherCon US</p><p>Hosted opening day, the lightning talks, and the United Go Meetup.</p></li><li><div class="rw-meta"><span class="rw-kind">Workshop</span><time>Jun 2026</time></div><h4><a href="https://www.nexusla.org/">Building with AI</a></h4><p class="rw-where">Nexus Louisiana Startup School, Baton Rouge</p><p>Workshop for the founders in Nexus Louisiana&#x27;s Startup School.</p></li><li><div class="rw-meta"><span class="rw-kind">Workshop</span><time>Aug 2025</time></div><h4><a href="https://www.gophercon.com/agenda/session/1590663">Building and Deploying AI Agents with Go</a></h4><p class="rw-where">GopherCon US</p><p>Full-day workshop, taught alongside Advanced Go for Experienced Programmers.</p></li><li><div class="rw-meta"><span class="rw-kind">Workshop</span><time>Jan 2025</time></div><h4>Go for Experienced Programmers</h4><p class="rw-where">GopherCon Singapore</p><p>Full-day workshop for developers moving to Go from other languages.</p><a class=rw-code href="https://github.com/jboursiquot/go-for-experienced-programmers"><svg class="i" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>Code</a></li></ol>
+  <h3 class="oss-h">Open source</h3>
+  <ul class="oss"><li><a href="https://github.com/jboursiquot/pantry-agent"><svg class="i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span class="oss-name">pantry-agent</span></a><span class="oss-desc">An AI agent in Go, built for teaching how agents work end to end.</span></li><li><a href="https://github.com/jboursiquot/mermaid-mcp"><svg class="i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span class="oss-name">mermaid-mcp</span></a><span class="oss-desc">An MCP server that generates Mermaid diagrams.</span></li><li><a href="https://github.com/jboursiquot/embedder"><svg class="i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span class="oss-name">embedder</span></a><span class="oss-desc">Working with embeddings and LLMs from Go.</span></li><li><a href="https://github.com/jboursiquot/gc26buildingagenticsystems"><svg class="i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span class="oss-name">gc26buildingagenticsystems</span></a><span class="oss-desc">Code for the GopherCon 2026 agentic systems workshop.</span></li><li><a href="https://github.com/jboursiquot/shoutouts"><svg class="i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span class="oss-name">shoutouts</span></a><span class="oss-desc">A serverless Go app on AWS used for teaching serverless architecture.</span></li></ul>
+  <div class="earlier-work">
+    <h3>Earlier highlights</h3>
+    <p>Contributing author, <a href="https://www.amazon.com/Things-Every-SRE-Should-Know/dp/1492081493">97 Things Every SRE Should Know</a> (O'Reilly). Keynotes at <a href="https://www.infoq.com/presentations/sre-build-trust/">QCon Plus 2020</a> and GopherCon <a href="https://www.youtube.com/watch?v=_Pc0bzz4-gM">2019</a> and <a href="https://www.youtube.com/watch?v=PAUjYyBfELk">2021</a>. Host of <a href="https://changelog.com/person/jboursiquot">Go Time</a> through its final episode in December 2024. Courses on <a href="https://www.linkedin.com/learning/hands-on-introduction-go/hands-on-with-go">LinkedIn Learning</a>, O'Reilly, and <a href="https://bitly.com/gostdsol">Packt</a>.</p>
+  </div>
+  <details class="all"><summary>Full public record since 2013 (85 entries)</summary><ol class="log"><li><time datetime="2026-08">Aug 2026</time><span>Talk, GopherCon US</span><a href="https://www.gophercon.com/agenda/session/1880696">A Slice of Go&#x27;s Future</a></li><li><time datetime="2026-08">Aug 2026</time><span>Organizing, GopherCon US</span><a href="https://www.gophercon.com/agenda/session/1801580">Emcee</a></li><li><time datetime="2026-08">Aug 2026</time><span>Organizing, GopherCon US</span><a href="https://www.gophercon.com/agenda/session/1801599">United Go Meetup</a></li><li><time datetime="2026-08">Aug 2026</time><span>Workshop, GopherCon US</span><a href="https://www.gophercon.com/agenda/session/1801556">Agents the Hard Way: Building Agentic Systems in Go</a></li><li><time datetime="2026-06">Jun 2026</time><span>Workshop, Nexus Louisiana Startup School</span><a href="https://www.nexusla.org/">Building with AI</a></li><li><time datetime="2025-12">Dec 2025</time><span>Podcast, Cup o&#x27; Go</span><a href="https://cupogo.dev/episodes/all-software-sucks-then-you-die-but-first-gophercon-2026-dates-and-location-announced">GopherCon 2026 dates and location announced</a></li><li><time datetime="2025-08">Aug 2025</time><span>Workshop, GopherCon US</span><a href="https://www.gophercon.com/agenda/session/1590663">Building and Deploying AI Agents with Go</a></li><li><time datetime="2025-08">Aug 2025</time><span>Workshop, GopherCon US</span><a href="https://www.gophercon.com/agenda/session/1545650">Advanced Go for Experienced Programmers</a></li><li><time datetime="2025-01">Jan 2025</time><span>Workshop, GopherCon Singapore</span>Go for Experienced Programmers</li><li><time datetime="2024-12">Dec 2024</time><span>Podcast, Ardan Labs Podcast</span><a href="https://www.youtube.com/watch?v=B8_ff39tGD8">Startups, Resilience, and Passion with Johnny Boursiquot</a></li><li><time datetime="2024-12">Dec 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/340">That&#x27;s Go Time</a></li><li><time datetime="2024-12">Dec 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/339">Pitching Go in 2025</a></li><li><time datetime="2024-11">Nov 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/337">Crawl, walk &amp; run your way to usable CLIs in Go</a></li><li><time datetime="2024-10">Oct 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/336">Writing a shell in Go</a></li><li><time datetime="2024-10">Oct 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/335">AI for Observability</a></li><li><time datetime="2024-10">Oct 2024</time><span>Podcast, Changelog &amp; Friends</span><a href="https://changelog.com/friends/65">The indispensable cog</a></li><li><time datetime="2024-09">Sep 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/332">&quot;Founder Mode&quot; at work when you&#x27;re not a founder</a></li><li><time datetime="2024-09">Sep 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/331">How I lost my (old) job to AI</a></li><li><time datetime="2024-09">Sep 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/330">Home automation with Go</a></li><li><time datetime="2024-07">Jul 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/328">OpenAPI &amp; API design</a></li><li><time datetime="2024-07">Jul 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/325">What&#x27;s New in Go 1.23</a></li><li><time datetime="2024-07">Jul 2024</time><span>Organizing, GopherCon US</span>Emcee</li><li><time datetime="2024-07">Jul 2024</time><span>Workshop, GopherCon US</span>Go for Experienced Programmers</li><li><time datetime="2024-06">Jun 2024</time><span>Workshop, GopherCon EU</span>Go for Experienced Programmers</li><li><time datetime="2024-05">May 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/315">What if Google lays off the Go team?</a></li><li><time datetime="2024-05">May 2024</time><span>Talk, Stuttgart Go Users Group</span><a href="https://www.meetup.com/stuttgart-gophers/events/300674376">Robust HTTP Servers and Clients in Go</a></li><li><time datetime="2024-04">Apr 2024</time><span>Workshop, O&#x27;Reilly</span><a href="https://www.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920060985/">Go in 3 Weeks</a></li><li><time datetime="2024-03">Mar 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/308">Questions from a new Go developer</a></li><li><time datetime="2024-03">Mar 2024</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/307">Jumping into an existing codebase</a></li><li><time datetime="2023-01">Jan 2023</time><span>Workshop, O&#x27;Reilly</span><a href="https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269">Go Generics in 2 Hours</a></li><li><time datetime="2022-11">Nov 2022</time><span>Course, LinkedIn Learning</span><a href="https://www.linkedin.com/learning/hands-on-introduction-go/hands-on-with-go">Hands-On Go</a></li><li><time datetime="2022-10">Oct 2022</time><span>Workshop, Pivot Technology School</span><a href="https://pivottechschool.com">Instructor</a></li><li><time datetime="2022-09">Sep 2022</time><span>Workshop, O&#x27;Reilly</span><a href="https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269">Go Generics in 2 Hours</a></li><li><time datetime="2022-08">Aug 2022</time><span>Workshop, O&#x27;Reilly</span><a href="https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/">Go in 3 Weeks</a></li><li><time datetime="2022-07">Jul 2022</time><span>Workshop, O&#x27;Reilly</span><a href="https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269">Go Generics in 2 Hours</a></li><li><time datetime="2022-04">Apr 2022</time><span>Workshop, O&#x27;Reilly</span><a href="https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/">Go in 3 Weeks</a></li><li><time datetime="2022-01">Jan 2022</time><span>Workshop, O&#x27;Reilly</span><a href="https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/">Go in 3 Weeks</a></li><li><time datetime="2022-01">Jan 2022</time><span>Talk, Association for Computing Machinery</span><a href="https://learning.acm.org/techtalks/concurrencygo">The Art of Concurrency in Go</a></li><li><time datetime="2022-01">Jan 2022</time><span>Podcast, PodRocket</span><a href="https://www.youtube.com/watch?v=lNI7NTKNJPM&amp;ab_channel=LogRocket">Getting Started with Golang</a></li><li><time datetime="2021-12">Dec 2021</time><span>Keynote, GopherCon 2021</span><a href="https://www.youtube.com/watch?v=PAUjYyBfELk&amp;ab_channel=GopherAcademy">Unbounded Concurrency in Go (live with Aaron Schlesinger)</a></li><li><time datetime="2021-06">Jun 2021</time><span>Talk, Craft Conference</span><a href="https://craft-conf.com/speaker/JohnnyBoursiquot">Unbounded Concurrency (extended version)</a></li><li><time datetime="2021-05">May 2021</time><span>Workshop, GopherCon EU</span><a href="https://gophercon.eu/">Practical Go Workshop</a></li><li><time datetime="2021-04">Apr 2021</time><span>Talk, O&#x27;Reilly</span><a href="https://www.oreilly.com/attend/open-source-software-superstream-series-gogenerics-extensibility-and-the-future-of-go-in-open-source-programming/0636920053215/0636920053214/">Open Source Software Superstream Series: Go—Generics, Extensibility, and the Future of Go in Open Source Programming</a></li><li><time datetime="2021-03">Mar 2021</time><span>Talk, Golang NYC</span><a href="https://www.youtube.com/watch?v=HDDNYA9MeNQ&amp;t=1862s&amp;ab_channel=GolangNYCMeetup">Unbounded Concurrency</a></li><li><time datetime="2021-01">Jan 2021</time><span>Talk, Lagos Gophers</span><a href="https://www.meetup.com/GolangNigeria/events/274776873/">Let&#x27;s build a port scanner with Go</a></li><li><time datetime="2020-11">Nov 2020</time><span>Keynote, QCon</span><a href="https://www.youtube.com/watch?v=iB8yybpdEwY">The SRE as a Diplomat</a></li><li><time datetime="2020-09">Sep 2020</time><span>Talk, National Information Standards Organization (NISO)</span><a href="https://niso.org/niso-io/2020/09/privacy-and-effective-search-experience-johnny-boursiquot">Privacy and Search Technology</a></li><li><time datetime="2020-06">Jun 2020</time><span>Podcast, InfoQ Podcast</span><a href="https://www.infoq.com/podcasts/serverless-go-site-reliability-engineering/">Serverless Go and Site Reliability Engineering at Heroku</a></li><li><time datetime="2020-05">May 2020</time><span>Keynote, GoGetCommunity 2020</span><a href="https://www.gogetcommunity.com/">Closing Keynote</a></li><li><time datetime="2020-05">May 2020</time><span>Workshop, O&#x27;Reilly</span><a href="https://learning.oreilly.com/live-training/courses/go-next-steps/0636920386711/">Go Next Steps</a></li><li><time datetime="2020-05">May 2020</time><span>Workshop, O&#x27;Reilly</span><a href="https://learning.oreilly.com/live-training/courses/serverless-go/0636920407034/">Serverless Go</a></li><li><time datetime="2020"> 2020</time><span>Organizing, GopherCon 2020</span>Program committee</li><li><time datetime="2019-07">Jul 2019</time><span>Keynote, GopherCon 2019</span><a href="https://www.youtube.com/watch?v=_Pc0bzz4-gM">Closing Keynote</a></li><li><time datetime="2019-07">Jul 2019</time><span>Workshop, GopherCon 2019</span>Instructor</li><li><time datetime="2019"> 2019</time><span>Organizing, GopherCon 2019</span>Program committee</li><li><time datetime="2019-01">Jan 2019</time><span>Talk, Columbia AWS</span>Serverless Lens on AWS Well Architected Framework</li><li><time datetime="2018-10">Oct 2018</time><span>Talk, Columbia AWS</span>Serverless Orchestration on AWS</li><li><time datetime="2018-10">Oct 2018</time><span>Talk, Baltimore Innovation Week&#x27;s Developer Conference</span>Go, FaaS/Serverless Orchestration</li><li><time datetime="2018-08">Aug 2018</time><span>Talk, GopherCon 2018 (Lightning Talks)</span>Go, FaaS/Serverless on AWS</li><li><time datetime="2018-08">Aug 2018</time><span>Workshop, GopherCon 2018</span><a href="https://www.gophercon.com/">Instructor</a></li><li><time datetime="2017-10">Oct 2017</time><span>Workshop, DevFest MD 2017 Conference</span>Getting Started with the Go Programming Language</li><li><time datetime="2017-09">Sep 2017</time><span>Workshop, Code(Her) Conference 2017</span><a href="http://codeherconference.com/">Building Serverless Slack Bots with AWS Lambda</a></li><li><time datetime="2017-06">Jun 2017</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/49">Adventures in VS Code</a></li><li><time datetime="2017-05">May 2017</time><span>Talk, Baltimore Go User Group</span>Popular Go Libraries</li><li><time datetime="2017-04">Apr 2017</time><span>Talk, Capital Go Language Conference 2017</span><a href="https://bit.ly/capgominethedebt">Mine the Debt</a></li><li><time datetime="2017-03">Mar 2017</time><span>Podcast, Hacker Practice Podcast</span><a href="https://justuseapen.com/johnny-boursiquot-on-building-a-software-agency-from-scratch-learning-go-for-rubyists-and-server-less-software-architectures/">Guest</a></li><li><time datetime="2017-03">Mar 2017</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/38">Go Developer Survey with Steve Francia</a></li><li><time datetime="2017-02">Feb 2017</time><span>Press, New Relic</span><a href="https://blog.newrelic.com/2017/02/16/golang-experts-follow-online/">Featured</a></li><li><time datetime="2017-02">Feb 2017</time><span>Talk, Google Developer Group Baltimore</span>Go, Quickly</li><li><time datetime="2017-02">Feb 2017</time><span>Workshop, Baltimore Go User Group</span><a href="https://github.com/jboursiquot/go-database-workshop">Interacting with Databases</a></li><li><time datetime="2017-01">Jan 2017</time><span>Podcast, Go Time</span><a href="https://changelog.com/gotime/30">Discussing Imposter Syndrome (with William Kennedy)</a></li><li><time datetime="2017-01">Jan 2017</time><span>Workshop, Baltimore Go User Group</span><a href="https://github.com/jboursiquot/go-web-app-workshop">Building Web Applications in Go</a></li><li><time datetime="2016-12">Dec 2016</time><span>Workshop, Baltimore Go User Group</span>Building Chat Bots in Golang</li><li><time datetime="2016-11">Nov 2016</time><span>Workshop, Baltimore Go User Group</span><a href="https://github.com/jboursiquot/go-cli-workshop">Building Command Line Applications with Go</a></li><li><time datetime="2016-05">May 2016</time><span>Workshop, GoBridge Boston</span>Organizer</li><li><time datetime="2015-09">Sep 2015</time><span>Press, Codeship</span><a href="https://youtu.be/j8Lp7W48xDE">An Inside Look with Codeship</a></li><li><time datetime="2015-09">Sep 2015</time><span>Workshop, Code(Her) Conference 2015</span>Programming Fundamentals and Building APIs for Web and Mobile Apps</li><li><time datetime="2015-01">Jan 2015</time><span>Workshop, RailsBridge Boston</span><a href="https://bit.ly/14Rr7Qv">Intro to Ruby for the Non Programmer</a></li><li><time datetime="2014-09">Sep 2014</time><span>Workshop, Code(Her) Conference</span><a href="http://codeherconference.com/">Building APIs for Web and Mobile Apps</a></li><li><time datetime="2014-08">Aug 2014</time><span>Talk, Burlington Ruby Conference</span><a href="https://vimeo.com/album/2996485/video/103590400">The Future of Ruby</a></li><li><time datetime="2014-02">Feb 2014</time><span>Talk, BostonGolang</span><a href="https://speakerdeck.com/jboursiquot/object-oriented-programming-in-go">Object Oriented Programming in Golang</a></li><li><time datetime="2013-06">Jun 2013</time><span>Talk, Launch Academy</span><a href="https://bit.ly/19htW1C">Building Command Line Tools</a></li><li><time datetime="2013-05">May 2013</time><span>Talk, Launch Academy</span><a href="https://bit.ly/17TvF9l">The New Engineer&#x27;s Survival Guide</a></li><li><time datetime="2013-05">May 2013</time><span>Talk, BostonRB</span><a href="https://bit.ly/12Ly7LJ">Getting Closure: Ruby Blocks, Procs and Lambdas</a></li><li><time datetime="2013-01">Jan 2013</time><span>Workshop, BostonRB</span><a href="https://bit.ly/13WI4Zu">Defensive Programming in Ruby</a></li></ol></details>
+</section>
 
-            <!-- NAVIGATION LINKS -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="smoothScroll" href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a class="smoothScroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="smoothScroll" href="#latest">Latest</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>The best way to reach me is a message on LinkedIn.</p>
+    <div class="cta">
+      <a class="btn" href="https://www.linkedin.com/in/jboursiquot"><svg class="i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 9.5V18M6.5 6.2v.1M10.5 18v-5a3 3 0 0 1 6 0v5M10.5 9.5V18"/></svg> Message me on LinkedIn</a>
     </div>
+  </div>
+</section>
+</main>
+<footer class="wrap foot"><p>&copy; 2026 Johnny Boursiquot. Updated 2026-09-28.</p><p>Also as <a href="index.md">Markdown</a> and <a href="llms.txt">llms.txt</a>.</p></footer>
+<script>
+(function () {
+  var root = document.documentElement;
+  var hero = document.querySelector(".hero");
+  var me = document.querySelector(".hero .me, .hero .portrait img");
 
+  // Entrance: start once the portrait has decoded so the sequence plays as one piece.
+  function go() { requestAnimationFrame(function () { root.classList.add("ready"); }); }
+  if (!me || me.complete) { go(); } else { me.addEventListener("load", go); me.addEventListener("error", go); }
+  setTimeout(go, 1500);
 
-    <!-- HOME SECTION -->
-    <section id="home" class="parallax-section">
-        <!-- OVERLAY -->
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
+  // Pointer parallax on the floating cards and orbs (fine pointers, motion allowed, wide screens only).
+  var motionOK = window.matchMedia("(prefers-reduced-motion: no-preference) and (pointer: fine) and (min-width: 901px)");
+  hero.querySelectorAll("[data-depth]").forEach(function (el) { el.style.setProperty("--d", el.dataset.depth); });
+  hero.addEventListener("pointermove", function (e) {
+    if (!motionOK.matches) return;
+    var r = hero.getBoundingClientRect();
+    hero.style.setProperty("--px", ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
+    hero.style.setProperty("--py", ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
+  });
+  hero.addEventListener("pointerleave", function () {
+    hero.style.setProperty("--px", 0); hero.style.setProperty("--py", 0);
+  });
 
-                <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <h1>Hi, I'm Johnny.</h1>
-                    <h4>
-                        <strong>Software Engineer</strong> •
-                        <strong>Community Organizer</strong> •
-                        <strong>Speaker</strong> •
-                        <strong>Trainer</strong>
-                    </h4>
+  // Section dots and header links follow the section in view.
+  var links = document.querySelectorAll(".dots a, .bar nav a");
+  var ids = ["top", "about", "experience", "capabilities", "works", "contact"];
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      links.forEach(function (l) { l.classList.toggle("on", l.getAttribute("href") === "#" + en.target.id); });
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  ids.forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
+})();
 
-                    <!-- SOCIAL ICON -->
-                    <ul class="social-icon">
-                        <li>
-                            <a href="https://twitter.com/jboursiquot" class="fa fa-twitter" target="blank"></a>
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/in/jboursiquot" class="fa fa-linkedin" target="blank"></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/jboursiquot" class="fa fa-github" target="blank"></a>
-                        </li>
-                        <li>
-                            <a href="https://medium.com/@jboursiquot/latest" class="fa fa-medium" target="blank"></a>
-                        </li>
-                        <li>
-                            <a href="https://changelog.com/person/jboursiquot" class="fa fa-podcast" target="blank"></a>
-                        </li>
-                    </ul>
-                </div>
+(function () {
+  var map = document.querySelector(".skillmap");
+  if (!map) return;
+  var svg = map.querySelector(".wires");
+  var roles = [].slice.call(map.querySelectorAll(".role-btn"));
+  var chips = [].slice.call(map.querySelectorAll(".chip"));
+  var panels = [].slice.call(map.querySelectorAll(".detail .rd"));
+  var wide = window.matchMedia("(min-width: 901px)");
+  var pinned = null;
 
-            </div>
-        </div>
-    </section>
+  function showPanel(p) { panels.forEach(function (x) { x.hidden = x !== p; }); }
 
+  function wires(targets, from) {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    if (!from || !wide.matches) return;
+    var m = map.getBoundingClientRect();
+    svg.setAttribute("viewBox", "0 0 " + m.width + " " + m.height);
+    var fromRole = from.classList.contains("role-btn");
+    var f = from.getBoundingClientRect();
+    targets.forEach(function (t) {
+      var r = fromRole ? f : t.getBoundingClientRect();   // role end
+      var c = fromRole ? t.getBoundingClientRect() : f;   // chip end
+      var x1 = r.right - m.left, y1 = r.top + r.height / 2 - m.top;
+      var x2 = c.left - m.left + 10, y2 = c.top + c.height / 2 - m.top;
+      var k = Math.max(60, (x2 - x1) * 0.55);
+      var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", "M" + x1 + " " + y1 + " C" + (x1 + k) + " " + y1 + " " + (x2 - k) + " " + y2 + " " + x2 + " " + y2);
+      path.setAttribute("pathLength", "1");
+      svg.appendChild(path);
+    });
+  }
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="parallax-section">
-        <div class="container">
-            <div class="row">
+  function show(state) {
+    roles.concat(chips).forEach(function (e) { e.classList.remove("lit", "dim"); });
+    if (!state) { showPanel(map.querySelector(".rd-default")); wires([], null); return; }
+    if (state.type === "role") {
+      var id = state.el.dataset.role;
+      var lit = chips.filter(function (c) { return c.dataset.roles.split(" ").indexOf(id) > -1; });
+      roles.forEach(function (r) { r.classList.add(r === state.el ? "lit" : "dim"); });
+      chips.forEach(function (c) { c.classList.add(lit.indexOf(c) > -1 ? "lit" : "dim"); });
+      showPanel(map.querySelector('.rd[data-role="' + id + '"]'));
+      wires(lit, state.el);
+    } else {
+      var ids = state.el.dataset.roles.split(" ");
+      var litR = roles.filter(function (r) { return ids.indexOf(r.dataset.role) > -1; });
+      chips.forEach(function (c) { c.classList.add(c === state.el ? "lit" : "dim"); });
+      roles.forEach(function (r) { r.classList.add(litR.indexOf(r) > -1 ? "lit" : "dim"); });
+      var p = map.querySelector(".rd-skill");
+      p.querySelector("h3").textContent = state.el.firstElementChild.textContent;
+      var n = +state.el.dataset.count;
+      p.querySelector(".rd-meta").textContent = "Used in " + n + (n === 1 ? " role" : " roles");
+      p.querySelector(".rd-where").textContent = state.el.dataset.where + ".";
+      showPanel(p);
+      wires(litR, state.el);
+    }
+  }
 
-                <div class="col-md-5 col-sm-12">
-                    <!-- ABOUT IMAGE -->
-                    <div class="about-image">
-                        <img src="images/boursiquot-johnny-small.jpg" class="img-responsive" alt="about image">
-                    </div>
-                </div>
+  function bind(el, type) {
+    el.addEventListener("mouseenter", function () { if (!pinned) show({ type: type, el: el }); });
+    el.addEventListener("mouseleave", function () { if (!pinned) show(null); });
+    el.addEventListener("click", function () {
+      pinned = pinned && pinned.el === el ? null : { type: type, el: el };
+      roles.concat(chips).forEach(function (e) { e.setAttribute("aria-pressed", String(!!pinned && pinned.el === e)); });
+      show(pinned);
+    });
+  }
+  roles.forEach(function (r) { bind(r, "role"); });
+  chips.forEach(function (c) { bind(c, "skill"); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && pinned) { pinned = null; roles.concat(chips).forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); show(null); }
+  });
+  window.addEventListener("resize", function () { if (pinned) show(pinned); });
+})();
 
-                <div class="col-md-7 col-sm-12">
-                    <div class="about-thumb">
-                        <!-- SECTION TITLE -->
-                        <div class="section-title">
-                            <h2>A little about me</h2>
-                        </div>
-                        <p>I’m a multi-disciplined <strong>Software, Reliability, and Cloud Systems Engineer</strong>
-                            with over two decades of experience spanning various client, server and cloud infrastructure
-                            technologies. I've worked with and been a part of multiple startup founding teams and have
-                            worked at large market-leading Fortune 500 technology companies.</p>
-                        <p>I've authored technology
-                            courses, collaborated on books (co-author, technical reviewer, etc), and provided corporate
-                            trainings to large technology companies. These days I work extensively with Go (golang), AWS
-                            (ECS, Fargate, Lambda, CloudFormation, etc), Microservice Architectures, Serverless
-                            Architectures, Generative AI technologies, and build Large Language Model (LLM)-powered products. 
-                            I professionally teach the technologies I use on platforms like LinkedIn Learning, 
-                            O'Reilly, Packt, and others. Whenever possible, I also teach programming workshops at no cost 
-                            to learners in my local community.
-                        </p>
-                        <p>Some of the highlights of my professional career so far include:</p>
-                        <ul>
-                            <li>Architecting a cloud platform for skill inventory, skill gap analysis, and professional
-                                development for Information Professionals and Libraries with <a
-                                    href="https://www.skilltype.com/">Skilltype</a></li>
-                            <li>Establishing Site Reliability Engineering practices and tooling at Salesforce's <a
-                                    href="https://www.heroku.com/">Heroku</a></li>
-                            <li>Building microservice and serverless applications and tools that leverage the AWS cloud
-                                to further the mission of
-                                <a href="http://achievementnetwork.org/" target="blank">The Achievement Network</a>
-                            </li>
-                            <li>Bringing Enterprise-grade time series database and cluster management solutions to
-                                market at
-                                <a href="http://influxdata.com/" target="blank">InfluxData</a>
-                            </li>
-                            <li>Leading the development of the backend infrastructure for the popular consumer IoT
-                                device,
-                                <a href="http://pavlok.com/" target="blank">Pavlok</a>, complete with integration of
-                                services like IFTTT
-                            </li>
-                            <li>Architecting visual merchandising technology at
-                                <a href="http://onedoor.com/" target="blank">One Door</a>
-                            </li>
-                            <li>Educating the next generation of software developers at
-                                <a href="http://www.launchacademy.com/" target="blank">Launch Academy</a>
-                            </li>
-                            <li>Building the Boston-based digital agency,
-                                <a href="http://www.maark.com/" target="blank">MAARK</a>
-                            </li>
-                        </ul>
-                        <p>My love for technology is matched only by my passion for community service:</p>
-                        <ul>
-                            <li>
-                                <a href="https://www.gophercon.com" target="blank">GopherCon</a> Program Chair
-                            </li>
-                            <li>
-                                <a href="http://golangbridge.org/" target="blank">GoBridge</a> Leadership Team
-                            </li>
-                            <li><a href="http://baltimoregolang.org/" target="blank">Baltimore Go User Group</a> Founder
-                                &amp; Organizer</li>
-                            <li>
-                                <a href="http://bostongolang.org/" target="blank">Boston Golang User Group</a> Organizer
-                            </li>
-                            <li>
-                                <a href="http://bostonrb.org/" target="blank">Boston Ruby User Group</a> Organizer
-                            </li>
-                            <li>
-                                <a href="https://www.railsbridgeboston.org/" target="blank">RailsBridge Boston</a>
-                                Instructor
-                            </li>
-                            <li><a href="http://haitischoolproject.org/" target="blank">Haiti School Project</a> Board
-                                of Directors</li>
-                        </ul>
-                        <p>Education & Certifications include:</p>
-                        <ul>
-                            <li>Master of Science in Cloud Computing Architecture</li>
-                            <li>Bachelor of Science in Computer & Information Science</li>
-                            <li>AWS Certified Solutions Architect</li>
-                            <li>AWS Certified Developer</li>
-                            <li>AWS Certified Cloud Practitioner</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- LATEST SECTION -->
-    <section id="latest" class="parallax-section">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2>What I've been up to lately</h2>
-                    <p>Projects, teaching, and speaking.</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="latest-thumb">
-                        <i class="fa fa-video-camera"></i>
-                        <h3>Hands-On Go</h3>
-                        <p><img src="images/LIL-HandsOnGo.jpeg" width="302" style="border: 0px solid;"></p>
-                        <p><a href="https://97things.incidentlabs.io/" target="_blank">Course</a> available now at <a
-                                href="https://www.linkedin.com/learning/hands-on-introduction-go/hands-on-with-go"
-                                target="_blank">LinkedIn Learning</a></p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="latest-thumb">
-                        <i class="fa fa-book"></i>
-                        <h3>97 Things Every SRE Should Know</h3>
-                        <p><img src="images/97-things-every-sre-should-know.jpeg" width="302"
-                                style="border: 0px solid;"></p>
-                        <p><a href="https://97things.incidentlabs.io/" target="_blank">Contributing author to 97 Things
-                                Every SRE Should Know</a> available now at <a
-                                href="https://www.amazon.com/Things-Every-SRE-Should-Know/dp/1492081493"
-                                target="_blank">Amazon</a></p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="latest-thumb">
-                        <i class="fa fa-microphone"></i>
-                        <h3>Go Time</h3>
-                        <p><img src="images/gotime.png" width="302" style="border: 1px solid;"></p>
-                        <p>Regular panelist on the Go Time podcast.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="latest-thumb">
-                        <i class="fa fa-video-camera"></i>
-                        <h3>Go Standard Library Solutions</h3>
-                        <p><img src="images/GoStdLibSolCover.png"></p>
-                        <p>Course available now at <a href="https://bitly.com/gostdsol" target="blank">Packt</a>.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="latest-thumb">
-                        <i class="fa fa-video-camera"></i>
-                        <h3>SRE as a Diplomat on InfoQ</h3>
-                        <p><img src="images/infoq-logo.png" width="302" style="border: 1px solid;"></p>
-                        <p><a href="https://www.infoq.com/presentations/sre-build-trust/" target="blank">Presentation
-                                and transcript</a> of QCon Keynote</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="latest-thumb">
-                        <i class="fa fa-video-camera"></i>
-                        <h3>Go & Serverless @ O'Reilly</h3>
-                        <p><img src="images/oreilly-serverless-go.jpeg" width="302"></p>
-                        <p>Multiple Go and serverless orchestration trainings on O'Reilly's learning platform</p>
-                    </div>
-                </div>
-
-                <!-- <div class="col-md-4 col-sm-6">
-                    <div class="latest-thumb">
-                        <i class="fa fa-microphone"></i>
-                        <h3>InfoQ Podcast Guest</h3>
-                        <p><img src="images/infoq-podcast.jpg" height="320"></p>
-                        <p><a href="https://www.infoq.com/podcasts/serverless-go-site-reliability-engineering/"
-                                target="_blank">Serverless Go and Site Reliability Engineering at Heroku</a></p>
-                    </div>
-                </div> -->
-            </div>
-
-            <div class="row" style="text-align: center;">
-                <h3>...</h3>
-            </div>
-
-            <div class="row">
-                <div class="section-title">
-                    <h2>Archive of talks, trainings, and other engagements</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div>
-                    <ol style="text-align: left;">
-                        <li>August 2025 - Instructor @ GopherCon US: <a href="https://www.gophercon.com/agenda/session/1590663" target="_blank">Building and Deploying AI Agents with Go</a></li>
-                        <li>August 2025 - Instructor @ GopherCon US: <a href="https://www.gophercon.com/agenda/session/1545650" target="_blank">Advanced Go for Experienced Programmers</a></li>
-                        <li>Jan 2025 - Go Instructor @ GopherCon Singapore: Go for Experienced Programmers</li>
-                        <li>December 2024 - Guest on the Ardan Labs Podcast: <a href="https://www.youtube.com/watch?v=B8_ff39tGD8" target="_blank">Startups, Resilience, and Passion with Johnny Boursiquot</a></li>
-                        <li>December 2024 - Go Time Podcast Finale: <a href="https://changelog.com/gotime/340" target="_blank">That's Go Time</a></li>
-                        <li>December 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/339" target="_blank">Pitching Go in 2025</a></li>
-                        <li>November 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/337" target="_blank">Crawl, walk & run your way to usable CLIs in Go</a></li>
-                        <li>October 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/336" target="_blank">Writing a shell in Go</a></li>
-                        <li>October 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/335" target="_blank">AI for Observability</a></li>
-                        <li>October 2024 - Changelog & Friends Podcast: <a href="https://changelog.com/friends/65" target="_blank">The indispensable cog</a></li>
-                        <li>September 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/332" target="_blank">"Founder Mode" at work when you're not a founder</a></li>
-                        <li>September 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/331" target="_blank">How I lost my (old) job to AI</a></li>
-                        <li>September 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/330" target="_blank">Home automation with Go</a></li>
-                        <li>July 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/328" target="_blank">OpenAPI & API design</a></li>
-                        <li>July 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/325" target="_blank">What's New in Go 1.23</a></li>
-                        <li>July 2024 - Emcee @ GopherCon US (Chicago)</li>
-                        <li>July 2024 - Go Instructor @ GopherCon US (Chicago): Go for Experienced Programmers</li>
-                        <li>June 2024 - Go Instructor @ GopherCon EU (Berlin): Go for Experienced Programmers</li>
-                        <li>May 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/315" target="_blank">What if Google lays off the Go team?</a></li>
-                        <li>May 2024 - Speaker @ Stuttgart, Germany Go Users Group <a href="https://www.meetup.com/stuttgart-gophers/events/300674376">Robust HTTP Servers and Clients in Go</a></li>
-                        <li>April 2024 - Live Training @ O'Reilly. <a href="https://www.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920060985/" target="_blank">Go in 3 Weeks</a></li>
-                        <li>March 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/307" target="_blank">Questions from a new Go developer</a></li>
-                        <li>March 2024 - Go Time Podcast: <a href="https://changelog.com/gotime/307" target="_blank">Jumping into an existing codebase</a></li>
-                        <li>January 2023 - Live Training @ O'Reilly. <a
-                                href="https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269"
-                                target="_blank">Go Generics in 2 Hours.</a></li>
-                        <li>November 2022 - Created and released "Hands-On Go" course at <a
-                                href="https://www.linkedin.com/learning/hands-on-introduction-go/hands-on-with-go"
-                                target="_blank">LinkedIn Learning</a></li>
-                        <li>October 2022 - Trained 25-student cohort in Go backend development for 7 weeks at <a
-                                href="https://pivottechschool.com" target="_blank">Pivot Technology School</a></li>
-                        <li>September 2022 - Live Training @ O'Reilly. <a
-                                href="https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269"
-                                target="_blank">Go Generics in 2 Hours.</a></li>
-                        <li>August 2022 - Live Training @ O'Reilly. <a
-                                href="https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/"
-                                target="_blank">Go in 3 Weeks @ O'Reilly Media.</a></li>
-                        <li>July 2022 - Live Training @ O'Reilly. <a
-                                href="https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269"
-                                target="_blank">Go Generics in 2 Hours.</a></li>
-                        <li>April 2022 - Live Training @ O'Reilly. <a
-                                href="https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/"
-                                target="_blank">Go in 3 Weeks @ O'Reilly Media.</a></li>
-                        <li>January 2022 - Live Training @ O'Reilly. <a
-                                href="https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/"
-                                target="_blank">Go in 3 Weeks @ O'Reilly Media.</a></li>
-                        <li>January 2022 - Guest speaker, Association for Computing Machinery. <a
-                                href="https://learning.acm.org/techtalks/concurrencygo"
-                                target="_blank">The Art of Concurrency in Go</a>.</li>
-                        <li>January 2022 - Guest on PodRocket. <a
-                            href="https://www.youtube.com/watch?v=lNI7NTKNJPM&ab_channel=LogRocket"
-                            target="_blank">Getting Started with Golang</a>.</li>
-                        <li>December 2021 - Closing Keynote Speaker @ GopherCon 2021.<a
-                                href="https://www.youtube.com/watch?v=PAUjYyBfELk&ab_channel=GopherAcademy"
-                                target="_blank">Unbounded Concurrency in Go (live with Aaron Schlesinger)</a></li>
-                        <li>June 2021 - Speaker at <a href="https://craft-conf.com/speaker/JohnnyBoursiquot"
-                                target="_blank">Craft Conference</a>. Extended version of "Unbounded Concurrency" talk.
-                        </li>
-                        <li>May 2021 - Trainer at <a href="https://gophercon.eu/" target="_blank">GopherCon EU</a>.
-                            Practical Go Workshop.</li>
-                        <li>April 2021 - Speaker at <a
-                                href="https://www.oreilly.com/attend/open-source-software-superstream-series-gogenerics-extensibility-and-the-future-of-go-in-open-source-programming/0636920053215/0636920053214/"
-                                target="_blank">Open Source Software Superstream Series: Go—Generics, Extensibility, and
-                                the Future of Go in Open Source Programming</a></li>
-                        <li>March 2021 - Speaker at <a href="https://www.meetup.com/golanguagenewyork/events/276460855/"
-                                target="_blank">Golang NYC</a>. Delivered <a
-                                href="https://www.youtube.com/watch?v=HDDNYA9MeNQ&t=1862s&ab_channel=GolangNYCMeetup"
-                                target="_blank">"Unbounded Concurrency"</a></li>
-                        <li>January 2021 - Speaker at <a href="https://www.meetup.com/GolangNigeria/events/274776873/"
-                                target="_blank">Lagos Gophers</a>. Delivered "Let's build a port scanner with Go."</li>
-                        <li>November 2020 - <a href="https://plus.qconferences.com/plus2020/speakers/johnny-boursiquot"
-                                target="_blank">Keynote Speaker @ QCon.</a> <a
-                                href="https://www.youtube.com/watch?v=iB8yybpdEwY" target="_blank">The SRE as a
-                                Diplomat</a></li>
-                        <li>September 2020 - Speaker at National Information Standards Organization (NISO) event where I
-                            delivered a talk on <a
-                                href="https://niso.org/niso-io/2020/09/privacy-and-effective-search-experience-johnny-boursiquot"
-                                target="_blank">privacy and search technology</a>.</li>
-                        <li>June 2020 - InfoQ Podcast Guest - <a
-                                href="https://www.infoq.com/podcasts/serverless-go-site-reliability-engineering/"
-                                target="_blank">Serverless Go and Site Reliability Engineering at Heroku</a></li>
-                        <li>May 2020 - Speaker @ GoGetCommunity 2020. <a href="https://www.gogetcommunity.com/">Closing
-                                keynote at Go Get Community.</a></li>
-                        <li>May 2020 - Live Training @ O'Reilly. <a
-                                href="https://learning.oreilly.com/live-training/courses/go-next-steps/0636920386711/"
-                                target="_blank">Go Next Steps @ O'Reilly Media. .</a></li>
-                        <li>May 2020 - Live Training @ O'Reilly. <a
-                                href="https://learning.oreilly.com/live-training/courses/serverless-go/0636920407034/"
-                                target="_blank">Serverless Go @ O'Reilly Media. </a></li>
-                        <li>2020 - GopherCon 2020 Program Committe</li>
-                        <li>July 2019 - Speaker @ GopherCon 2019. <a
-                                href="https://www.youtube.com/watch?v=_Pc0bzz4-gM">Closing Keynote</a>.</li>
-                        <li>July 2019 - Trainer @ GopherCon 2019</li>
-                        <li>2019 - GopherCon 2019 Program Committe</li>
-                        <li>January 2019 - Speaker @ Columbia AWS. Serverless Lens on AWS Well Architected Framework.
-                        </li>
-                        <li>October 2018 - Speaker @ Columbia AWS. Serverless Orchestration on AWS.</li>
-                        <li>October 2018 - Speaker @ Baltimore Innovaton Week's Developer Conference. Delivered a talk
-                            on Go, FaaS/Serverless Orchestration.</li>
-                        <li>August 2018 - Speaker @ GopherCon 2018 (Lightning Talks). Delivered a lightning talk on Go,
-                            FaaS/Serverless on AWS </li>
-                        <li>August 2018 - Go Workshop Trainer @ GopherCon 2018. Full day Go training at <a
-                                href="https://www.gophercon.com/">GopherCon 2018</a></li>
-                        <li>October 2017 - Speaker @ DevFest MD 2017 Conference. Delivered a workshop on getting started
-                            with the Go programming language.</li>
-                        <li>September 2017 - Speaker @ Code(Her) Conference 2017. Delivered a 2-hour workshop on
-                            building Serverless Slack Bots with AWS Lambda at <a
-                                href="http://codeherconference.com/">Coder(Her) Conference</a></li>
-                        <li>June 2017 - Co-host of <a href="https://changelog.com/gotime/49" target="blank">Go Time 49:
-                                Adventures in VS Code.</a></li>
-                        <li>May 2017 - Speaker @ Baltimore Go User Group. Delivered "Popular Go Libraries" talk at the
-                            Baltimore Go User Group.</li>
-                        <li>April 2017 - Speaker @ Capitol Go Language Conference 2017. Delivered <a
-                                href="http://bit.ly/capgominethedebt" target="blank">"Mine the Debt"</a> at the
-                            inaugural Capital Go Language Conference.</li>
-                        <li>March 2017 - Guest on the <a
-                                href="https://justuseapen.com/johnny-boursiquot-on-building-a-software-agency-from-scratch-learning-go-for-rubyists-and-server-less-software-architectures/"
-                                target="blank">Hacker Practice Podcast</a></li>
-                        <li>March 2017 - Co-host of <a href="https://changelog.com/gotime/38" target="blank">Go Time 38:
-                                Go Developer Survey with Steve Francia.</a></li>
-                        <li>February 2017 - Featured as a Go Expert to Follow on <a
-                                href="https://blog.newrelic.com/2017/02/16/golang-experts-follow-online/"
-                                target="blank">New Relic blog</a>.</li>
-                        <li>February 2017 - Speaker @ Google Developer Group Baltimore. Delivered "Go, Quickly", a talk
-                            on how to get started programming in Go.</li>
-                        <li>February 2017 - Speaker @ Baltimore Go User Group. Delivered <a
-                                href="https://github.com/jboursiquot/go-database-workshop" target="blank">"Interacting
-                                with Databases"</a> workshop at the Baltimore Go User Group.</li>
-                        <li>January 2017 - Guest on the <a href="https://changelog.com/gotime/30" target="blank">Go Time
-                                30: Discussing Imposter Syndrome along with William Kennedy.</a></li>
-                        <li>January 2017 - Speaker @ Baltimore Go User Group. Delivered <a
-                                href="https://github.com/jboursiquot/go-web-app-workshop" target="blank">"Building Web
-                                Applications in Go"</a> workshop at the Baltimore Go User Group.</li>
-                        <li>December 2016 - Speaker @ Baltimore Go User Group. Delivered "Building Chat Bots in Golang"
-                            workshop at the Baltimore Go User Group.</li>
-                        <li>November 2016 - Speaker @ Baltimore Go User Group. Delivered <a
-                                href="https://github.com/jboursiquot/go-cli-workshop" target="blank">"Building Command
-                                Line Applications with Go"</a> workshop at the Baltimore Go User Group.</li>
-                        <li>May 2016 - Organizer/Teacher @ GoBridge Boston Workshop. Organized and taught the first
-                            GoBridge Boston workshop thanks in large part to the awesome gophers in the Boston area and
-                            the support of Pivotal Labs.</li>
-                        <li>September 2015 - Featured on <a
-                                href="https://blog.codeship.com/a-look-inside-with-codeship-johnny-boursiquot-of-rbm-technologies/"
-                                target="blank">"An Inside Look with Codeship"</a>, a regular series providing an
-                            insider’s perspective on founding and building a tech company. <a
-                                href="https://youtu.be/j8Lp7W48xDE" target="blank">Available on YouTube</a> as well.
-                        </li>
-                        <li>September 2015 - Speaker @ Code(Her) Conference 2015. Delivered two workshops: "Programming
-                            Fundamentals" and "Building APIs for Web and Mobile Apps"</li>
-                        <li>January 2015 - <a title="Intro to Ruby for the Non Programmer" href="http://bit.ly/14Rr7Qv"
-                                target="_blank" rel="noopener noreferrer">Intro to Ruby for the Non Programmer</a> talk
-                            given at the <a title="RailsBridge Boston" href="http://www.railsbridgeboston.org/"
-                                target="_blank" rel="noopener noreferrer">RailsBridge Workshop in Boston, MA</a> .
-                            RailsBridge is an organization that aims to bring diversity into the tech community by
-                            empowering women from various backgrounds with skills in Ruby and Rails development. Check
-                            out their <a title="RailsBridge Boston Video Teaser" href="https://vimeo.com/70699061"
-                                target="_blank" rel="noopener noreferrer">trailer on Vimeo</a>.</li>
-                        <li>September 2014 - <a title="Code[Her] Conference" href="http://codeherconference.com/"
-                                target="_blank" rel="noopener noreferrer">Building APIs for Web and Mobile Apps</a> at
-                            <a href="http://codeherconference.com/">Code(Her)Conference</a>, a 2+ hour-long workshop to
-                            conference attendees on how to build REST APIs. It was well received and I was invited back
-                            as a speaker the following year.
-                        </li>
-                        <li>August 2014 - <a title="Panel: The Future of Ruby"
-                                href="https://vimeo.com/album/2996485/video/103590400" target="_blank"
-                                rel="noopener noreferrer">Panel Guest on The Future of Ruby</a> at the Burlington Ruby
-                            Conference where I, along with Sandi Metz and Ernie Miller, discussed the future of the Ruby
-                            programming language and its community.</li>
-                        <li>February 2014 - <a title="Object Oriented Programming in Golang"
-                                href="https://speakerdeck.com/jboursiquot/object-oriented-programming-in-go"
-                                target="_blank" rel="noopener noreferrer">Object Oriented Programming in Golang</a> talk
-                            given at BostonGolang (<a title="BostonGolang" href="http://bostongolang.org"
-                                target="_blank" rel="noopener noreferrer">bostongolang.org</a>) to an audience of
-                            programmers looking to transition to Go from other OO languages.</li>
-                        <li>June 2013 - <a title="Building Command Line Tools" href="http://bit.ly/19htW1C"
-                                target="_blank" rel="noopener noreferrer">Building Command Line Tools</a> talk given to
-                            the first cohort of <a title="Launch Academy" href="http://www.launchacademy.com/"
-                                target="_blank" rel="noopener noreferrer">Launch Academy</a> in Boston, MA, who at that
-                            time had gone through several weeks of training and hands-on experience with web application
-                            development since my last visit. This talk was meant to present an alternative approach to
-                            tackling problems that do not necessarily need to be solved using the traditional web stack.
-                        </li>
-                        <li>May 2013 - <a title="The New Engineer's Survival Guide" href="http://bit.ly/17TvF9l"
-                                target="_blank" rel="noopener noreferrer">The New Engineer's Survival Guide</a> to the
-                            first cohort of <a title="Launch Academy" href="http://www.launchacademy.com/"
-                                target="_blank" rel="noopener noreferrer">Launch Academy</a> in Boston, MA. It was meant
-                            to serve as a precursor of things to come in your engineering career and be encouraging as
-                            well.</li>
-                        <li>May 2013 - <a title="Getting Closure: Ruby Blocks, Procs and Lambdas"
-                                href="http://bit.ly/12Ly7LJ" target="_blank" rel="noopener noreferrer">Getting Closure:
-                                Ruby Blocks, Procs and Lambdas</a> talk given at <a title="BostonRB"
-                                href="http://bostonrb.org/presentations/getting-closure" target="_blank"
-                                rel="noopener noreferrer">BostonRB</a>. An introduction to an aspect of Ruby that is not
-                            talked about very often but that represents one of the distinctive features of the language.
-                        </li>
-                        <li>January 2013 - <a title="Defensive Programming in Ruby" href="http://bit.ly/13WI4Zu"
-                                target="_blank" rel="noopener noreferrer">Defensive Programming in Ruby</a>: Given as a
-                            workshop at BostonRB's Project Night. Introduced new Rubyists to concepts surrounding
-                            writing fault-tolerant Ruby.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER SECTION -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-offset-2 col-md-8 col-sm-12">
-                    <p>Copyright © 2021 Johnny Boursiquot
-                    <p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- SCRIPTS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.parallax.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/magnific-popup-options.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-
+</script>
 </body>
-
 </html>
