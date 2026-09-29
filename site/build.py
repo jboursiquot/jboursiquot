@@ -292,12 +292,30 @@ def page():
   <h2>Works</h2>
   <p class="sub">Recent talks, workshops, and open source. The full record goes back to {FIRST_YEAR}.</p>
   <ol class="recent">{recent}</ol>
+  <h3 class="oss-h">Highlights</h3>
+  <ul class="highlights">
+    <li>
+      <a class="hl-media hl-book" href="{P['writing'][0]['url']}" tabindex="-1" aria-hidden="true"><img src="img/book-97-things-sre.jpg" alt="" loading="lazy" width="432" height="640"></a>
+      <div class="hl-body"><span class="rw-kind">Book</span>
+        <h4><a href="{P['writing'][0]['url']}">97 Things Every SRE Should Know</a></h4>
+        <p>Contributing author to O'Reilly's collection of essays on site reliability engineering (2020).</p></div>
+    </li>
+    <li>
+      <a class="hl-media" href="{P['courses'][0]['url']}" tabindex="-1" aria-hidden="true"><img src="img/course-hands-on-go.jpg" alt="" loading="lazy" width="720" height="446"></a>
+      <div class="hl-body"><span class="rw-kind">Courses</span>
+        <h4><a href="{P['courses'][0]['url']}">Hands-On Introduction: Go</a></h4>
+        <p>Rated 4.9 on LinkedIn Learning. Also <a href="{P['courses'][1]['url']}">Go Standard Library Solutions</a> on Packt and live trainings on O'Reilly, including Go in 3 Weeks.</p></div>
+    </li>
+    <li>
+      <a class="hl-media hl-dark" href="{P['writing'][1]['url']}" tabindex="-1" aria-hidden="true"><img src="img/gotime.jpg" alt="" loading="lazy" width="480" height="480"></a>
+      <div class="hl-body"><span class="rw-kind">Podcast</span>
+        <h4><a href="{P['writing'][1]['url']}">Go Time</a></h4>
+        <p>Host of Changelog's weekly Go podcast from 2017 through its final episode in December 2024.</p></div>
+    </li>
+  </ul>
+  <p class="keynotes">Keynotes at <a href="https://www.infoq.com/presentations/sre-build-trust/">QCon Plus 2020</a> and GopherCon <a href="https://www.youtube.com/watch?v=_Pc0bzz4-gM">2019</a> and <a href="https://www.youtube.com/watch?v=PAUjYyBfELk">2021</a>.</p>
   <h3 class="oss-h">Open source</h3>
   <ul class="oss">{oss}</ul>
-  <div class="earlier-work">
-    <h3>Earlier highlights</h3>
-    <p>Contributing author, <a href="{P['writing'][0]['url']}">97 Things Every SRE Should Know</a> (O'Reilly). Keynotes at <a href="https://www.infoq.com/presentations/sre-build-trust/">QCon Plus 2020</a> and GopherCon <a href="https://www.youtube.com/watch?v=_Pc0bzz4-gM">2019</a> and <a href="https://www.youtube.com/watch?v=PAUjYyBfELk">2021</a>. Host of <a href="{P['writing'][1]['url']}">Go Time</a> through its final episode in December 2024. Courses on <a href="{P['courses'][0]['url']}">LinkedIn Learning</a>, O'Reilly, and <a href="{P['courses'][1]['url']}">Packt</a>.</p>
-  </div>
   <details class="all"><summary>Full public record since {FIRST_YEAR} ({count_public()} entries)</summary><ol class="log">{arch}</ol></details>
 </section>
 
