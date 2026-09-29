@@ -203,11 +203,11 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Industries
 
-- Enterprise SaaS: Skilltype, InfluxData, One Door, MAARK
+- Enterprise SaaS: Human Agency, Skilltype, InfluxData, One Door, MAARK
 - Enterprise AI: Human Agency
 - Loyalty and retail: Chick-fil-A, One Door
 - Talent management: Skilltype
-- Education: The Achievement Network
+- Education: The Achievement Network, Launch Academy
 - Developer platforms: Salesforce, Heroku
 - Payments: MAARK
 

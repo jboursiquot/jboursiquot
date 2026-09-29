@@ -1347,7 +1347,8 @@
             "skilltype",
             "influx",
             "onedoor",
-            "maark"
+            "maark",
+            "humanagency"
           ],
           "inferred": []
         },
@@ -1376,7 +1377,8 @@
         {
           "name": "Education",
           "roles": [
-            "anet"
+            "anet",
+            "launch"
           ],
           "inferred": []
         },
