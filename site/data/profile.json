@@ -1052,7 +1052,8 @@
         {
           "name": "SRE tooling",
           "roles": [
-            "heroku"
+            "heroku",
+            "salesforce"
           ],
           "inferred": []
         },
@@ -1218,7 +1219,9 @@
             "humanagency",
             "cfa",
             "skilltype",
-            "maark"
+            "maark",
+            "salesforce",
+            "onedoor"
           ],
           "inferred": []
         },
@@ -1244,7 +1247,16 @@
         {
           "name": "Design and code review",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "humanagency",
+            "cfa",
+            "salesforce",
+            "heroku",
+            "anet",
+            "influx",
+            "onedoor",
+            "launch",
+            "maark"
           ],
           "inferred": []
         },
