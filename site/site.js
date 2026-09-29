@@ -21,17 +21,55 @@
     hero.style.setProperty("--px", 0); hero.style.setProperty("--py", 0);
   });
 
-  // Section dots and header links follow the section in view.
+  // Section dots and header links follow the section in view. A section is
+  // current once its top passes a line just below the sticky header. Sections
+  // without a link (the photo mosaic) clear the underline. At the bottom of the
+  // page the last section wins, since short sections can't reach the line.
   var links = document.querySelectorAll(".dots a, .bar nav a");
-  var ids = ["top", "about", "experience", "capabilities", "works", "contact"];
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (!en.isIntersecting) return;
-      links.forEach(function (l) { l.classList.toggle("on", l.getAttribute("href") === "#" + en.target.id); });
-      if (!hovered) restDot();
+  var sections = ["top", "about", "experience", "capabilities", "photos", "works", "contact"]
+    .map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  var current = null, locked = null, lockTimer = 0, ticking = false;
+
+  function setActive(id) {
+    if (id === current) return;
+    current = id;
+    links.forEach(function (l) { l.classList.toggle("on", l.getAttribute("href") === "#" + id); });
+    if (!hovered) restDot();
+  }
+  function sectionInView() {
+    var line = document.querySelector(".bar").offsetHeight + window.innerHeight * 0.25;
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      return sections[sections.length - 1].id;
+    }
+    var id = sections[0].id;
+    sections.forEach(function (s) { if (s.getBoundingClientRect().top <= line) id = s.id; });
+    return id;
+  }
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      ticking = false;
+      if (locked) {
+        // Hold the clicked item while the smooth scroll runs; release once it settles.
+        clearTimeout(lockTimer);
+        lockTimer = setTimeout(function () { locked = null; setActive(sectionInView()); }, 150);
+        return;
+      }
+      setActive(sectionInView());
     });
-  }, { rootMargin: "-45% 0px -50% 0px" });
-  ids.forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
+  }
+  links.forEach(function (l) {
+    l.addEventListener("click", function () {
+      var id = l.getAttribute("href").slice(1);
+      locked = id;
+      setActive(id);
+      clearTimeout(lockTimer);
+      lockTimer = setTimeout(function () { locked = null; }, 1200);
+    });
+  });
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
 
   // Header gets a solid background once the page scrolls under it.
   var bar = document.querySelector(".bar");
@@ -60,8 +98,8 @@
     nav.addEventListener("mouseleave", function () { hovered = null; restDot(); });
     nav.addEventListener("focusout", function (e) { if (!nav.contains(e.relatedTarget)) { hovered = null; restDot(); } });
     window.addEventListener("resize", restDot);
-    restDot();
   }
+  setActive(sectionInView());
 })();
 
 (function () {
