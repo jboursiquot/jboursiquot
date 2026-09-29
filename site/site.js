@@ -137,7 +137,7 @@
   var svg = document.getElementById("orbit");
   var NS = "http://www.w3.org/2000/svg", TAU = Math.PI * 2;
   var panels = [].slice.call(root.querySelectorAll(".orbit-panel .rd"));
-  var chips = [].slice.call(root.querySelectorAll(".orbit-chips button"));
+  var chipRow = root.querySelector(".orbit-chips"), chips = [].slice.call(chipRow.querySelectorAll("button"));
   var orgName = {};
   data.orgs.forEach(function (o) { orgName[o.id] = o.name; });
 
@@ -214,6 +214,8 @@
   function clearMarks() {
     labels.forEach(function (l) { l.classList.remove("on"); });
     spokes.forEach(function (l) { l.classList.remove("on"); });
+    chipRow.classList.remove("skill");
+    chips.forEach(function (b) { b.classList.remove("lit"); });
   }
   function center() {
     if (org) {
@@ -233,6 +235,9 @@
     clearMarks();
     lab.classList.add("on");
     line.classList.add("on");
+    // Light the chips for the organizations that used this skill, and dim the rest.
+    chipRow.classList.add("skill");
+    chips.forEach(function (b) { b.classList.toggle("lit", s.roles.indexOf(b.getAttribute("data-org")) >= 0); });
     var p = root.querySelector(".rd-skill");
     p.querySelector("h3").textContent = s.name;
     p.querySelector(".rd-meta").textContent = c.name + ", used at " + s.roles.length + (s.roles.length === 1 ? " organization" : " organizations");
