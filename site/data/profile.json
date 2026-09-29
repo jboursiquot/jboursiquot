@@ -661,9 +661,7 @@
             "cfa",
             "rocketfarm"
           ],
-          "inferred": [
-            "cfa"
-          ]
+          "inferred": []
         },
         {
           "name": "Java",
@@ -694,10 +692,7 @@
             "skilltype",
             "humanagency"
           ],
-          "inferred": [
-            "skilltype",
-            "humanagency"
-          ]
+          "inferred": []
         },
         {
           "name": "SQL",
@@ -707,9 +702,7 @@
             "onedoor",
             "maark"
           ],
-          "inferred": [
-            "maark"
-          ]
+          "inferred": []
         },
         {
           "name": "Ruby on Rails",
@@ -810,9 +803,7 @@
             "humanagency",
             "rocketfarm"
           ],
-          "inferred": [
-            "humanagency"
-          ]
+          "inferred": []
         },
         {
           "name": "Lambda",
@@ -821,9 +812,7 @@
             "skilltype",
             "rocketfarm"
           ],
-          "inferred": [
-            "skilltype"
-          ]
+          "inferred": []
         },
         {
           "name": "ECS Fargate",
@@ -871,9 +860,7 @@
             "humanagency",
             "rocketfarm"
           ],
-          "inferred": [
-            "humanagency"
-          ]
+          "inferred": []
         },
         {
           "name": "Deployment automation",
@@ -959,10 +946,7 @@
             "anet",
             "rocketfarm"
           ],
-          "inferred": [
-            "skilltype",
-            "anet"
-          ]
+          "inferred": []
         },
         {
           "name": "Caching strategy",
@@ -1035,10 +1019,7 @@
             "onedoor",
             "heroku"
           ],
-          "inferred": [
-            "cfa",
-            "skilltype"
-          ]
+          "inferred": []
         },
         {
           "name": "MySQL",
@@ -1165,9 +1146,7 @@
             "skilltype",
             "humanagency"
           ],
-          "inferred": [
-            "humanagency"
-          ]
+          "inferred": []
         },
         {
           "name": "AI agents",

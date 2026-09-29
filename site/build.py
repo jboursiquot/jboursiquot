@@ -157,50 +157,42 @@ def page():
         return (f'<a class="orb {cls}" href="#cap-{cid}" data-depth="{ {"o1": 18, "o2": 10, "o3": 24, "o4": 14, "o5": 16}[cls] }">'
                 f'<span class="ball">{icon(c["icon"], 26)}</span><span class="lbl">{E(c["name"])}</span></a>')
 
-    roles = [x for x in P["experience"] if x["id"] != "earlier"]
-    rmap = {x["id"]: x for x in P["experience"]}
-    order = {x["id"]: n for n, x in enumerate(P["experience"])}
-    role_count = {r["id"]: sum(r["id"] in sk["roles"] for c in P["skillmap"] for sk in c["skills"]) for r in roles}
+    orgs = [x for x in P["experience"] if x["id"] != "earlier"]
+    orgs_az = sorted(orgs, key=lambda x: x["org"].lower())
+    short = {"Languages": "Languages", "Front End": "Front End", "Cloud & Delivery": "Cloud", "Architecture & APIs": "Arch & APIs",
+             "Data": "Data", "Reliability & Observability": "Reliability", "AI": "AI", "Security & Compliance": "Security",
+             "Leadership & Business": "Leadership", "Industries": "Industries"}
+    nskills = sum(len(c["skills"]) for c in P["skillmap"])
+    orbit_data = json.dumps({
+        "cats": [{"name": c["name"], "short": short.get(c["name"], c["name"]),
+                  "skills": [{"name": s["name"], "roles": s["roles"]} for s in c["skills"]]} for c in P["skillmap"]],
+        "orgs": [{"id": x["id"], "name": x["org"]} for x in orgs],
+    }, ensure_ascii=False).replace("</", "<\\/")
 
-    def role_btn(x):
-        return (f'<li><button type="button" class="role-btn" data-role="{x["id"]}" aria-pressed="false">'
-                f'<span class="rb-org">{E(x["org"])}</span><span class="rb-title">{E(x["role"])}</span>'
-                f'<span class="rb-meta"><span>{span_of(x)}</span><span>{role_count[x["id"]]} skills</span></span></button></li>')
-
-    def role_detail(x):
+    def org_panel(x):
         bl = "".join(f"<li>{E(b)}</li>" for b in x["bullets"])
         tech = f'<p class="tech">{E(x["tech"])}</p>' if x["tech"] else ""
         via = f' <span class="via">via {E(x["via"])}</span>' if x.get("via") else ""
-        return (f'<div class="rd" data-role="{x["id"]}" hidden><h3>{a(x["org"], x["url"])}{via}</h3>'
-                f'<p class="rd-meta">{E(x["role"])}{", " + span_of(x) if span_of(x) else ""}</p><ul>{bl}</ul>{tech}</div>')
+        meta = E(x["role"]) + (f", {span_of(x)}" if span_of(x) else "")
+        return (f'<div class="rd" data-org="{x["id"]}" hidden><h3>{a(x["org"], x["url"])}{via}</h3>'
+                f'<p class="rd-meta">{meta}</p><ul>{bl}</ul>{tech}</div>')
 
-    def chip(sk):
-        n = len(sk["roles"])
-        pips = "".join(f'<i class="{"on" if k < n else ""}"></i>' for k in range(5))
-        where = "; ".join(rmap[r]["org"] + (f" ({span_of(rmap[r])})" if span_of(rmap[r]) else "") for r in sorted(sk["roles"], key=lambda r: order[r]))
-        return (f'<li><button type="button" class="chip" data-roles="{" ".join(sk["roles"])}" data-where="{E(where)}" '
-                f'data-count="{n}" aria-pressed="false" title="Used at {E(where)}">'
-                f'<span>{E(sk["name"])}</span><span class="pips" aria-label="{n} role{"s" if n > 1 else ""}">{pips}</span></button></li>')
-
-    board = "".join(f'<div class="cat"><h3>{E(c["name"])}</h3><ul>{"".join(chip(sk) for sk in c["skills"])}</ul></div>'
-                    for c in P["skillmap"])
-    nskills = sum(len(c["skills"]) for c in P["skillmap"])
-    top = sorted((sk for c in P["skillmap"] for sk in c["skills"]), key=lambda sk: -len(sk["roles"]))[:3]
-    skillmap = f"""<div class="skillmap">
-  <svg class="wires" aria-hidden="true"></svg>
-  <div class="sm-roles">
-    <ol class="roles">{"".join(role_btn(x) for x in roles)}</ol>
-    <p class="earlier">Plus earlier software engineering roles before MAARK.</p>
-  </div>
-  <div class="sm-board">
-    <div class="detail" aria-live="polite">
-      <div class="rd rd-default"><h3>What I've used, and where</h3>
-        <p>Pick a role to see the skills I used there, or a skill to see where I used it. Dots show how many roles used each skill.</p></div>
-      <div class="rd rd-skill" hidden><h3></h3><p class="rd-meta"></p><p class="rd-where"></p></div>
-      {"".join(role_detail(x) for x in roles)}
+    chips = '<button type="button" data-org="" aria-pressed="true">All</button>' + "".join(
+        f'<button type="button" data-org="{x["id"]}" aria-pressed="false">{E(x["org"])}</button>' for x in orgs_az)
+    skillmap = f"""<div class="orbit">
+  <div class="orbit-chips" role="group" aria-label="Show one organization">{chips}</div>
+  <div class="orbit-grid">
+    <div class="orbit-chart">
+      <svg id="orbit" viewBox="-265 -265 530 530" role="img" aria-label="{nskills} skills in {len(P['skillmap'])} categories. Each spoke is a skill; each dot is an organization where I used it."></svg>
     </div>
-    <div class="board">{board}</div>
+    <div class="orbit-panel" aria-live="polite">
+      <div class="rd rd-default"><h3>Skills and where I used them</h3>
+        <p>Each spoke is a skill, and each dot on it is an organization where I used it, so longer spokes mean skills I've used in more places. Pick an organization to trace its dots around the ring, or hover a spoke.</p></div>
+      <div class="rd rd-skill" hidden><h3></h3><p class="rd-meta"></p><ul class="rd-orgs"></ul></div>
+      {"".join(org_panel(x) for x in orgs)}
+    </div>
   </div>
+  <script type="application/json" id="orbit-data">{orbit_data}</script>
 </div>"""
     glance = f"""<dl class="facts">
       <div><dt>Community</dt><dd>GopherCon program chair</dd></div>
