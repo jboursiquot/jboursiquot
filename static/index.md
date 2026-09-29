@@ -6,7 +6,7 @@ Last updated: 2026-09-28. Contact: message on LinkedIn (https://www.linkedin.com
 
 ## Facts
 
-- Roles, most recent first, with length: Director of Technology, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, The Achievement Network (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
+- Roles, most recent first, with length: Director of Technology, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Contract engineer, Rocket Farm (4 mos); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, The Achievement Network (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
 - Founder of Idiomat LLC, a software engineering training and consulting company (https://idiomat.co/).
 - Software engineer for over two decades; earlier roles before MAARK are not listed.
 - GopherCon: program chair; workshop instructor at GopherCon US, EU, and Singapore (most recently August 2026); closing keynotes 2019 and 2021; emcee 2024 and 2026.
@@ -39,6 +39,14 @@ Most recent first, with length of each role. Some roles overlapped.
 - Designed location-scoped cache invalidation and event propagation that reduced promotion-data staleness from minutes to near real time.
 - Hire engineers at Stable Kernel, document failure modes, and build Datadog diagnostics for release performance.
 - Technologies: DynamoDB, caching, event propagation, Datadog
+
+### Rocket Farm: Contract engineer (4 mos)
+
+- Designed and built a serverless AWS IoT backend in Go for a connected-device product: gateway provisioning with X.509 certificates, a device registry, and MQTT command and control.
+- Processed device telemetry and alarms with IoT rules, SQS, EventBridge, DynamoDB, and Lambda, and delivered over-the-air firmware updates through S3.
+- Instrumented the system with OpenTelemetry traces and metrics sent to Honeycomb, and built device simulators for end-to-end testing.
+- Shipped infrastructure with SAM and CloudFormation through GitHub Actions pipelines for dev, staging, and production.
+- Technologies: Go, AWS IoT Core, MQTT, Lambda, DynamoDB, SQS, EventBridge, S3, OpenTelemetry, Honeycomb, GitHub Actions
 
 ### Skilltype: Co-founder and CTO (fractional) (6 yrs 11 mos)
 
@@ -97,7 +105,7 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Languages
 
-- Go: Chick-fil-A, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData
+- Go: Chick-fil-A, Rocket Farm, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData
 - Java: Skilltype, The Achievement Network
 - TypeScript: Skilltype
 - JavaScript: Skilltype, MAARK
@@ -120,31 +128,34 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Cloud & Delivery
 
-- AWS: Human Agency, Chick-fil-A, Skilltype, The Achievement Network
-- Lambda: Skilltype, The Achievement Network
+- AWS: Human Agency, Chick-fil-A, Rocket Farm, Skilltype, The Achievement Network
+- Lambda: Rocket Farm, Skilltype, The Achievement Network
 - ECS Fargate: Skilltype
-- SQS and SNS: Skilltype, The Achievement Network
+- SQS and SNS: Rocket Farm, Skilltype, The Achievement Network
 - Docker: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData
 - Kubernetes: Chick-fil-A, Salesforce, Heroku
-- CI/CD: Human Agency, Skilltype, The Achievement Network
-- Deployment automation: Heroku, The Achievement Network
+- CI/CD: Human Agency, Rocket Farm, Skilltype, The Achievement Network
+- Deployment automation: Rocket Farm, Heroku, The Achievement Network
+- CloudFormation and SAM: Rocket Farm
 - Heroku platform: Salesforce, Heroku
 
 ### Architecture & APIs
 
-- Architecture: Chick-fil-A, Skilltype, The Achievement Network, One Door, MAARK
-- API design: Skilltype, The Achievement Network, One Door, MAARK
-- Backend services: Skilltype, Heroku, The Achievement Network, InfluxData, MAARK, One Door
-- Distributed systems: Chick-fil-A, Salesforce, Heroku, InfluxData
-- Event-driven design: Chick-fil-A, Skilltype, The Achievement Network
+- Architecture: Chick-fil-A, Rocket Farm, Skilltype, The Achievement Network, One Door, MAARK
+- API design: Rocket Farm, Skilltype, The Achievement Network, One Door, MAARK
+- Backend services: Rocket Farm, Skilltype, Heroku, The Achievement Network, InfluxData, MAARK, One Door
+- Distributed systems: Chick-fil-A, Rocket Farm, Salesforce, Heroku, InfluxData
+- Event-driven design: Chick-fil-A, Rocket Farm, Skilltype, The Achievement Network
 - Caching strategy: Chick-fil-A
 - Data integrations: Skilltype, MAARK
-- Messaging: The Achievement Network, One Door
+- Messaging: Rocket Farm, The Achievement Network, One Door
+- AWS IoT and MQTT: Rocket Farm
+- OTA firmware updates: Rocket Farm
 
 ### Data
 
 - PostgreSQL: Skilltype, Heroku, The Achievement Network, One Door
-- DynamoDB: Chick-fil-A, Skilltype, The Achievement Network
+- DynamoDB: Chick-fil-A, Rocket Farm, Skilltype, The Achievement Network
 - Redis: Chick-fil-A, Skilltype, Heroku, One Door
 - MySQL: One Door
 - Oracle Database: MAARK
@@ -153,10 +164,10 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Reliability & Observability
 
-- OpenTelemetry: Chick-fil-A, Salesforce, Skilltype
-- Honeycomb: Salesforce, Skilltype, Heroku
+- OpenTelemetry: Chick-fil-A, Rocket Farm, Salesforce, Skilltype
+- Honeycomb: Rocket Farm, Salesforce, Skilltype, Heroku
 - Datadog: Chick-fil-A
-- Distributed tracing: Chick-fil-A, Salesforce, Skilltype
+- Distributed tracing: Chick-fil-A, Rocket Farm, Salesforce, Skilltype
 - Incident command: Heroku
 - SRE tooling: Salesforce, Heroku
 - Performance tuning: Chick-fil-A
@@ -181,6 +192,7 @@ Most recent first, with length of each role. Some roles overlapped.
 
 - SOC 2: Human Agency, Skilltype
 - Security controls: Human Agency
+- Device certificates and TOTP: Rocket Farm
 - GDPR: Skilltype
 - TX-RAMP: Skilltype
 - Secure delivery: Skilltype
@@ -207,6 +219,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - Enterprise AI: Human Agency
 - Loyalty and retail: Chick-fil-A, One Door
 - Talent management: Skilltype
+- Connected devices: Rocket Farm
 - Education: The Achievement Network, Launch Academy
 - Developer platforms: Salesforce, Heroku
 - Payments: MAARK

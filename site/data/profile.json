@@ -163,6 +163,28 @@
       "via": "Stable Kernel"
     },
     {
+      "id": "rocketfarm",
+      "org": "Rocket Farm",
+      "url": "https://www.rocketfarmstudios.com/",
+      "role": "Contract engineer",
+      "start": "2024-04",
+      "end": "2024-07",
+      "domains": [
+        "arch",
+        "cloud",
+        "iot",
+        "data"
+      ],
+      "what": "Designed and built a serverless AWS IoT backend for a connected-device product.",
+      "bullets": [
+        "Designed and built a serverless AWS IoT backend in Go for a connected-device product: gateway provisioning with X.509 certificates, a device registry, and MQTT command and control.",
+        "Processed device telemetry and alarms with IoT rules, SQS, EventBridge, DynamoDB, and Lambda, and delivered over-the-air firmware updates through S3.",
+        "Instrumented the system with OpenTelemetry traces and metrics sent to Honeycomb, and built device simulators for end-to-end testing.",
+        "Shipped infrastructure with SAM and CloudFormation through GitHub Actions pipelines for dev, staging, and production."
+      ],
+      "tech": "Go, AWS IoT Core, MQTT, Lambda, DynamoDB, SQS, EventBridge, S3, OpenTelemetry, Honeycomb, GitHub Actions"
+    },
+    {
       "id": "skilltype",
       "org": "Skilltype",
       "url": "https://www.skilltype.com/",
@@ -636,7 +658,8 @@
             "heroku",
             "anet",
             "influx",
-            "cfa"
+            "cfa",
+            "rocketfarm"
           ],
           "inferred": [
             "cfa"
@@ -784,7 +807,8 @@
             "skilltype",
             "anet",
             "cfa",
-            "humanagency"
+            "humanagency",
+            "rocketfarm"
           ],
           "inferred": [
             "humanagency"
@@ -794,7 +818,8 @@
           "name": "Lambda",
           "roles": [
             "anet",
-            "skilltype"
+            "skilltype",
+            "rocketfarm"
           ],
           "inferred": [
             "skilltype"
@@ -811,7 +836,8 @@
           "name": "SQS and SNS",
           "roles": [
             "skilltype",
-            "anet"
+            "anet",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -842,7 +868,8 @@
           "roles": [
             "skilltype",
             "anet",
-            "humanagency"
+            "humanagency",
+            "rocketfarm"
           ],
           "inferred": [
             "humanagency"
@@ -852,7 +879,15 @@
           "name": "Deployment automation",
           "roles": [
             "anet",
-            "heroku"
+            "heroku",
+            "rocketfarm"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "CloudFormation and SAM",
+          "roles": [
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -876,7 +911,8 @@
             "skilltype",
             "anet",
             "onedoor",
-            "maark"
+            "maark",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -886,7 +922,8 @@
             "skilltype",
             "anet",
             "onedoor",
-            "maark"
+            "maark",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -898,7 +935,8 @@
             "influx",
             "maark",
             "onedoor",
-            "heroku"
+            "heroku",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -908,7 +946,8 @@
             "cfa",
             "salesforce",
             "heroku",
-            "influx"
+            "influx",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -917,7 +956,8 @@
           "roles": [
             "cfa",
             "skilltype",
-            "anet"
+            "anet",
+            "rocketfarm"
           ],
           "inferred": [
             "skilltype",
@@ -943,7 +983,22 @@
           "name": "Messaging",
           "roles": [
             "onedoor",
-            "anet"
+            "anet",
+            "rocketfarm"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "AWS IoT and MQTT",
+          "roles": [
+            "rocketfarm"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "OTA firmware updates",
+          "roles": [
+            "rocketfarm"
           ],
           "inferred": []
         }
@@ -967,7 +1022,8 @@
           "roles": [
             "cfa",
             "skilltype",
-            "anet"
+            "anet",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -1022,7 +1078,8 @@
           "roles": [
             "salesforce",
             "skilltype",
-            "cfa"
+            "cfa",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -1031,7 +1088,8 @@
           "roles": [
             "salesforce",
             "skilltype",
-            "heroku"
+            "heroku",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -1047,7 +1105,8 @@
           "roles": [
             "salesforce",
             "skilltype",
-            "cfa"
+            "cfa",
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -1197,6 +1256,13 @@
           "name": "Security controls",
           "roles": [
             "humanagency"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Device certificates and TOTP",
+          "roles": [
+            "rocketfarm"
           ],
           "inferred": []
         },
@@ -1383,6 +1449,13 @@
           "name": "Talent management",
           "roles": [
             "skilltype"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Connected devices",
+          "roles": [
+            "rocketfarm"
           ],
           "inferred": []
         },

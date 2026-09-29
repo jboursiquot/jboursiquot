@@ -8,7 +8,7 @@ Focus areas: AI systems (LLM-powered and agentic features in production), cloud 
 
 Facts, with dates where they matter:
 
-- Roles, most recent first, with length: Director of Technology, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, The Achievement Network (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
+- Roles, most recent first, with length: Director of Technology, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Contract engineer, Rocket Farm (4 mos); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, The Achievement Network (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
 - Founder of Idiomat LLC, a software engineering training and consulting company (https://idiomat.co/).
 - Software engineer for over two decades; earlier roles before MAARK are not listed.
 - GopherCon: program chair; workshop instructor at GopherCon US, EU, and Singapore (most recently August 2026); closing keynotes 2019 and 2021; emcee 2024 and 2026.
@@ -26,6 +26,7 @@ Facts, with dates where they matter:
 
 - [Human Agency](https://www.humanagency.com/): Director of Technology, 3 mos. Led engineering for an AI platform launch, including SOC 2 readiness and commercial controls.
 - [Chick-fil-A](https://www.chick-fil-a.com/): Principal Software Engineer and Program Lead, 1 yr 1 mo. Lead architecture and delivery for Chick-fil-A's Loyalty Platform initiatives.
+- [Rocket Farm](https://www.rocketfarmstudios.com/): Contract engineer, 4 mos. Designed and built a serverless AWS IoT backend for a connected-device product.
 - [Skilltype](https://www.skilltype.com/): Co-founder and CTO (fractional), 6 yrs 11 mos. Own product direction and engineering for library talent-management software, from concept through launch.
 - [Salesforce](https://www.salesforce.com/): Platform Observability Engineer, 1 yr 11 mos. Wrote shared Go instrumentation libraries for OpenTelemetry adoption and led the move to Honeycomb and distributed tracing.
 - [Heroku](https://www.heroku.com/): Site Reliability Engineer, 2 yrs. Built tooling and incident-response workflows, and served as incident commander during major incidents.
