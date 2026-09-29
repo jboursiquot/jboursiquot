@@ -128,15 +128,17 @@
       "end": "2026-10",
       "domains": [
         "ai",
+        "product",
         "lead"
       ],
       "what": "Led engineering for an AI platform launch, including SOC 2 readiness and commercial controls.",
       "bullets": [
         "Restarted a stalled SOC 2 readiness program, delivering automated security controls across all active company systems, vendor tracking, and audit evidence collection.",
         "Built a commercial controls program ahead of the product's beta launch, including per-customer cost and margin tracking, usage attribution, vendor cost monitoring, and AI-assisted invoice processing workflows.",
+        "Built much of the product front end in TypeScript and Next.js through AI-assisted development, on PostgreSQL and Redis.",
         "Fixed inefficiencies and set up guardrails in a codebase written mostly by non-engineers with AI tools."
       ],
-      "tech": ""
+      "tech": "TypeScript, Next.js, PostgreSQL, ORM, Redis, Anthropic, OpenAI, MCP, CI/CD"
     },
     {
       "id": "cfa",
@@ -689,7 +691,8 @@
         {
           "name": "TypeScript",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "humanagency"
           ],
           "inferred": []
         },
@@ -744,7 +747,15 @@
         {
           "name": "React",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "humanagency"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Next.js",
+          "roles": [
+            "humanagency"
           ],
           "inferred": []
         },
@@ -1012,7 +1023,15 @@
             "skilltype",
             "anet",
             "onedoor",
-            "heroku"
+            "heroku",
+            "humanagency"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "ORM",
+          "roles": [
+            "humanagency"
           ],
           "inferred": []
         },
@@ -1032,7 +1051,8 @@
             "cfa",
             "skilltype",
             "onedoor",
-            "heroku"
+            "heroku",
+            "humanagency"
           ],
           "inferred": []
         },
