@@ -1122,14 +1122,16 @@
         {
           "name": "Tool calling",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "humanagency"
           ],
           "inferred": []
         },
         {
           "name": "MCP",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "humanagency"
           ],
           "inferred": []
         },
@@ -1143,14 +1145,16 @@
         {
           "name": "Anthropic",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "humanagency"
           ],
           "inferred": []
         },
         {
           "name": "OpenAI",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "humanagency"
           ],
           "inferred": []
         },
