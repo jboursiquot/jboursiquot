@@ -6,7 +6,7 @@ Last updated: 2026-09-28. Contact: message on LinkedIn (https://www.linkedin.com
 
 ## Facts
 
-- Roles, most recent first, with length: Director of Engineering, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, The Achievement Network (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
+- Roles, most recent first, with length: Director of Technology, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, The Achievement Network (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
 - Founder of Idiomat LLC, a software engineering training and consulting company (https://idiomat.co/).
 - Software engineer for over two decades; earlier roles before MAARK are not listed.
 - GopherCon: program chair; workshop instructor at GopherCon US, EU, and Singapore (most recently August 2026); closing keynotes 2019 and 2021; emcee 2024 and 2026.
@@ -25,7 +25,7 @@ Last updated: 2026-09-28. Contact: message on LinkedIn (https://www.linkedin.com
 
 Most recent first, with length of each role. Some roles overlapped.
 
-### Human Agency: Director of Engineering (3 mos)
+### Human Agency: Director of Technology (3 mos)
 
 - Restarted a stalled SOC 2 readiness program, delivering automated security controls across all active company systems, vendor tracking, and audit evidence collection.
 - Built a commercial controls program ahead of the product's beta launch, including per-customer cost and margin tracking, usage attribution, vendor cost monitoring, and AI-assisted invoice processing workflows.
