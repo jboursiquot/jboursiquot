@@ -158,7 +158,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - Datadog: Chick-fil-A
 - Distributed tracing: Salesforce
 - Incident command: Heroku
-- SRE tooling: Heroku
+- SRE tooling: Salesforce, Heroku
 - Performance tuning: Chick-fil-A
 - Failure-mode analysis: Chick-fil-A
 - Testing standards: Skilltype
@@ -187,10 +187,10 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Leadership & Business
 
-- Engineering leadership: Human Agency, Chick-fil-A, Skilltype, MAARK
+- Engineering leadership: Human Agency, Chick-fil-A, Salesforce, Skilltype, MAARK, One Door
 - Hiring: Chick-fil-A, Skilltype, MAARK
 - Mentoring: Salesforce, Skilltype, Heroku, Launch Academy
-- Design and code review: Skilltype
+- Design and code review: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData, One Door, Launch Academy, MAARK
 - Product direction: Skilltype, MAARK
 - Program leadership: Chick-fil-A
 - Cross-functional delivery: Chick-fil-A, Heroku
