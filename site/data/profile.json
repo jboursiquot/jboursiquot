@@ -250,7 +250,7 @@
     },
     {
       "id": "anet",
-      "org": "The Achievement Network",
+      "org": "ANet",
       "url": "https://achievementnetwork.org/",
       "role": "Principal Cloud Engineer",
       "start": "2016-08",
@@ -266,7 +266,8 @@
         "Built CI/CD pipelines and deployment automation on AWS, and designed backend services and APIs.",
         "Guided engineering teams on AWS architecture and implementation."
       ],
-      "tech": "Go, Java, PostgreSQL, Lambda, SQS, DynamoDB"
+      "tech": "Go, Java, PostgreSQL, Lambda, SQS, DynamoDB",
+      "org_full": "ANet (The Achievement Network)"
     },
     {
       "id": "influx",
