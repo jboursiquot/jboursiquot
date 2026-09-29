@@ -238,6 +238,7 @@ def page():
   <a class="mark" href="#top" aria-label="Johnny Boursiquot, home">JB<span>.</span></a>
   <nav aria-label="Sections">
     <a href="#about">About</a><a href="#experience">Experience</a><a href="#capabilities">Capabilities</a><a href="#works">Works</a><a href="#contact">Contact</a>
+    <span class="nav-line" aria-hidden="true"></span>
   </nav>
   <div class="actions">
     <a class="round alt" href="{github}" aria-label="GitHub profile">{icon("gh", 20)}</a>
