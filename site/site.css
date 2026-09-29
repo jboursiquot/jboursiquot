@@ -443,3 +443,10 @@ ul.highlights + p.keynotes + .oss-h, ol.recent + .oss-h { margin-top: 56px; }
   .hero .o1 .ball, .hero .o2 .ball, .hero .o3 .ball, .hero .o4 .ball, .hero .o5 .ball, .hero .o6 .ball, .hero .o7 .ball, .hero .o8 .ball { width: 44px; height: 44px; }
   .hero .o7 { grid-column: auto; }
 }
+/* Orbit labels wrap to two centered lines so neighbors don't touch */
+@media (min-width: 901px) { .hero .orb .lbl { max-width: 118px; text-align: center; line-height: 1.25; } }
+@media (max-width: 1260px) and (min-width: 901px) {
+  .hero .orb { gap: 8px; }
+  .hero .o1 .ball, .hero .o2 .ball, .hero .o3 .ball, .hero .o4 .ball, .hero .o5 .ball, .hero .o6 .ball, .hero .o7 .ball, .hero .o8 .ball { width: 60px; height: 60px; }
+  .hero .orb .lbl { font-size: 12.5px; max-width: 104px; }
+}
