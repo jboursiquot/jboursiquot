@@ -153,10 +153,10 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Reliability & Observability
 
-- OpenTelemetry: Salesforce
-- Honeycomb: Salesforce
+- OpenTelemetry: Chick-fil-A, Salesforce, Skilltype
+- Honeycomb: Salesforce, Skilltype, Heroku
 - Datadog: Chick-fil-A
-- Distributed tracing: Salesforce
+- Distributed tracing: Chick-fil-A, Salesforce, Skilltype
 - Incident command: Heroku
 - SRE tooling: Salesforce, Heroku
 - Performance tuning: Chick-fil-A
