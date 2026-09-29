@@ -164,7 +164,9 @@ ol.timeline ul li::before { display: none; }
 ol.timeline .tech { margin-top: 10px; font-size: 14px; color: var(--ink); opacity: .75; }
 
 /* Capabilities */
-.band { background: var(--card); padding-block: 96px; border-radius: 48px; max-width: 1360px; margin-inline: auto; }
+/* Boxed sections match the content column (1096px, 16px gutters on phones). */
+.band { background: var(--card); padding-block: 80px; border-radius: 36px; width: min(1096px, calc(100% - 64px)); margin-inline: auto; }
+.band > .wrap { padding-inline: 56px; }
 ul.caps { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 44px 64px; }
 ul.caps li { display: grid; grid-template-columns: 60px 1fr; gap: 22px; scroll-margin-top: 40px; }
 ul.caps .ball { width: 60px; height: 60px; border-radius: 50%; background: var(--indigo-soft); color: var(--indigo);
@@ -203,7 +205,7 @@ ol.log li { display: grid; grid-template-columns: 96px 240px 1fr; gap: 16px; pad
 ol.log time, ol.log span { color: var(--muted); }
 
 /* Contact */
-.contact .wrap { background: var(--indigo-fill); color: #fff; border-radius: 40px; padding: 72px; }
+.contact .wrap { background: var(--indigo-fill); color: #fff; border-radius: 36px; padding: 64px 56px; width: min(1096px, calc(100% - 64px)); }
 .contact h2 { color: #fff; }
 .contact p { color: #d9dbf7; font-size: 19px; }
 .cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
@@ -256,14 +258,15 @@ ol.log time, ol.log span { color: var(--muted); }
   ol.timeline li { padding: 18px 20px; }
   ol.timeline li::before { left: -26px; }
   ol.timeline::before { left: 4px; }
-  .band { border-radius: 28px; padding-block: 64px; }
+  .band { border-radius: 28px; padding-block: 56px; width: calc(100% - 32px); }
+  .band > .wrap { padding-inline: 20px; }
   ul.caps, dl.stack, .pub-grid { grid-template-columns: 1fr; gap: 32px; }
   .mosaic { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; gap: 10px; }
   .ph.xl { grid-column: span 2; }
   .ph.tall { grid-row: span 2; }
   .ph figcaption { font-size: 12px; padding: 5px 10px; left: 8px; bottom: 8px; right: 8px; }
   ol.log li { grid-template-columns: 1fr; gap: 0; }
-  .contact .wrap { padding: 40px 24px; border-radius: 28px; margin-inline: 16px; }
+  .contact .wrap { padding: 40px 24px; border-radius: 28px; width: calc(100% - 32px); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 
