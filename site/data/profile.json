@@ -1294,7 +1294,8 @@
           "name": "Cross-functional delivery",
           "roles": [
             "cfa",
-            "heroku"
+            "heroku",
+            "maark"
           ],
           "inferred": []
         },
@@ -1302,7 +1303,8 @@
           "name": "Executive partnership",
           "roles": [
             "skilltype",
-            "humanagency"
+            "humanagency",
+            "maark"
           ],
           "inferred": []
         },

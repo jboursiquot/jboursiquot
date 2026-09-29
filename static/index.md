@@ -194,8 +194,8 @@ Most recent first, with length of each role. Some roles overlapped.
 - Design and code review: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData, One Door, Launch Academy, MAARK
 - Product direction: Human Agency, Skilltype, MAARK
 - Program leadership: Chick-fil-A
-- Cross-functional delivery: Chick-fil-A, Heroku
-- Executive partnership: Human Agency, Skilltype
+- Cross-functional delivery: Chick-fil-A, Heroku, MAARK
+- Executive partnership: Human Agency, Skilltype, MAARK
 - Cost and margin controls: Human Agency, Chick-fil-A
 - Vendor management: Human Agency, Skilltype, MAARK
 - Codebase guardrails: Human Agency, Skilltype, One Door, MAARK
