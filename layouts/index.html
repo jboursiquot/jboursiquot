@@ -181,9 +181,6 @@ h1 { font-size: 46px; line-height: 1.02; font-weight: 800; letter-spacing: -0.03
 .o2 { right: 20%; top: 68%; }
 .o3 { left: 20%; top: 70%; }
 .o3 .ball, .o2 .ball { width: 76px; height: 76px; }
-.orb.big { right: 8%; top: 38%; }
-.orb.big .ball { width: 128px; height: 128px; }
-.orb.big .ball .i { width: 48px; height: 48px; }
 
 .social { position: absolute; left: 64px; bottom: 64px; list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; z-index: 3; }
 .social a { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; color: var(--ink);
@@ -205,7 +202,6 @@ h1 { font-size: 46px; line-height: 1.02; font-weight: 800; letter-spacing: -0.03
   .js .hero .card.name { transition-delay: .45s; }
   .js .hero .card.role { transition-delay: .6s; }
   .js .hero .o1 { transition-delay: .7s; }
-  .js .hero .big { transition-delay: .8s; }
   .js .hero .o2 { transition-delay: .9s; }
   .js .hero .o3 { transition-delay: 1s; }
   .ready .hero .disc { transform: none; opacity: 1; }
@@ -307,8 +303,7 @@ ol.log time, ol.log span { color: var(--muted); }
 @media (max-width: 1100px) {
   .card.name { left: 4%; }
   .card.role { left: 6%; }
-  .o1 { right: 18%; } .o2 { right: 14%; } .orb.big { right: 2%; }
-  .orb.big .ball { width: 116px; height: 116px; }
+  .o1 { right: 18%; } .o2 { right: 14%; }
   .bar nav { gap: 20px; }
 }
 @media (max-width: 900px) {
@@ -328,8 +323,6 @@ ol.log time, ol.log span { color: var(--muted); }
   .orb .ball .i { width: 20px; height: 20px; }
   .hero .orb { order: 4; background: var(--card); border-radius: 999px; padding: 6px 12px 6px 6px; box-shadow: 0 4px 12px -6px rgba(40, 52, 99, .25); }
   .hero .orb .ball { box-shadow: none; background: var(--indigo-soft); }
-  .hero .orb.big .ball { width: 44px; height: 44px; }
-  .hero .orb.big .ball .i { width: 22px; height: 22px; }
   .me { order: 2; transform: none !important; width: 100%; height: auto; max-width: 380px; justify-self: center; margin-top: 8px;
     background: radial-gradient(circle at 50% 62%, var(--disc-b) 0 58%, transparent 59%); }
   .social { order: 5; display: flex; justify-content: center; margin-top: 20px; }
@@ -458,9 +451,15 @@ dl.facts dd { margin: 2px 0 0; font-size: 15px; font-weight: 600; line-height: 1
 @media (max-width: 1100px) and (min-width: 901px) { .o5 { right: 2%; } }
 @media (max-width: 1300px) and (min-width: 901px) { .o1 { right: 15%; } }
 @media (max-width: 1100px) and (min-width: 901px) { .o5 { right: 3%; top: 82%; } .o2 { right: 12%; } }
+/* Leadership (upper left) and Full-Stack Engineering (upper right) */
+.o6 { left: 20%; top: 11%; }
+.o7 { right: 4%; top: 12%; }
+.o6 .ball, .o7 .ball { width: 76px; height: 76px; }
+@media (prefers-reduced-motion: no-preference) { .js .hero .o6 { transition-delay: 1.15s; } .js .hero .o7 { transition-delay: 1.2s; } }
+@media (max-width: 1100px) and (min-width: 901px) { .o6 { left: 14%; } .o7 { right: 2%; } }
 @media (max-width: 900px) {
-  .hero .o5 .ball { width: 44px; height: 44px; }
-  .hero .o5 { grid-column: 1 / -1; justify-self: start; }
+  .hero .o5 .ball, .hero .o6 .ball, .hero .o7 .ball { width: 44px; height: 44px; }
+  .hero .o7 { grid-column: 1 / -1; justify-self: start; }
 }
 
 /* Works: recent cards, open source list, earlier highlights */
@@ -507,6 +506,31 @@ ul.highlights + p.keynotes + .oss-h, ol.recent + .oss-h { margin-top: 56px; }
 @media (max-width: 1100px) { ol.recent { grid-template-columns: 1fr 1fr; } ul.oss { grid-template-columns: 1fr; } }
 @media (max-width: 900px) { ol.recent { grid-template-columns: 1fr; } ul.oss li { grid-template-columns: 1fr; gap: 2px; } .earlier-work { padding: 20px; } }
 
+/* Hero bubbles: four per side around the portrait. Declared last so these positions win. */
+.o6 { left: 20%; top: 11%; }
+.o3 { left: 18%; top: 78%; }
+.o8 { left: 3%; top: 10%; }
+.o1 { right: 24%; top: 12%; }
+.o7 { right: 5%; top: 12%; }
+.o4 { right: 8%; top: 42%; }
+.o2 { right: 22%; top: 70%; }
+.o5 { right: 4%; top: 72%; }
+.o1 .ball, .o2 .ball, .o3 .ball, .o4 .ball, .o5 .ball, .o6 .ball, .o7 .ball, .o8 .ball { width: 76px; height: 76px; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero .o4 { transition-delay: .8s; }
+  .js .hero .o8 { transition-delay: 1.25s; }
+}
+@media (max-width: 1260px) and (min-width: 901px) { .portrait { width: 460px; } }
+@media (max-width: 1140px) and (min-width: 901px) { .portrait { width: 390px; } }
+@media (max-width: 1100px) and (min-width: 901px) {
+  .o6 { left: 19%; } .o3 { left: 16%; } .o8 { left: 1%; }
+  .o1 { right: 23%; } .o7 { right: 2%; } .o4 { right: 4%; } .o2 { right: 20%; } .o5 { right: 1%; }
+}
+@media (max-width: 900px) {
+  .hero .o1 .ball, .hero .o2 .ball, .hero .o3 .ball, .hero .o4 .ball, .hero .o5 .ball, .hero .o6 .ball, .hero .o7 .ball, .hero .o8 .ball { width: 44px; height: 44px; }
+  .hero .o7 { grid-column: auto; }
+}
+
 </style>
 <link rel="preload" as="image" href="img/johnny-headshot-round.jpg">
 <script>document.documentElement.classList.add("js")</script>
@@ -538,10 +562,13 @@ ul.highlights + p.keynotes + .oss-h, ol.recent + .oss-h { margin-top: 56px; }
     <p>Over two decades of building software</p>
   </div>
   <a class="orb o1" href="#cap-ai" data-depth="18"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4l1.9 5.1L17 11l-5.1 1.9L10 18l-1.9-5.1L3 11l5.1-1.9z"/><path d="M18 3v4M16 5h4M18.5 15.5v3M17 17h3"/></svg></span><span class="lbl">AI Systems</span></a>
-  <a class="orb big" href="#cap-dist" data-depth="6"><span class="ball"><svg class="i" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 7.3l2.6 8.4M15.8 7.3l-2.6 8.4M8.5 6h7"/></svg></span><span class="lbl">Distributed Systems</span></a>
+  <a class="orb o4" href="#cap-dist" data-depth="14"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 7.3l2.6 8.4M15.8 7.3l-2.6 8.4M8.5 6h7"/></svg></span><span class="lbl">Distributed Systems</span></a>
   <a class="orb o2" href="#cap-sre" data-depth="10"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"/></svg></span><span class="lbl">Reliability</span></a>
   <a class="orb o3" href="#cap-cloud" data-depth="24"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.2 4.5 4.5 0 0 0 7 18z"/></svg></span><span class="lbl">Cloud Architecture</span></a>
   <a class="orb o5" href="#cap-sec" data-depth="16"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.1-7 9.5-4.1-1.4-7-5.2-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><span class="lbl">Security &amp; Compliance</span></a>
+  <a class="orb o6" href="#cap-lead" data-depth="20"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.8.3 5 2.6 5 5.8"/></svg></span><span class="lbl">Leadership</span></a>
+  <a class="orb o7" href="#cap-fullstack" data-depth="12"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><span class="lbl">Full-Stack Engineering</span></a>
+  <a class="orb o8" href="#cap-product" data-depth="22"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.1 2.1 0 0 0-2.9-.1z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></span><span class="lbl">Product Engineering</span></a>
 </section>
 <nav class="dots" aria-label="Page sections">
   <a href="#top" aria-label="Top" class="on"></a><a href="#about" aria-label="About"></a><a href="#experience" aria-label="Experience"></a><a href="#capabilities" aria-label="Capabilities"></a><a href="#photos" aria-label="On Stage"></a><a href="#works" aria-label="Works"></a><a href="#contact" aria-label="Contact"></a>
@@ -584,7 +611,7 @@ ul.highlights + p.keynotes + .oss-h, ol.recent + .oss-h { margin-top: 56px; }
 <section class="band" id="capabilities">
   <div class="wrap">
     <h2>Capabilities</h2>
-    <ul class="caps"><li id="cap-ai"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4l1.9 5.1L17 11l-5.1 1.9L10 18l-1.9-5.1L3 11l5.1-1.9z"/><path d="M18 3v4M16 5h4M18.5 15.5v3M17 17h3"/></svg></span><div><h3>AI Systems</h3><p>Designing and shipping production AI features, from RAG and tool calling to MCP integrations, on Bedrock, Anthropic, and OpenAI, with explicit control flow, guardrails, evaluation, and the same observability and testing as any other service.</p></div></li><li id="cap-cloud"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.2 4.5 4.5 0 0 0 7 18z"/></svg></span><div><h3>Cloud Architecture</h3><p>Designing and running cloud platforms for global user bases, from containers and serverless functions to event streams, queues, and infrastructure as code, with data handling built for privacy rules like GDPR.</p></div></li><li id="cap-sre"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"/></svg></span><div><h3>Reliability</h3><p>Incident command, SRE tooling, and release diagnostics, and instrumenting systems with OpenTelemetry, Honeycomb, and Datadog so teams can see what production is doing.</p></div></li><li id="cap-dist"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 7.3l2.6 8.4M15.8 7.3l-2.6 8.4M8.5 6h7"/></svg></span><div><h3>Distributed Systems</h3><p>Caching, event propagation, and distributed coordination for high-traffic workloads, plus time-series infrastructure and data stores from PostgreSQL and MySQL to DynamoDB and Redis.</p></div></li><li id="cap-sec"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.1-7 9.5-4.1-1.4-7-5.2-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><div><h3>Security &amp; Compliance</h3><p>Running SOC 2 readiness with automated security controls, vendor tracking, and audit evidence collection, and building GDPR-aware architecture, PII protection across vendors and regions, and TX-RAMP compliance into how products ship.</p></div></li><li id="cap-product"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><div><h3>Full-Stack Product Engineering</h3><p>Two decades of taking SaaS products from concept to production across enterprise software, loyalty and retail, education, and payments, owning everything from the React and TypeScript front end to the API, the data layer, and the deploy.</p></div></li><li id="cap-lead"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.8.3 5 2.6 5 5.8"/></svg></span><div><h3>Leadership</h3><p>Leading engineering as a CTO, director, and program lead: hiring and mentoring engineers, setting architecture, testing, and delivery standards, running SOC 2 and cost-control programs, and working with executives on what to build.</p></div></li></ul>
+    <ul class="caps"><li id="cap-ai"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4l1.9 5.1L17 11l-5.1 1.9L10 18l-1.9-5.1L3 11l5.1-1.9z"/><path d="M18 3v4M16 5h4M18.5 15.5v3M17 17h3"/></svg></span><div><h3>AI Systems</h3><p>Designing and shipping production AI features, from RAG and tool calling to MCP integrations, on Bedrock, Anthropic, and OpenAI, with explicit control flow, guardrails, evaluation, and the same observability and testing as any other service.</p></div></li><li id="cap-cloud"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.2 4.5 4.5 0 0 0 7 18z"/></svg></span><div><h3>Cloud Architecture</h3><p>Designing and running cloud platforms for global user bases, from containers and serverless functions to event streams, queues, and infrastructure as code, with data handling built for privacy rules like GDPR.</p></div></li><li id="cap-sre"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"/></svg></span><div><h3>Reliability</h3><p>Incident command, SRE tooling, and release diagnostics, and instrumenting systems with OpenTelemetry, Honeycomb, and Datadog so teams can see what production is doing.</p></div></li><li id="cap-dist"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 7.3l2.6 8.4M15.8 7.3l-2.6 8.4M8.5 6h7"/></svg></span><div><h3>Distributed Systems</h3><p>Caching, event propagation, and distributed coordination for high-traffic workloads, plus time-series infrastructure and data stores from PostgreSQL and MySQL to DynamoDB and Redis.</p></div></li><li id="cap-sec"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.1-7 9.5-4.1-1.4-7-5.2-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><div><h3>Security &amp; Compliance</h3><p>Running SOC 2 readiness with automated security controls, vendor tracking, and audit evidence collection, and building GDPR-aware architecture, PII protection across vendors and regions, and TX-RAMP compliance into how products ship.</p></div></li><li id="cap-fullstack"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><div><h3>Full-Stack Engineering</h3><p>Building across the whole stack, from React and TypeScript front ends to Go and Java services, APIs, data stores, and the pipelines that ship them, with testing and accessibility checks along the way.</p></div></li><li id="cap-product"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.1 2.1 0 0 0-2.9-.1z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></span><div><h3>Product Engineering</h3><p>Two decades of taking SaaS products from concept to launch across enterprise software, loyalty and retail, education, and payments, working with product and executive teams to decide what to build and how to deliver it.</p></div></li><li id="cap-lead"><span class="ball"><svg class="i" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.8.3 5 2.6 5 5.8"/></svg></span><div><h3>Leadership</h3><p>Leading engineering as a CTO, director, and program lead: hiring and mentoring engineers, setting architecture, testing, and delivery standards, running SOC 2 and cost-control programs, and working with executives on what to build.</p></div></li></ul>
     <h3 class="stack-h">Stack</h3>
     <dl class="stack"><div><dt>Languages</dt><dd><span>Go</span><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Ruby</span><span>Java</span></dd></div><div><dt>Front End</dt><dd><span>React</span><span>TypeScript</span><span>Vite</span><span>Vitest</span><span>Playwright</span><span>Material UI</span></dd></div><div><dt>Cloud</dt><dd><span>Lambda</span><span>ECS and Fargate</span><span>S3</span><span>SQS</span><span>SNS</span><span>Kinesis</span><span>Cognito</span><span>CloudFront</span><span>Bedrock</span></dd></div><div><dt>Architecture</dt><dd><span>Microservices</span><span>serverless</span><span>event-driven and distributed systems</span></dd></div><div><dt>Data</dt><dd><span>Postgres</span><span>MySQL</span><span>DynamoDB</span><span>Redis</span><span>time-series databases</span></dd></div><div><dt>APIs &amp; Messaging</dt><dd><span>REST</span><span>GraphQL</span><span>gRPC</span><span>MQTT</span></dd></div><div><dt>Delivery &amp; Operations</dt><dd><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>CloudFormation</span><span>Terraform</span><span>OpenTelemetry</span><span>SRE practice</span></dd></div><div><dt>AI</dt><dd><span>LLM applications</span><span>AI agents</span><span>Amazon Bedrock</span><span>OpenAI models</span><span>Anthropic models</span></dd></div></dl>
   </div>

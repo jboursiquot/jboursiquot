@@ -132,6 +132,7 @@ ICONS = {
     "in": '<path d="M6.5 9.5V18M6.5 6.2v.1M10.5 18v-5a3 3 0 0 1 6 0v5M10.5 9.5V18"/>',
     "gh": '<path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.7 4.7 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
     "x": '<path d="M4 4l16 16M20 4L4 20"/>',
+    "rocket": '<path d="M5 15c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.1 2.1 0 0 0-2.9-.1z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/>',
     "shield": '<path d="M12 3l7 3v5.5c0 4.3-2.9 8.1-7 9.5-4.1-1.4-7-5.2-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/>',
     "mail": '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
 }
@@ -152,10 +153,11 @@ def page():
     xurl = next(l["url"] for l in P["links"] if l["name"] == "X")
     caps = {c["id"]: c for c in P["capabilities"]}
 
-    def orb(cid, cls):
+    def orb(cid, cls, label=None):
         c = caps[cid]
-        return (f'<a class="orb {cls}" href="#cap-{cid}" data-depth="{ {"o1": 18, "o2": 10, "o3": 24, "o4": 14, "o5": 16}[cls] }">'
-                f'<span class="ball">{icon(c["icon"], 26)}</span><span class="lbl">{E(c["name"])}</span></a>')
+        depth = {"o1": 18, "o2": 10, "o3": 24, "o4": 14, "o5": 16, "o6": 20, "o7": 12, "o8": 22}[cls]
+        return (f'<a class="orb {cls}" href="#cap-{cid}" data-depth="{depth}">'
+                f'<span class="ball">{icon(c["icon"], 26)}</span><span class="lbl">{E(label or c["name"])}</span></a>')
 
     orgs = [x for x in P["experience"] if x["id"] != "earlier"]
     orgs_az = sorted(orgs, key=lambda x: x["org"].lower())
@@ -251,10 +253,13 @@ def page():
     <p>Over two decades of building software</p>
   </div>
   {orb("ai", "o1")}
-  <a class="orb big" href="#cap-dist" data-depth="6"><span class="ball">{icon("nodes", 72)}</span><span class="lbl">Distributed Systems</span></a>
+  <a class="orb o4" href="#cap-dist" data-depth="14"><span class="ball">{icon("nodes", 26)}</span><span class="lbl">Distributed Systems</span></a>
   {orb("sre", "o2")}
   {orb("cloud", "o3")}
   {orb("sec", "o5")}
+  {orb("lead", "o6")}
+  {orb("fullstack", "o7")}
+  {orb("product", "o8")}
 </section>
 <nav class="dots" aria-label="Page sections">
   <a href="#top" aria-label="Top" class="on"></a><a href="#about" aria-label="About"></a><a href="#experience" aria-label="Experience"></a><a href="#capabilities" aria-label="Capabilities"></a><a href="#photos" aria-label="On Stage"></a><a href="#works" aria-label="Works"></a><a href="#contact" aria-label="Contact"></a>
