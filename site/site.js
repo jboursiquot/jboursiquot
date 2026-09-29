@@ -22,9 +22,9 @@
   });
 
   // Section dots and header links follow the section in view. A section is
-  // current once its top passes a line just below the sticky header. Sections
-  // without a link (the photo mosaic) clear the underline. At the bottom of the
-  // page the last section wins, since short sections can't reach the line.
+  // current once its top passes a line just below the sticky header. The hero
+  // has no link, so it clears the underline. At the bottom of the page the last
+  // section wins, since short sections can't reach the line.
   var links = document.querySelectorAll(".dots a, .bar nav a");
   var sections = ["top", "about", "experience", "capabilities", "photos", "works", "contact"]
     .map(function (id) { return document.getElementById(id); }).filter(Boolean);

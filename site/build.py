@@ -237,7 +237,7 @@ def page():
 <header class="bar">
   <a class="mark" href="#top" aria-label="Johnny Boursiquot, home">JB<span>.</span></a>
   <nav aria-label="Sections">
-    <a href="#about">About</a><a href="#experience">Experience</a><a href="#capabilities">Capabilities</a><a href="#works">Works</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#capabilities">Capabilities</a><a href="#photos">On Stage</a><a href="#works">Works</a><a href="#contact">Contact</a>
     <span class="nav-line" aria-hidden="true"></span>
   </nav>
   <div class="actions">
@@ -265,7 +265,7 @@ def page():
   {orb("sec", "o5")}
 </section>
 <nav class="dots" aria-label="Page sections">
-  <a href="#top" aria-label="Top" class="on"></a><a href="#about" aria-label="About"></a><a href="#experience" aria-label="Experience"></a><a href="#capabilities" aria-label="Capabilities"></a><a href="#works" aria-label="Works"></a><a href="#contact" aria-label="Contact"></a>
+  <a href="#top" aria-label="Top" class="on"></a><a href="#about" aria-label="About"></a><a href="#experience" aria-label="Experience"></a><a href="#capabilities" aria-label="Capabilities"></a><a href="#photos" aria-label="On Stage"></a><a href="#works" aria-label="Works"></a><a href="#contact" aria-label="Contact"></a>
 </nav>
 
 <section class="wrap about" id="about">
