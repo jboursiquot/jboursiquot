@@ -822,6 +822,15 @@
           ]
         },
         {
+          "name": "Kubernetes",
+          "roles": [
+            "cfa",
+            "salesforce",
+            "heroku"
+          ],
+          "inferred": []
+        },
+        {
           "name": "CI/CD",
           "roles": [
             "skilltype",
