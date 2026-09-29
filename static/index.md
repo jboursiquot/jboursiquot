@@ -191,13 +191,13 @@ Most recent first, with length of each role. Some roles overlapped.
 - Hiring: Chick-fil-A, Skilltype, MAARK
 - Mentoring: Salesforce, Skilltype, Heroku, Launch Academy
 - Design and code review: Human Agency, Chick-fil-A, Salesforce, Skilltype, Heroku, The Achievement Network, InfluxData, One Door, Launch Academy, MAARK
-- Product direction: Skilltype, MAARK
+- Product direction: Human Agency, Skilltype, MAARK
 - Program leadership: Chick-fil-A
 - Cross-functional delivery: Chick-fil-A, Heroku
-- Executive partnership: Skilltype
+- Executive partnership: Human Agency, Skilltype
 - Cost and margin controls: Human Agency, Chick-fil-A
-- Vendor management: Human Agency
-- Codebase guardrails: Human Agency
+- Vendor management: Human Agency, Skilltype, MAARK
+- Codebase guardrails: Human Agency, Skilltype, One Door, MAARK
 - Teaching: Launch Academy
 
 ### Industries
