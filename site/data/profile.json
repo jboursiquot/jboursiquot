@@ -1264,7 +1264,8 @@
           "name": "Product direction",
           "roles": [
             "skilltype",
-            "maark"
+            "maark",
+            "humanagency"
           ],
           "inferred": []
         },
@@ -1286,7 +1287,8 @@
         {
           "name": "Executive partnership",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "humanagency"
           ],
           "inferred": []
         },
@@ -1301,14 +1303,19 @@
         {
           "name": "Vendor management",
           "roles": [
-            "humanagency"
+            "humanagency",
+            "skilltype",
+            "maark"
           ],
           "inferred": []
         },
         {
           "name": "Codebase guardrails",
           "roles": [
-            "humanagency"
+            "humanagency",
+            "skilltype",
+            "onedoor",
+            "maark"
           ],
           "inferred": []
         },
