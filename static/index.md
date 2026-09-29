@@ -125,6 +125,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - ECS Fargate: Skilltype
 - SQS and SNS: Skilltype, The Achievement Network
 - Docker: Human Agency, Skilltype
+- Kubernetes: Chick-fil-A, Salesforce, Heroku
 - CI/CD: Human Agency, Skilltype, The Achievement Network
 - Deployment automation: Heroku, The Achievement Network
 - Heroku platform: Salesforce, Heroku
