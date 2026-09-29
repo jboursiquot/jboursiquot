@@ -510,7 +510,7 @@ ul.oss a .i { flex: none; }
 <header class="bar">
   <a class="mark" href="#top" aria-label="Johnny Boursiquot, home">JB<span>.</span></a>
   <nav aria-label="Sections">
-    <a href="#about">About</a><a href="#experience">Experience</a><a href="#capabilities">Capabilities</a><a href="#works">Works</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#capabilities">Capabilities</a><a href="#photos">On Stage</a><a href="#works">Works</a><a href="#contact">Contact</a>
     <span class="nav-line" aria-hidden="true"></span>
   </nav>
   <div class="actions">
@@ -538,7 +538,7 @@ ul.oss a .i { flex: none; }
   <a class="orb o5" href="#cap-sec" data-depth="16"><span class="ball"><svg class="i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.1-7 9.5-4.1-1.4-7-5.2-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><span class="lbl">Security &amp; Compliance</span></a>
 </section>
 <nav class="dots" aria-label="Page sections">
-  <a href="#top" aria-label="Top" class="on"></a><a href="#about" aria-label="About"></a><a href="#experience" aria-label="Experience"></a><a href="#capabilities" aria-label="Capabilities"></a><a href="#works" aria-label="Works"></a><a href="#contact" aria-label="Contact"></a>
+  <a href="#top" aria-label="Top" class="on"></a><a href="#about" aria-label="About"></a><a href="#experience" aria-label="Experience"></a><a href="#capabilities" aria-label="Capabilities"></a><a href="#photos" aria-label="On Stage"></a><a href="#works" aria-label="Works"></a><a href="#contact" aria-label="Contact"></a>
 </nav>
 
 <section class="wrap about" id="about">
@@ -639,9 +639,9 @@ ul.oss a .i { flex: none; }
   });
 
   // Section dots and header links follow the section in view. A section is
-  // current once its top passes a line just below the sticky header. Sections
-  // without a link (the photo mosaic) clear the underline. At the bottom of the
-  // page the last section wins, since short sections can't reach the line.
+  // current once its top passes a line just below the sticky header. The hero
+  // has no link, so it clears the underline. At the bottom of the page the last
+  // section wins, since short sections can't reach the line.
   var links = document.querySelectorAll(".dots a, .bar nav a");
   var sections = ["top", "about", "experience", "capabilities", "photos", "works", "contact"]
     .map(function (id) { return document.getElementById(id); }).filter(Boolean);
