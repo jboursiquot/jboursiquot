@@ -102,7 +102,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - TypeScript: Skilltype
 - JavaScript: Skilltype, MAARK
 - Python: Human Agency, Skilltype
-- SQL: Skilltype, The Achievement Network, One Door
+- SQL: Skilltype, The Achievement Network, One Door, MAARK
 - Ruby on Rails: One Door, Launch Academy
 - HTML and CSS: Skilltype, MAARK
 
@@ -132,13 +132,13 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Architecture & APIs
 
-- Architecture: Chick-fil-A, Skilltype, The Achievement Network, One Door
-- API design: Skilltype, The Achievement Network, One Door
-- Backend services: Skilltype, The Achievement Network, InfluxData
+- Architecture: Chick-fil-A, Skilltype, The Achievement Network, One Door, MAARK
+- API design: Skilltype, The Achievement Network, One Door, MAARK
+- Backend services: Skilltype, The Achievement Network, InfluxData, MAARK
 - Distributed systems: Chick-fil-A, Salesforce, Heroku, InfluxData
 - Event-driven design: Chick-fil-A, Skilltype, The Achievement Network
 - Caching strategy: Chick-fil-A
-- Data integrations: Skilltype
+- Data integrations: Skilltype, MAARK
 - Messaging: The Achievement Network, One Door
 
 ### Data
@@ -147,6 +147,7 @@ Most recent first, with length of each role. Some roles overlapped.
 - DynamoDB: Chick-fil-A, Skilltype, The Achievement Network
 - Redis: Chick-fil-A, Skilltype
 - MySQL: One Door
+- Oracle Database: MAARK
 - RabbitMQ: One Door
 - Time-series data: InfluxData
 

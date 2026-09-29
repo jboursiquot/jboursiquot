@@ -681,9 +681,12 @@
           "roles": [
             "skilltype",
             "anet",
-            "onedoor"
+            "onedoor",
+            "maark"
           ],
-          "inferred": []
+          "inferred": [
+            "maark"
+          ]
         },
         {
           "name": "Ruby on Rails",
@@ -868,7 +871,8 @@
             "cfa",
             "skilltype",
             "anet",
-            "onedoor"
+            "onedoor",
+            "maark"
           ],
           "inferred": []
         },
@@ -877,7 +881,8 @@
           "roles": [
             "skilltype",
             "anet",
-            "onedoor"
+            "onedoor",
+            "maark"
           ],
           "inferred": []
         },
@@ -886,7 +891,8 @@
           "roles": [
             "skilltype",
             "anet",
-            "influx"
+            "influx",
+            "maark"
           ],
           "inferred": []
         },
@@ -922,7 +928,8 @@
         {
           "name": "Data integrations",
           "roles": [
-            "skilltype"
+            "skilltype",
+            "maark"
           ],
           "inferred": []
         },
@@ -971,6 +978,13 @@
           "name": "MySQL",
           "roles": [
             "onedoor"
+          ],
+          "inferred": []
+        },
+        {
+          "name": "Oracle Database",
+          "roles": [
+            "maark"
           ],
           "inferred": []
         },
