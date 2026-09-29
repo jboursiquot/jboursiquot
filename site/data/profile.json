@@ -692,7 +692,8 @@
           "name": "Ruby on Rails",
           "roles": [
             "onedoor",
-            "launch"
+            "launch",
+            "heroku"
           ],
           "inferred": []
         },
@@ -893,7 +894,8 @@
             "anet",
             "influx",
             "maark",
-            "onedoor"
+            "onedoor",
+            "heroku"
           ],
           "inferred": []
         },
@@ -952,7 +954,8 @@
           "roles": [
             "skilltype",
             "anet",
-            "onedoor"
+            "onedoor",
+            "heroku"
           ],
           "inferred": []
         },
@@ -970,7 +973,8 @@
           "roles": [
             "cfa",
             "skilltype",
-            "onedoor"
+            "onedoor",
+            "heroku"
           ],
           "inferred": [
             "cfa",
