@@ -318,7 +318,7 @@ def page():
   </div>
 </section>
 </main>
-<footer class="wrap foot"><p>&copy; 2026 Johnny Boursiquot. Updated {P['updated']}.</p><p>Also as <a href="index.md">Markdown</a> and <a href="llms.txt">llms.txt</a>.</p></footer>
+<footer class="wrap foot"><p>&copy; 2026 Johnny Boursiquot.</p><p>Also as <a href="index.md">Markdown</a> and <a href="llms.txt">llms.txt</a>.</p></footer>
 <script>
 {js}
 </script>
