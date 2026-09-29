@@ -1,0 +1,767 @@
+[
+  {
+    "date": "2026-08",
+    "type": "talk",
+    "role": "Moderator",
+    "venue": "GopherCon US",
+    "place": "",
+    "title": "A Slice of Go's Future",
+    "url": "https://www.gophercon.com/agenda/session/1880696"
+  },
+  {
+    "date": "2026-08",
+    "type": "organizing",
+    "role": "Emcee",
+    "venue": "GopherCon US",
+    "place": "Seattle",
+    "title": "",
+    "url": "https://www.gophercon.com/agenda/session/1801580"
+  },
+  {
+    "date": "2026-08",
+    "type": "organizing",
+    "role": "Host",
+    "venue": "GopherCon US",
+    "place": "",
+    "title": "United Go Meetup",
+    "url": "https://www.gophercon.com/agenda/session/1801599"
+  },
+  {
+    "date": "2026-08",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon US",
+    "place": "",
+    "title": "Agents the Hard Way: Building Agentic Systems in Go",
+    "url": "https://www.gophercon.com/agenda/session/1801556"
+  },
+  {
+    "date": "2026-06",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "Nexus Louisiana Startup School",
+    "place": "Baton Rouge",
+    "title": "Building with AI",
+    "url": "https://www.nexusla.org/"
+  },
+  {
+    "date": "2025-12",
+    "type": "podcast",
+    "role": "Guest",
+    "venue": "Cup o' Go",
+    "place": "",
+    "title": "GopherCon 2026 dates and location announced",
+    "url": "https://cupogo.dev/episodes/all-software-sucks-then-you-die-but-first-gophercon-2026-dates-and-location-announced"
+  },
+  {
+    "date": "2025-08",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon US",
+    "place": "",
+    "title": "Building and Deploying AI Agents with Go",
+    "url": "https://www.gophercon.com/agenda/session/1590663"
+  },
+  {
+    "date": "2025-08",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon US",
+    "place": "",
+    "title": "Advanced Go for Experienced Programmers",
+    "url": "https://www.gophercon.com/agenda/session/1545650"
+  },
+  {
+    "date": "2025-01",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon Singapore",
+    "place": "",
+    "title": "Go for Experienced Programmers",
+    "url": ""
+  },
+  {
+    "date": "2024-12",
+    "type": "podcast",
+    "role": "Guest",
+    "venue": "Ardan Labs Podcast",
+    "place": "",
+    "title": "Startups, Resilience, and Passion with Johnny Boursiquot",
+    "url": "https://www.youtube.com/watch?v=B8_ff39tGD8"
+  },
+  {
+    "date": "2024-12",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "That's Go Time",
+    "url": "https://changelog.com/gotime/340"
+  },
+  {
+    "date": "2024-12",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Pitching Go in 2025",
+    "url": "https://changelog.com/gotime/339"
+  },
+  {
+    "date": "2024-11",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Crawl, walk & run your way to usable CLIs in Go",
+    "url": "https://changelog.com/gotime/337"
+  },
+  {
+    "date": "2024-10",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Writing a shell in Go",
+    "url": "https://changelog.com/gotime/336"
+  },
+  {
+    "date": "2024-10",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "AI for Observability",
+    "url": "https://changelog.com/gotime/335"
+  },
+  {
+    "date": "2024-10",
+    "type": "podcast",
+    "role": "Guest",
+    "venue": "Changelog & Friends",
+    "place": "",
+    "title": "The indispensable cog",
+    "url": "https://changelog.com/friends/65"
+  },
+  {
+    "date": "2024-09",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "\"Founder Mode\" at work when you're not a founder",
+    "url": "https://changelog.com/gotime/332"
+  },
+  {
+    "date": "2024-09",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "How I lost my (old) job to AI",
+    "url": "https://changelog.com/gotime/331"
+  },
+  {
+    "date": "2024-09",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Home automation with Go",
+    "url": "https://changelog.com/gotime/330"
+  },
+  {
+    "date": "2024-07",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "OpenAPI & API design",
+    "url": "https://changelog.com/gotime/328"
+  },
+  {
+    "date": "2024-07",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "What's New in Go 1.23",
+    "url": "https://changelog.com/gotime/325"
+  },
+  {
+    "date": "2024-07",
+    "type": "organizing",
+    "role": "Emcee",
+    "venue": "GopherCon US",
+    "place": "Chicago",
+    "title": "",
+    "url": ""
+  },
+  {
+    "date": "2024-07",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon US",
+    "place": "Chicago",
+    "title": "Go for Experienced Programmers",
+    "url": ""
+  },
+  {
+    "date": "2024-06",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon EU",
+    "place": "Berlin",
+    "title": "Go for Experienced Programmers",
+    "url": ""
+  },
+  {
+    "date": "2024-05",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "What if Google lays off the Go team?",
+    "url": "https://changelog.com/gotime/315"
+  },
+  {
+    "date": "2024-05",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Stuttgart Go Users Group",
+    "place": "Stuttgart",
+    "title": "Robust HTTP Servers and Clients in Go",
+    "url": "https://www.meetup.com/stuttgart-gophers/events/300674376"
+  },
+  {
+    "date": "2024-04",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Go in 3 Weeks",
+    "url": "https://www.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920060985/"
+  },
+  {
+    "date": "2024-03",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Questions from a new Go developer",
+    "url": "https://changelog.com/gotime/308"
+  },
+  {
+    "date": "2024-03",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Jumping into an existing codebase",
+    "url": "https://changelog.com/gotime/307"
+  },
+  {
+    "date": "2023-01",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Go Generics in 2 Hours",
+    "url": "https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269"
+  },
+  {
+    "date": "2022-11",
+    "type": "course",
+    "role": "Author",
+    "venue": "LinkedIn Learning",
+    "place": "",
+    "title": "Hands-On Go",
+    "url": "https://www.linkedin.com/learning/hands-on-introduction-go/hands-on-with-go"
+  },
+  {
+    "date": "2022-10",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "Pivot Technology School",
+    "place": "",
+    "title": "",
+    "url": "https://pivottechschool.com"
+  },
+  {
+    "date": "2022-09",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Go Generics in 2 Hours",
+    "url": "https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269"
+  },
+  {
+    "date": "2022-08",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Go in 3 Weeks",
+    "url": "https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/"
+  },
+  {
+    "date": "2022-07",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Go Generics in 2 Hours",
+    "url": "https://www.oreilly.com/live-events/go-generics-in-2-hours/0636920072269"
+  },
+  {
+    "date": "2022-04",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Go in 3 Weeks",
+    "url": "https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/"
+  },
+  {
+    "date": "2022-01",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Go in 3 Weeks",
+    "url": "https://learning.oreilly.com/live-events/go-in-3-weeks/0636920060986/0636920062624/"
+  },
+  {
+    "date": "2022-01",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Association for Computing Machinery",
+    "place": "",
+    "title": "The Art of Concurrency in Go",
+    "url": "https://learning.acm.org/techtalks/concurrencygo"
+  },
+  {
+    "date": "2022-01",
+    "type": "podcast",
+    "role": "Guest",
+    "venue": "PodRocket",
+    "place": "",
+    "title": "Getting Started with Golang",
+    "url": "https://www.youtube.com/watch?v=lNI7NTKNJPM&ab_channel=LogRocket"
+  },
+  {
+    "date": "2021-12",
+    "type": "keynote",
+    "role": "Keynote speaker",
+    "venue": "GopherCon 2021",
+    "place": "",
+    "title": "Unbounded Concurrency in Go (live with Aaron Schlesinger)",
+    "url": "https://www.youtube.com/watch?v=PAUjYyBfELk&ab_channel=GopherAcademy"
+  },
+  {
+    "date": "2021-06",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Craft Conference",
+    "place": "",
+    "title": "Unbounded Concurrency (extended version)",
+    "url": "https://craft-conf.com/speaker/JohnnyBoursiquot"
+  },
+  {
+    "date": "2021-05",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon EU",
+    "place": "",
+    "title": "Practical Go Workshop",
+    "url": "https://gophercon.eu/"
+  },
+  {
+    "date": "2021-04",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Open Source Software Superstream Series: Go—Generics, Extensibility, and the Future of Go in Open Source Programming",
+    "url": "https://www.oreilly.com/attend/open-source-software-superstream-series-gogenerics-extensibility-and-the-future-of-go-in-open-source-programming/0636920053215/0636920053214/"
+  },
+  {
+    "date": "2021-03",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Golang NYC",
+    "place": "",
+    "title": "Unbounded Concurrency",
+    "url": "https://www.youtube.com/watch?v=HDDNYA9MeNQ&t=1862s&ab_channel=GolangNYCMeetup"
+  },
+  {
+    "date": "2021-01",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Lagos Gophers",
+    "place": "",
+    "title": "Let's build a port scanner with Go",
+    "url": "https://www.meetup.com/GolangNigeria/events/274776873/"
+  },
+  {
+    "date": "2020-11",
+    "type": "keynote",
+    "role": "Keynote speaker",
+    "venue": "QCon",
+    "place": "",
+    "title": "The SRE as a Diplomat",
+    "url": "https://www.youtube.com/watch?v=iB8yybpdEwY"
+  },
+  {
+    "date": "2020-09",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "National Information Standards Organization (NISO)",
+    "place": "",
+    "title": "Privacy and Search Technology",
+    "url": "https://niso.org/niso-io/2020/09/privacy-and-effective-search-experience-johnny-boursiquot"
+  },
+  {
+    "date": "2020-06",
+    "type": "podcast",
+    "role": "Guest",
+    "venue": "InfoQ Podcast",
+    "place": "",
+    "title": "Serverless Go and Site Reliability Engineering at Heroku",
+    "url": "https://www.infoq.com/podcasts/serverless-go-site-reliability-engineering/"
+  },
+  {
+    "date": "2020-05",
+    "type": "keynote",
+    "role": "Keynote speaker",
+    "venue": "GoGetCommunity 2020",
+    "place": "",
+    "title": "Closing Keynote",
+    "url": "https://www.gogetcommunity.com/"
+  },
+  {
+    "date": "2020-05",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Go Next Steps",
+    "url": "https://learning.oreilly.com/live-training/courses/go-next-steps/0636920386711/"
+  },
+  {
+    "date": "2020-05",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "O'Reilly",
+    "place": "",
+    "title": "Serverless Go",
+    "url": "https://learning.oreilly.com/live-training/courses/serverless-go/0636920407034/"
+  },
+  {
+    "date": "2020",
+    "type": "organizing",
+    "role": "Program committee",
+    "venue": "GopherCon 2020",
+    "place": "",
+    "title": "",
+    "url": ""
+  },
+  {
+    "date": "2019-07",
+    "type": "keynote",
+    "role": "Keynote speaker",
+    "venue": "GopherCon 2019",
+    "place": "",
+    "title": "Closing Keynote",
+    "url": "https://www.youtube.com/watch?v=_Pc0bzz4-gM"
+  },
+  {
+    "date": "2019-07",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon 2019",
+    "place": "",
+    "title": "",
+    "url": ""
+  },
+  {
+    "date": "2019",
+    "type": "organizing",
+    "role": "Program committee",
+    "venue": "GopherCon 2019",
+    "place": "",
+    "title": "",
+    "url": ""
+  },
+  {
+    "date": "2019-01",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Columbia AWS",
+    "place": "",
+    "title": "Serverless Lens on AWS Well Architected Framework",
+    "url": ""
+  },
+  {
+    "date": "2018-10",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Columbia AWS",
+    "place": "",
+    "title": "Serverless Orchestration on AWS",
+    "url": ""
+  },
+  {
+    "date": "2018-10",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Baltimore Innovation Week's Developer Conference",
+    "place": "",
+    "title": "Go, FaaS/Serverless Orchestration",
+    "url": ""
+  },
+  {
+    "date": "2018-08",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "GopherCon 2018 (Lightning Talks)",
+    "place": "",
+    "title": "Go, FaaS/Serverless on AWS",
+    "url": ""
+  },
+  {
+    "date": "2018-08",
+    "type": "workshop",
+    "role": "Instructor",
+    "venue": "GopherCon 2018",
+    "place": "",
+    "title": "",
+    "url": "https://www.gophercon.com/"
+  },
+  {
+    "date": "2017-10",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "DevFest MD 2017 Conference",
+    "place": "",
+    "title": "Getting Started with the Go Programming Language",
+    "url": ""
+  },
+  {
+    "date": "2017-09",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "Code(Her) Conference 2017",
+    "place": "",
+    "title": "Building Serverless Slack Bots with AWS Lambda",
+    "url": "http://codeherconference.com/"
+  },
+  {
+    "date": "2017-06",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Adventures in VS Code",
+    "url": "https://changelog.com/gotime/49"
+  },
+  {
+    "date": "2017-05",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Baltimore Go User Group",
+    "place": "",
+    "title": "Popular Go Libraries",
+    "url": ""
+  },
+  {
+    "date": "2017-04",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Capital Go Language Conference 2017",
+    "place": "",
+    "title": "Mine the Debt",
+    "url": "https://bit.ly/capgominethedebt"
+  },
+  {
+    "date": "2017-03",
+    "type": "podcast",
+    "role": "Guest",
+    "venue": "Hacker Practice Podcast",
+    "place": "",
+    "title": "",
+    "url": "https://justuseapen.com/johnny-boursiquot-on-building-a-software-agency-from-scratch-learning-go-for-rubyists-and-server-less-software-architectures/"
+  },
+  {
+    "date": "2017-03",
+    "type": "podcast",
+    "role": "Co-host",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Go Developer Survey with Steve Francia",
+    "url": "https://changelog.com/gotime/38"
+  },
+  {
+    "date": "2017-02",
+    "type": "press",
+    "role": "Featured",
+    "venue": "New Relic",
+    "place": "",
+    "title": "",
+    "url": "https://blog.newrelic.com/2017/02/16/golang-experts-follow-online/"
+  },
+  {
+    "date": "2017-02",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Google Developer Group Baltimore",
+    "place": "",
+    "title": "Go, Quickly",
+    "url": ""
+  },
+  {
+    "date": "2017-02",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "Baltimore Go User Group",
+    "place": "",
+    "title": "Interacting with Databases",
+    "url": "https://github.com/jboursiquot/go-database-workshop"
+  },
+  {
+    "date": "2017-01",
+    "type": "podcast",
+    "role": "Guest",
+    "venue": "Go Time",
+    "place": "",
+    "title": "Discussing Imposter Syndrome (with William Kennedy)",
+    "url": "https://changelog.com/gotime/30"
+  },
+  {
+    "date": "2017-01",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "Baltimore Go User Group",
+    "place": "",
+    "title": "Building Web Applications in Go",
+    "url": "https://github.com/jboursiquot/go-web-app-workshop"
+  },
+  {
+    "date": "2016-12",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "Baltimore Go User Group",
+    "place": "",
+    "title": "Building Chat Bots in Golang",
+    "url": ""
+  },
+  {
+    "date": "2016-11",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "Baltimore Go User Group",
+    "place": "",
+    "title": "Building Command Line Applications with Go",
+    "url": "https://github.com/jboursiquot/go-cli-workshop"
+  },
+  {
+    "date": "2016-05",
+    "type": "workshop",
+    "role": "Organizer",
+    "venue": "GoBridge Boston",
+    "place": "Boston",
+    "title": "",
+    "url": ""
+  },
+  {
+    "date": "2015-09",
+    "type": "press",
+    "role": "Featured",
+    "venue": "Codeship",
+    "place": "",
+    "title": "An Inside Look with Codeship",
+    "url": "https://youtu.be/j8Lp7W48xDE"
+  },
+  {
+    "date": "2015-09",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "Code(Her) Conference 2015",
+    "place": "",
+    "title": "Programming Fundamentals and Building APIs for Web and Mobile Apps",
+    "url": ""
+  },
+  {
+    "date": "2015-01",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "RailsBridge Boston",
+    "place": "Boston",
+    "title": "Intro to Ruby for the Non Programmer",
+    "url": "https://bit.ly/14Rr7Qv"
+  },
+  {
+    "date": "2014-09",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "Code(Her) Conference",
+    "place": "",
+    "title": "Building APIs for Web and Mobile Apps",
+    "url": "http://codeherconference.com/"
+  },
+  {
+    "date": "2014-08",
+    "type": "talk",
+    "role": "Panelist",
+    "venue": "Burlington Ruby Conference",
+    "place": "",
+    "title": "The Future of Ruby",
+    "url": "https://vimeo.com/album/2996485/video/103590400"
+  },
+  {
+    "date": "2014-02",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "BostonGolang",
+    "place": "",
+    "title": "Object Oriented Programming in Golang",
+    "url": "https://speakerdeck.com/jboursiquot/object-oriented-programming-in-go"
+  },
+  {
+    "date": "2013-06",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Launch Academy",
+    "place": "Boston",
+    "title": "Building Command Line Tools",
+    "url": "https://bit.ly/19htW1C"
+  },
+  {
+    "date": "2013-05",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "Launch Academy",
+    "place": "Boston",
+    "title": "The New Engineer's Survival Guide",
+    "url": "https://bit.ly/17TvF9l"
+  },
+  {
+    "date": "2013-05",
+    "type": "talk",
+    "role": "Speaker",
+    "venue": "BostonRB",
+    "place": "",
+    "title": "Getting Closure: Ruby Blocks, Procs and Lambdas",
+    "url": "https://bit.ly/12Ly7LJ"
+  },
+  {
+    "date": "2013-01",
+    "type": "workshop",
+    "role": "Speaker",
+    "venue": "BostonRB",
+    "place": "",
+    "title": "Defensive Programming in Ruby",
+    "url": "https://bit.ly/13WI4Zu"
+  }
+]

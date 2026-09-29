@@ -1,0 +1,72 @@
+# Johnny Boursiquot
+
+> Software engineer with over two decades of building and running production systems, on startup founding teams and inside large technology companies. Co-founder and CTO of Skilltype. Works across AI systems, cloud architecture, distributed systems, and reliability engineering. Also a conference keynote speaker and instructor, with courses on O'Reilly, LinkedIn Learning, and Packt.
+
+Last updated: 2026-09-28. Contact: message on LinkedIn (https://www.linkedin.com/in/jboursiquot).
+
+Focus areas: AI systems (LLM-powered and agentic features in production), cloud architecture, distributed and data systems, reliability engineering, and engineering leadership.
+
+Facts, with dates where they matter:
+
+- Roles, most recent first, with length: Director of Engineering, Human Agency (3 mos); Principal Software Engineer and Program Lead, Chick-fil-A via Stable Kernel (1 yr 1 mo); Co-founder and CTO (fractional), Skilltype (6 yrs 11 mos); Platform Observability Engineer, Salesforce (1 yr 11 mos); Site Reliability Engineer, Heroku (2 yrs); Principal Cloud Engineer, The Achievement Network (2 yrs 10 mos); Senior Software Engineer, InfluxData (4 mos); Software Architect and Principal Software Engineer, One Door; Software Engineering Instructor, Launch Academy; Engineering leadership roles, MAARK.
+- Founder of Idiomat LLC, a software engineering training and consulting company (https://idiomat.co/).
+- Software engineer for over two decades; earlier roles before MAARK are not listed.
+- GopherCon: program chair; workshop instructor at GopherCon US, EU, and Singapore (most recently August 2026); closing keynotes 2019 and 2021; emcee 2024 and 2026.
+- Go Time podcast (Changelog Media): host, 2017 to December 2024. The show ended with its final episode in December 2024; he is no longer hosting a podcast.
+- Contributing author, 97 Things Every SRE Should Know (O'Reilly).
+- Most recent public engagements: August 2026 at GopherCon US (moderator: A Slice of Go's Future; emcee; host: United Go Meetup; instructor: Agents the Hard Way: Building Agentic Systems in Go).
+- Education: M.S., Cloud Computing Architecture, University of Maryland Global Campus; B.S., Computer and Information Science, University of Maryland Global Campus.
+
+## Profile
+
+- [Full profile](https://www.jboursiquot.com/index.md): bios, work history, stack, training catalog, and the complete engagement archive in Markdown
+- [Website](https://www.jboursiquot.com/): the same content as HTML
+
+## Experience
+
+- [Human Agency](https://www.humanagency.com/): Director of Engineering, 3 mos. Led engineering for an AI platform launch, including SOC 2 readiness and commercial controls.
+- [Chick-fil-A](https://www.chick-fil-a.com/): Principal Software Engineer and Program Lead, 1 yr 1 mo. Lead architecture and delivery for Chick-fil-A's Loyalty Platform initiatives.
+- [Skilltype](https://www.skilltype.com/): Co-founder and CTO (fractional), 6 yrs 11 mos. Own product direction and engineering for library talent-management software, from concept through launch.
+- [Salesforce](https://www.salesforce.com/): Platform Observability Engineer, 1 yr 11 mos. Wrote shared Go instrumentation libraries for OpenTelemetry adoption and led the move to Honeycomb and distributed tracing.
+- [Heroku](https://www.heroku.com/): Site Reliability Engineer, 2 yrs. Built tooling and incident-response workflows, and served as incident commander during major incidents.
+- [The Achievement Network](https://achievementnetwork.org/): Principal Cloud Engineer, 2 yrs 10 mos. Led backend engineering and AWS modernization for an education SaaS product.
+- [InfluxData](https://influxdata.com/): Senior Software Engineer, 4 mos. Worked on distributed time-series database infrastructure and enterprise SaaS services in Go.
+- [One Door](https://onedoor.com/): Software Architect and Principal Software Engineer. Built retail-merchandising SaaS applications, APIs, and messaging.
+- [Launch Academy](https://www.launchacademy.com/): Software Engineering Instructor. Taught Ruby on Rails and web application development, and mentored new engineers.
+- [MAARK](https://www.maark.com/): Engineering leadership roles. Owned products from concept through launch, hired engineers, and built enterprise SaaS, payments, and web applications.
+- [Earlier roles](https://www.jboursiquot.com/): Software engineer. Additional software engineering roles preceded MAARK.
+
+## Workshops and courses
+
+- [Agents the Hard Way: Building Agentic Systems in Go](https://www.gophercon.com/agenda/session/1801556): Two half-days; for: Engineers building agentic systems; last delivered GopherCon US, Aug 2026
+- [Building and Deploying AI Agents with Go](https://www.gophercon.com/agenda/session/1590663): Full day; for: Go developers adding LLM features; last delivered GopherCon US, Aug 2025
+- [Advanced Go for Experienced Programmers](https://www.gophercon.com/agenda/session/1545650): Full day; for: Working Go developers; last delivered GopherCon US, Aug 2025
+- [Serverless Go](https://learning.oreilly.com/live-training/courses/serverless-go/0636920407034/): Live training; for: Developers building on AWS Lambda; last delivered O'Reilly, May 2020
+- [Backend development cohort](https://pivottechschool.com): 7 weeks; for: Career-change cohort of 25, in Go; last delivered Pivot Technology School, Oct 2022
+- [Hands-On Introduction: Go](https://www.linkedin.com/learning/hands-on-introduction-go/hands-on-with-go): recorded course, LinkedIn Learning
+- [Go Standard Library Solutions](https://bitly.com/gostdsol): recorded course, Packt
+
+## Keynotes
+
+- [Unbounded Concurrency in Go (live, with Aaron Schlesinger)](https://www.youtube.com/watch?v=PAUjYyBfELk): GopherCon, December 2021
+- [The SRE as a Diplomat](https://www.infoq.com/presentations/sre-build-trust/): QCon Plus, November 2020
+- [Closing keynote](https://www.gogetcommunity.com/): Go Get Community, May 2020
+- [Closing keynote](https://www.youtube.com/watch?v=_Pc0bzz4-gM): GopherCon, July 2019
+
+## Writing and podcasts
+
+- [97 Things Every SRE Should Know](https://www.amazon.com/Things-Every-SRE-Should-Know/dp/1492081493): Contributing author, O'Reilly, 2020
+- [Go Time](https://changelog.com/person/jboursiquot): Host, 2017 to the show's final episode in December 2024, Changelog Media
+
+## Elsewhere
+
+- [GitHub](https://github.com/jboursiquot)
+- [LinkedIn](https://www.linkedin.com/in/jboursiquot)
+- [X](https://x.com/jboursiquot)
+- [Changelog](https://changelog.com/person/jboursiquot)
+- [Medium](https://medium.com/@jboursiquot)
+
+## Optional
+
+- [Engagement archive](https://www.jboursiquot.com/index.md#archive): all 85 public talks, workshops, courses, and podcast episodes since 2013
+- [Headshot](https://www.jboursiquot.com/img/johnny-headshot-round.jpg): 1200x1200 JPEG, free to use with bios
