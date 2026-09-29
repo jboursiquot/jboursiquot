@@ -1020,14 +1020,18 @@
         {
           "name": "OpenTelemetry",
           "roles": [
-            "salesforce"
+            "salesforce",
+            "skilltype",
+            "cfa"
           ],
           "inferred": []
         },
         {
           "name": "Honeycomb",
           "roles": [
-            "salesforce"
+            "salesforce",
+            "skilltype",
+            "heroku"
           ],
           "inferred": []
         },
@@ -1041,7 +1045,9 @@
         {
           "name": "Distributed tracing",
           "roles": [
-            "salesforce"
+            "salesforce",
+            "skilltype",
+            "cfa"
           ],
           "inferred": []
         },
