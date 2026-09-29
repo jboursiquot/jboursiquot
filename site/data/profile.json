@@ -561,10 +561,16 @@
       "body": "Running SOC 2 readiness with automated security controls, vendor tracking, and audit evidence collection, and building GDPR-aware architecture, PII protection across vendors and regions, and TX-RAMP compliance into how products ship."
     },
     {
-      "id": "product",
+      "id": "fullstack",
       "icon": "layers",
-      "name": "Full-Stack Product Engineering",
-      "body": "Two decades of taking SaaS products from concept to production across enterprise software, loyalty and retail, education, and payments, owning everything from the React and TypeScript front end to the API, the data layer, and the deploy."
+      "name": "Full-Stack Engineering",
+      "body": "Building across the whole stack, from React and TypeScript front ends to Go and Java services, APIs, data stores, and the pipelines that ship them, with testing and accessibility checks along the way."
+    },
+    {
+      "id": "product",
+      "icon": "rocket",
+      "name": "Product Engineering",
+      "body": "Two decades of taking SaaS products from concept to launch across enterprise software, loyalty and retail, education, and payments, working with product and executive teams to decide what to build and how to deliver it."
     },
     {
       "id": "lead",

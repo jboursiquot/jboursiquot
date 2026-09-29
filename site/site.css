@@ -94,9 +94,6 @@ h1 { font-size: 46px; line-height: 1.02; font-weight: 800; letter-spacing: -0.03
 .o2 { right: 20%; top: 68%; }
 .o3 { left: 20%; top: 70%; }
 .o3 .ball, .o2 .ball { width: 76px; height: 76px; }
-.orb.big { right: 8%; top: 38%; }
-.orb.big .ball { width: 128px; height: 128px; }
-.orb.big .ball .i { width: 48px; height: 48px; }
 
 .social { position: absolute; left: 64px; bottom: 64px; list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; z-index: 3; }
 .social a { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; color: var(--ink);
@@ -118,7 +115,6 @@ h1 { font-size: 46px; line-height: 1.02; font-weight: 800; letter-spacing: -0.03
   .js .hero .card.name { transition-delay: .45s; }
   .js .hero .card.role { transition-delay: .6s; }
   .js .hero .o1 { transition-delay: .7s; }
-  .js .hero .big { transition-delay: .8s; }
   .js .hero .o2 { transition-delay: .9s; }
   .js .hero .o3 { transition-delay: 1s; }
   .ready .hero .disc { transform: none; opacity: 1; }
@@ -220,8 +216,7 @@ ol.log time, ol.log span { color: var(--muted); }
 @media (max-width: 1100px) {
   .card.name { left: 4%; }
   .card.role { left: 6%; }
-  .o1 { right: 18%; } .o2 { right: 14%; } .orb.big { right: 2%; }
-  .orb.big .ball { width: 116px; height: 116px; }
+  .o1 { right: 18%; } .o2 { right: 14%; }
   .bar nav { gap: 20px; }
 }
 @media (max-width: 900px) {
@@ -241,8 +236,6 @@ ol.log time, ol.log span { color: var(--muted); }
   .orb .ball .i { width: 20px; height: 20px; }
   .hero .orb { order: 4; background: var(--card); border-radius: 999px; padding: 6px 12px 6px 6px; box-shadow: 0 4px 12px -6px rgba(40, 52, 99, .25); }
   .hero .orb .ball { box-shadow: none; background: var(--indigo-soft); }
-  .hero .orb.big .ball { width: 44px; height: 44px; }
-  .hero .orb.big .ball .i { width: 22px; height: 22px; }
   .me { order: 2; transform: none !important; width: 100%; height: auto; max-width: 380px; justify-self: center; margin-top: 8px;
     background: radial-gradient(circle at 50% 62%, var(--disc-b) 0 58%, transparent 59%); }
   .social { order: 5; display: flex; justify-content: center; margin-top: 20px; }
@@ -371,9 +364,15 @@ dl.facts dd { margin: 2px 0 0; font-size: 15px; font-weight: 600; line-height: 1
 @media (max-width: 1100px) and (min-width: 901px) { .o5 { right: 2%; } }
 @media (max-width: 1300px) and (min-width: 901px) { .o1 { right: 15%; } }
 @media (max-width: 1100px) and (min-width: 901px) { .o5 { right: 3%; top: 82%; } .o2 { right: 12%; } }
+/* Leadership (upper left) and Full-Stack Engineering (upper right) */
+.o6 { left: 20%; top: 11%; }
+.o7 { right: 4%; top: 12%; }
+.o6 .ball, .o7 .ball { width: 76px; height: 76px; }
+@media (prefers-reduced-motion: no-preference) { .js .hero .o6 { transition-delay: 1.15s; } .js .hero .o7 { transition-delay: 1.2s; } }
+@media (max-width: 1100px) and (min-width: 901px) { .o6 { left: 14%; } .o7 { right: 2%; } }
 @media (max-width: 900px) {
-  .hero .o5 .ball { width: 44px; height: 44px; }
-  .hero .o5 { grid-column: 1 / -1; justify-self: start; }
+  .hero .o5 .ball, .hero .o6 .ball, .hero .o7 .ball { width: 44px; height: 44px; }
+  .hero .o7 { grid-column: 1 / -1; justify-self: start; }
 }
 
 /* Works: recent cards, open source list, earlier highlights */
@@ -419,3 +418,28 @@ ul.highlights + p.keynotes + .oss-h, ol.recent + .oss-h { margin-top: 56px; }
 .earlier-work p { margin: 0; color: var(--muted); max-width: 90ch; }
 @media (max-width: 1100px) { ol.recent { grid-template-columns: 1fr 1fr; } ul.oss { grid-template-columns: 1fr; } }
 @media (max-width: 900px) { ol.recent { grid-template-columns: 1fr; } ul.oss li { grid-template-columns: 1fr; gap: 2px; } .earlier-work { padding: 20px; } }
+
+/* Hero bubbles: four per side around the portrait. Declared last so these positions win. */
+.o6 { left: 20%; top: 11%; }
+.o3 { left: 18%; top: 78%; }
+.o8 { left: 3%; top: 10%; }
+.o1 { right: 24%; top: 12%; }
+.o7 { right: 5%; top: 12%; }
+.o4 { right: 8%; top: 42%; }
+.o2 { right: 22%; top: 70%; }
+.o5 { right: 4%; top: 72%; }
+.o1 .ball, .o2 .ball, .o3 .ball, .o4 .ball, .o5 .ball, .o6 .ball, .o7 .ball, .o8 .ball { width: 76px; height: 76px; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero .o4 { transition-delay: .8s; }
+  .js .hero .o8 { transition-delay: 1.25s; }
+}
+@media (max-width: 1260px) and (min-width: 901px) { .portrait { width: 460px; } }
+@media (max-width: 1140px) and (min-width: 901px) { .portrait { width: 390px; } }
+@media (max-width: 1100px) and (min-width: 901px) {
+  .o6 { left: 19%; } .o3 { left: 16%; } .o8 { left: 1%; }
+  .o1 { right: 23%; } .o7 { right: 2%; } .o4 { right: 4%; } .o2 { right: 20%; } .o5 { right: 1%; }
+}
+@media (max-width: 900px) {
+  .hero .o1 .ball, .hero .o2 .ball, .hero .o3 .ball, .hero .o4 .ball, .hero .o5 .ball, .hero .o6 .ball, .hero .o7 .ball, .hero .o8 .ball { width: 44px; height: 44px; }
+  .hero .o7 { grid-column: auto; }
+}
