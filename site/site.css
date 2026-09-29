@@ -282,11 +282,11 @@ ol.log time, ol.log span { color: var(--muted); }
   color: var(--ink); background: var(--card); border: 1px solid var(--line); transition: background .2s, color .2s, border-color .2s; }
 .orbit-chips button:hover { border-color: var(--indigo-fill); }
 .orbit-chips button[aria-pressed="true"] { background: var(--indigo-fill); border-color: var(--indigo-fill); color: #fff; }
-.orbit-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 28px; align-items: start; }
-.orbit-chart { background: var(--card); border-radius: 28px; padding: 16px; box-shadow: var(--shadow); }
+.orbit-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 28px; align-items: stretch; }
+.orbit-chart { background: var(--card); border-radius: 28px; padding: 16px; box-shadow: var(--shadow); display: flex; align-items: center; }
 .orbit-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
-.orbit-panel { background: var(--card); border-radius: 22px; padding: 24px 28px; box-shadow: var(--shadow); position: sticky; top: 100px;
-  display: grid; }
+.orbit-panel { background: var(--card); border-radius: 22px; padding: 24px 28px; box-shadow: var(--shadow);
+  display: grid; align-content: start; }
 /* Every panel occupies the same cell, so the box is always as tall as the longest one and the page never shifts. */
 .orbit-panel > .rd { grid-area: 1 / 1; }
 .orbit-panel > .rd[hidden] { display: block; visibility: hidden; }
