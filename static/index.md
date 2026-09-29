@@ -29,7 +29,9 @@ Most recent first, with length of each role. Some roles overlapped.
 
 - Restarted a stalled SOC 2 readiness program, delivering automated security controls across all active company systems, vendor tracking, and audit evidence collection.
 - Built a commercial controls program ahead of the product's beta launch, including per-customer cost and margin tracking, usage attribution, vendor cost monitoring, and AI-assisted invoice processing workflows.
+- Built much of the product front end in TypeScript and Next.js through AI-assisted development, on PostgreSQL and Redis.
 - Fixed inefficiencies and set up guardrails in a codebase written mostly by non-engineers with AI tools.
+- Technologies: TypeScript, Next.js, PostgreSQL, ORM, Redis, Anthropic, OpenAI, MCP, CI/CD
 
 ### Chick-fil-A (via Stable Kernel): Principal Software Engineer and Program Lead (1 yr 1 mo)
 
@@ -107,7 +109,7 @@ Most recent first, with length of each role. Some roles overlapped.
 
 - Go: Chick-fil-A, Rocket Farm, Salesforce, Skilltype, Heroku, ANet (The Achievement Network), InfluxData
 - Java: Skilltype, ANet (The Achievement Network)
-- TypeScript: Skilltype
+- TypeScript: Human Agency, Skilltype
 - JavaScript: Skilltype, MAARK
 - Python: Human Agency, Skilltype
 - SQL: Skilltype, ANet (The Achievement Network), One Door, MAARK
@@ -116,7 +118,8 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Front End
 
-- React: Skilltype
+- React: Human Agency, Skilltype
+- Next.js: Human Agency
 - Vite: Skilltype
 - Vitest: Skilltype
 - React Testing Library: Skilltype
@@ -154,9 +157,10 @@ Most recent first, with length of each role. Some roles overlapped.
 
 ### Data
 
-- PostgreSQL: Skilltype, Heroku, ANet (The Achievement Network), One Door
+- PostgreSQL: Human Agency, Skilltype, Heroku, ANet (The Achievement Network), One Door
+- ORM: Human Agency
 - DynamoDB: Chick-fil-A, Rocket Farm, Skilltype, ANet (The Achievement Network)
-- Redis: Chick-fil-A, Skilltype, Heroku, One Door
+- Redis: Human Agency, Chick-fil-A, Skilltype, Heroku, One Door
 - MySQL: One Door
 - Oracle Database: MAARK
 - RabbitMQ: One Door
